@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+  <VTE.HasDestroyedItem>{PAWN_nameDef} has destroyed the item {PAWN_pronon} just crafted due to the item not being of sufficient quality</VTE.HasDestroyedItem>
+  <VTE.GotBruise>{PAWN_nameDef} got a bruise due to being clumsy</VTE.GotBruise>
+  <VTE.CantBeWokenUpHeavySleeper>{PAWN_nameDef} is too heavy of a sleeper to be drafted.</VTE.CantBeWokenUpHeavySleeper>
+  <VTE.DecisesInterruptCurrentCostructionJob>{PAWN_nameDef} has given up on {0} for now due to being a perfectionist</VTE.DecisesInterruptCurrentCostructionJob>
+  <VTE.CavaranSpeedIsDoubledWanderlusts>Wanderlust pawns will traverse to foreign locations at an increased speed</VTE.CavaranSpeedIsDoubledWanderlusts>
+  <VTE.KleptomaniacStealsItemFrom>{PAWN_nameDef} has stolen a possession not belonging to their faction, this may damage relations between affiliated factions</VTE.KleptomaniacStealsItemFrom>
+  <VTE.KleptomaniacFailedToStealItemFrom>{PAWN_nameDef} was caught trying to steal another factions possessions, this may damage relations between affiliated factions</VTE.KleptomaniacFailedToStealItemFrom>
+  <VTE.PawnBreaksChairs>{PAWN_nameDef} has damaged {0} due to their weight or strange posture</VTE.PawnBreaksChairs>
+  <VTE.PawnStoleItem>{PAWN_nameDef} stole {0} from {VICTIM_nameDef}</VTE.PawnStoleItem>
+  <VTE.PawnFailedToStealItem>{PAWN_nameDef} failed to steal {0} from {VICTIM_nameDef}. This has angered the {VICTIM_nameDef} faction</VTE.PawnFailedToStealItem>
+  <VTE.PawnCowardlyFlees>{PAWN_nameDef} runs away from combat due to being a coward</VTE.PawnCowardlyFlees>
+  <VTE.PawnCowardlyExitMapHostile>{PAWN_nameDef} runs away from combat due to being a coward</VTE.PawnCowardlyExitMapHostile>
+  <VTE.PawnCowardlyExitMapAlly>{PAWN_nameDef} runs away from combat due to being a coward</VTE.PawnCowardlyExitMapAlly>
+  <VTE.PawnCowardlyExitMapNeutral>{PAWN_nameDef} runs away from combat due to being a coward</VTE.PawnCowardlyExitMapNeutral>
+  <VTE.PawnStopsForcedJob>{PAWN_nameDef} has defied or forgotten their orders and stopped working for the time being</VTE.PawnStopsForcedJob>
+  <VTE.VictimDropsEquipmentMartialArtist>{PAWN_nameDef} has disarmed {VICTIM_nameDef} in melee combat</VTE.VictimDropsEquipmentMartialArtist>
+</LanguageData>

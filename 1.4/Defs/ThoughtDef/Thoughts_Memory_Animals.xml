@@ -1,0 +1,169 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThoughtDef ParentName="DeathMemory">
+		<defName>VTE_BondedAnimalDiedHater</defName>
+		<showBubble>true</showBubble>
+		<durationDays>20</durationDays>
+		<stackLimit>5</stackLimit>
+		<stackLimitForSameOtherPawn>1</stackLimitForSameOtherPawn>
+		<stages>
+			<li>
+				<label>bonded animal {0} died</label>
+				<description>Such a gross, annoying animal. I'm glad it's gone!</description>
+				<baseMoodEffect>8</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef ParentName="LostMemory">
+		<defName>VTE_BondedAnimalLostHater</defName>
+		<showBubble>true</showBubble>
+		<durationDays>20</durationDays>
+		<stackLimit>5</stackLimit>
+		<stackLimitForSameOtherPawn>1</stackLimitForSameOtherPawn>
+
+		<stages>
+			<li>
+				<label>bonded animal {0} lost</label>
+				<description>Such a gross, annoying animal. I'm glad it's gone!</description>
+				<baseMoodEffect>8</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>VTE_BondedAnimalBanishedHater</defName>
+		<thoughtClass>Thought_Banished</thoughtClass>
+		<durationDays>6</durationDays>
+		<stackLimit>5</stackLimit>
+		<showBubble>true</showBubble>
+		<nullifyingTraits>
+			<li>Psychopath</li>
+		</nullifyingTraits>
+		<stages>
+			<li>
+				<label>bonded animal {0} banished</label>
+				<description>My bonded animal was banished, finally.</description>
+				<baseMoodEffect>6</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>VTE_NuzzledHater</defName>
+		<durationDays>1</durationDays>
+		<stackLimit>3</stackLimit>
+		<stackedEffectMultiplier>0.5</stackedEffectMultiplier>
+		<nullifyingTraits>
+			<li>Psychopath</li>
+		</nullifyingTraits>
+		<stages>
+			<li>
+				<label>nuzzled</label>
+				<description>A disgusting animal nuzzled me.</description>
+				<baseMoodEffect>-4</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>VTE_KilledMyBondedAnimalHater</defName>
+		<thoughtClass>Thought_MemorySocial</thoughtClass>
+		<durationDays>60</durationDays>
+		<stackLimit>300</stackLimit>
+		<stackLimitForSameOtherPawn>10</stackLimitForSameOtherPawn>
+		<stages>
+			<li>
+				<label>killed my bonded animal</label>
+				<baseOpinionOffset>10</baseOpinionOffset>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>VTE_SoldMyBondedAnimalHater</defName>
+		<thoughtClass>Thought_MemorySocial</thoughtClass>
+		<durationDays>60</durationDays>
+		<stackLimit>10</stackLimit>
+		<stackLimitForSameOtherPawn>2</stackLimitForSameOtherPawn>
+		<stages>
+			<li>
+				<label>bonded animal given away.</label>
+				<labelSocial>gave away my bonded animal.</labelSocial>
+				<description>My nasty bonded animal was given away, about time!</description>
+				<baseOpinionOffset>-10</baseOpinionOffset>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>VTE_SoldMyBondedAnimalMoodHater</defName>
+		<durationDays>60</durationDays>
+		<stackLimit>10</stackLimit>
+		<stages>
+			<li>
+				<label>bonded animal given away</label>
+				<labelSocial>gave away my bonded animal</labelSocial>
+				<description>My nasty bonded animal was given away, about time!</description>
+				<baseMoodEffect>10</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>VTE_KilledColonyAnimalHater</defName>
+		<thoughtClass>Thought_Tale</thoughtClass>
+		<workerClass>ThoughtWorker_Tale</workerClass>
+		<taleDef>KilledColonyAnimal</taleDef>
+		<validWhileDespawned>true</validWhileDespawned>
+		<stages>
+			<li>
+				<label>killed colony animal</label>
+				<baseOpinionOffset>5</baseOpinionOffset>
+			</li>
+		</stages>
+		<nullifiedIfNotColonist>true</nullifiedIfNotColonist>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>VTE_BondedAnimalMasterHater</defName>
+		<thoughtClass>VanillaTraitsExpanded.Thought_BondedAnimalMasterHater</thoughtClass>
+		<workerClass>VanillaTraitsExpanded.ThoughtWorker_BondedAnimalMasterHater</workerClass>
+		<validWhileDespawned>true</validWhileDespawned>
+		<stages>
+			<li>
+				<label>{0}'s master</label>
+				<description>Being around that nasty thing makes me hate life itself.</description>
+				<baseMoodEffect>-5</baseMoodEffect>
+			</li>
+			<li>
+				<label>master of {0}</label>
+				<description>Being around that nasty thing makes me hate life itself.</description>
+				<baseMoodEffect>-5</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>VTE_NotBondedAnimalMasterHater</defName>
+		<thoughtClass>Thought_NotBondedAnimalMaster</thoughtClass>
+		<workerClass>VanillaTraitsExpanded.ThoughtWorker_NotBondedAnimalMasterHater</workerClass>
+		<validWhileDespawned>true</validWhileDespawned>
+		<nullifyingTraits>
+			<li>Psychopath</li>
+		</nullifyingTraits>
+		<stages>
+			<li>
+				<label>not {0}'s master</label>
+				<description>That thing may like me, but I certainly don't like it back - I'm glad somebody else took it.</description>
+				<baseMoodEffect>-3</baseMoodEffect>
+			</li>
+			<li>
+				<label>not master of {0}</label>
+				<description>That thing may like me, but I certainly don't like it back - I'm glad somebody else took it.</description>
+				<baseMoodEffect>-3</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+</Defs>

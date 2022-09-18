@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <MentalBreakDef>
+    <defName>VTE_TechnophobeTantrum</defName>
+    <mentalState>VTE_TechnophobeTantrum</mentalState>
+    <baseCommonality>1</baseCommonality>
+    <intensity>Major</intensity>
+  </MentalBreakDef>
+  
+  <MentalStateDef ParentName="Tantrum">
+    <defName>VTE_TechnophobeTantrum</defName>
+    <stateClass>VanillaTraitsExpanded.MentalState_TechnophobeTantrum</stateClass>
+    <workerClass>VanillaTraitsExpanded.MentalStateWorker_TechnophobeTantrum</workerClass>
+    <label>technophobe tantrum</label>
+    <maxTicksBeforeRecovery>30000</maxTicksBeforeRecovery>
+    <recoveryMessage>{0} is no longer in a technophobe tantrum.</recoveryMessage>
+    <beginLetterDef>ThreatSmall</beginLetterDef>
+    <beginLetter>{0} has flown into a technophobe tantrum.\n\n[PAWN_pronoun] is going to vent [PAWN_possessive] anger on technology.</beginLetter>
+    <baseInspectLine>Mental state: technophobe tantrum</baseInspectLine>
+  </MentalStateDef>
+
+  <MentalBreakDef>
+    <defName>VTE_PanicFreezing</defName>
+    <mentalState>VTE_PanicFreezing</mentalState>
+    <baseCommonality>1</baseCommonality>
+    <intensity>Extreme</intensity>
+    <requiredTrait>VTE_Anxious</requiredTrait>
+  </MentalBreakDef>
+
+  <MentalStateDef ParentName="BaseMentalState">
+    <defName>VTE_PanicFreezing</defName>
+    <label>panic freezing</label>
+    <stateClass>VanillaTraitsExpanded.MentalState_PanicFreezing</stateClass>
+    <category>Misc</category>
+    <blockInteractionInitiationExcept>
+      <li>Insult</li>
+    </blockInteractionInitiationExcept>
+    <blockInteractionRecipientExcept>
+      <li>Insult</li>
+    </blockInteractionRecipientExcept>
+    <blockRandomInteraction>true</blockRandomInteraction>
+    <nameColor>(0.65, 0.9, 0.93)</nameColor>
+    <beginLetterLabel>panic attack</beginLetterLabel>
+    <beginLetter>{0} is freezing in panic.</beginLetter>
+    <recoveryMessage>{0} is no longer freezing in panic.</recoveryMessage>
+    <baseInspectLine>Mental state: freezing in panic</baseInspectLine>
+	<stateEffecter>VTE_PanicFreezing</stateEffecter>
+    <blockNormalThoughts>true</blockNormalThoughts>
+    <unspawnedCanDo>true</unspawnedCanDo>
+  </MentalStateDef>
+
+  <MentalBreakDef>
+    <defName>VTE_Kleptomaniac</defName>
+    <mentalState>VTE_Kleptomaniac</mentalState>
+    <baseCommonality>0.8</baseCommonality>
+    <intensity>Minor</intensity>
+  </MentalBreakDef>
+  
+  <MentalStateDef ParentName="BaseMentalState">
+    <defName>VTE_Kleptomaniac</defName>
+    <stateClass>VanillaTraitsExpanded.MentalState_Kleptomaniac</stateClass>
+    <workerClass>VanillaTraitsExpanded.MentalStateWorker_Kleptomaniac</workerClass>
+    <label>kleptomaniac</label>
+    <category>Misc</category>
+    <prisonersCanDo>false</prisonersCanDo>
+    <colonistsOnly>true</colonistsOnly>
+    <minTicksBeforeRecovery>25000</minTicksBeforeRecovery>
+    <maxTicksBeforeRecovery>45000</maxTicksBeforeRecovery>
+    <recoveryMtbDays>0.166</recoveryMtbDays>
+    <recoverFromSleep>true</recoverFromSleep>
+    <nameColor>(0.5, 0.9, 0.5)</nameColor>
+    <beginLetterLabel>Kleptomaniac</beginLetterLabel>
+    <beginLetter>{0} is stealing items from visitors.</beginLetter>
+    <beginLetterDef>NegativeEvent</beginLetterDef>
+    <moodRecoveryThought>Catharsis</moodRecoveryThought>
+    <recoveryMessage>{0} is no longer stealing items from visitors.</recoveryMessage>
+    <baseInspectLine>Mental state: Kleptomaniac</baseInspectLine>
+    <allowBeatfire>true</allowBeatfire>
+    <escapingPrisonersIgnore>true</escapingPrisonersIgnore>
+  </MentalStateDef>
+</Defs>

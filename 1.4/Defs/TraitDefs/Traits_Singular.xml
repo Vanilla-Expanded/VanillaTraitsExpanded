@@ -1,0 +1,903 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<TraitDef>
+		<defName>VTE_AbsentMinded</defName>
+		<commonality>0.7</commonality>
+		<degreeDatas>
+			<li>
+				<label>absent-minded</label>
+				<description>[PAWN_nameDef] tends to occasionally allow their mind to drift, even in the middle of working.</description>
+			</li>
+		</degreeDatas>
+		<conflictingTraits>
+			<li>VTE_Workaholic</li>
+			<li>Industriousness</li>
+		</conflictingTraits>
+	</TraitDef>
+
+	<TraitDef>
+		<defName>VTE_Eccentric</defName>
+		<commonality>0.8</commonality>
+		<degreeDatas>
+			<li>
+				<label>eccentric</label>
+				<description>[PAWN_nameDef] has a loose screw or two, a small trade off for being naturally scientifically inclined.</description>
+				<statFactors>
+					<ResearchSpeed>1.15</ResearchSpeed>
+				</statFactors>
+			</li>
+		</degreeDatas>
+		<conflictingTraits>
+			<li>VTE_Dunce</li>
+		</conflictingTraits>
+	</TraitDef>
+
+	<TraitDef>
+		<defName>VTE_Perfectionist</defName>
+		<commonality>0.9</commonality>
+		<degreeDatas>
+			<li>
+				<label>perfectionist</label>
+				<description>[PAWN_nameDef] strives for perfection in [PAWN_possessive] work. They will naturally produce better quality products at the expense of time. However, making a low quality product will upset them. Additionally, they may very rarely quit a project mid attempt if they don't like the direction its going in.</description>
+				<statFactors>
+					<WorkSpeedGlobal>0.65</WorkSpeedGlobal>
+				</statFactors>
+			</li>
+		</degreeDatas>
+	</TraitDef>
+
+	<TraitDef>
+		<defName>VTE_Coward</defName>
+		<commonality>1</commonality>
+		<degreeDatas>
+			<li>
+				<label>coward</label>
+				<description>While fully capable of warfare in theory, [PAWN_nameDef]'s fight or flight instincts heavily lean towards flight, and [PAWN_pronoun] will try to hide or run as a first priority.</description>
+			</li>
+		</degreeDatas>
+		<conflictingTraits>
+			<li>Brawler</li>
+			<li>VTE_Brave</li>
+			<li>Bloodlust</li>
+		</conflictingTraits>
+	</TraitDef>
+
+	<TraitDef>
+		<defName>VTE_Brave</defName>
+		<commonality>0.7</commonality>
+		<degreeDatas>
+			<li>
+				<label>brave</label>
+				<description>[PAWN_nameDef] has a higher mental and physical fortitude compared to most and can more readily adapt to harsh environments in the rimworlds.</description>
+				<statOffsets>
+					<MentalBreakThreshold>-0.2</MentalBreakThreshold>
+					<PainShockThreshold>0.2</PainShockThreshold>
+				</statOffsets>
+			</li>
+		</degreeDatas>
+		<conflictingTraits>
+			<li>Wimp</li>
+			<li>VTE_Coward</li>
+		</conflictingTraits>
+	</TraitDef>
+
+	<TraitDef>
+		<defName>VTE_Clumsy</defName>
+		<commonality>1</commonality>
+		<degreeDatas>
+			<li>
+				<label>clumsy</label>
+				<description>Minor bruises and scrapes plague [PAWN_nameDef] all too often, mostly due to uncoordinated tripping or falling.</description>
+			</li>
+		</degreeDatas>
+		<conflictingTraits>
+			<li>Nimble</li>
+		</conflictingTraits>
+	</TraitDef>
+
+	<TraitDef>
+		<defName>VTE_HeatInclined</defName>
+		<commonality>0.8</commonality>
+		<degreeDatas>
+			<li>
+				<label>heat inclined</label>
+				<description>[PAWN_nameDef] loves the brightness and heat of a dry summer day. They don't mind working up a sweat or sleeping in the warmth either.</description>
+				<statOffsets>
+					<ComfyTemperatureMax>10.0</ComfyTemperatureMax>
+				</statOffsets>
+			</li>
+		</degreeDatas>
+		<conflictingTraits>
+			<li>VTE_ColdInclined</li>
+		</conflictingTraits>
+	</TraitDef>
+
+	<TraitDef>
+		<defName>VTE_ColdInclined</defName>
+		<commonality>0.8</commonality>
+		<degreeDatas>
+			<li>
+				<label>cold inclined</label>
+				<description>[PAWN_nameDef] loves the overcast and cold of a brisk winter night. They don't mind getting chilly or sleeping in the cold either.</description>
+				<statOffsets>
+					<ComfyTemperatureMin>-10.0</ComfyTemperatureMin>
+				</statOffsets>
+			</li>
+		</degreeDatas>
+		<conflictingTraits>
+			<li>VTE_HeatInclined</li>
+		</conflictingTraits>
+	</TraitDef>
+
+	<TraitDef>
+		<defName>VTE_HeavySleeper</defName>
+		<commonality>0.6</commonality>
+		<degreeDatas>
+			<li>
+				<label>heavy sleeper</label>
+				<description>A bomb could go off next to [PAWN_nameDef] while they sleep and they'd continue to do so. They can't be bothered to defend the colony mid catnap, either.</description>
+			</li>
+		</degreeDatas>
+	</TraitDef>
+
+	<TraitDef>
+		<defName>VTE_Neat</defName>
+		<commonality>1</commonality>
+		<degreeDatas>
+			<li>
+				<label>neat</label>
+				<description>[PAWN_nameDef] is naturally hygenic and organized. They will not track in dirt or throw trash anywhere, and feel happy while cleaning.</description>
+			</li>
+		</degreeDatas>
+		<conflictingTraits>
+			<li>VTE_Slob</li>
+		</conflictingTraits>
+	</TraitDef>
+
+	<TraitDef>
+		<defName>VTE_Slob</defName>
+		<commonality>0.8</commonality>
+		<degreeDatas>
+			<li>
+				<label>slob</label>
+				<description>[PAWN_nameDef] is sloppy naturally and leaves trash and dirt everywhere it seems. At least they're not much bothered by messes.</description>
+			</li>
+		</degreeDatas>
+		<conflictingTraits>
+			<li>VTE_Neat</li>
+		</conflictingTraits>
+	</TraitDef>
+
+	<TraitDef>
+		<defName>VTE_Workaholic</defName>
+		<commonality>0.7</commonality>
+		<degreeDatas>
+			<li>
+				<label>workaholic</label>
+				<description>[PAWN_nameDef] has problems taking breaks or resting mid job. [PAWN_pronoun] will continue to work even sacrificing their health or sleep.</description>
+			</li>
+		</degreeDatas>
+		<conflictingTraits>
+			<li>VTE_AbsentMinded</li>
+			<li>Industriousness</li>
+		</conflictingTraits>
+	</TraitDef>
+
+	<TraitDef>
+		<defName>VTE_IronStomach</defName>
+		<commonality>1</commonality>
+		<degreeDatas>
+			<li>
+				<label>iron stomach</label>
+				<description>[PAWN_nameDef] has never felt nausea in [PAWN_possessive] life. Throwing up or food poisoning is foreign to [PAWN_objective].</description>
+			</li>
+		</degreeDatas>
+		<conflictingTraits>
+			<li>VTE_Squeamish</li>
+		</conflictingTraits>
+	</TraitDef>
+
+	<TraitDef>
+		<defName>VTE_AnimalLover</defName>
+		<commonality>1</commonality>
+		<degreeDatas>
+			<li>
+				<label>animal lover</label>
+				<description>[PAWN_nameDef] can't stand mistreatment of animals. [PAWN_pronoun] will feel happier being nuzzled or being a master to a bonded animal, but will be more deeply crushed when not master of a bonded animal or seeing one die. They also refuse to butcher.</description>
+			</li>
+		</degreeDatas>
+		<conflictingTraits>
+			<li>VTE_AnimalHater</li>
+		</conflictingTraits>
+	</TraitDef>
+
+	<TraitDef>
+		<defName>VTE_AnimalHater</defName>
+		<commonality>0.5</commonality>
+		<degreeDatas>
+			<li>
+				<label>animal hater</label>
+				<description>[PAWN_nameDef] believes deeply in human superiority. Killing animals will please them and the colony losing an animal is a cherry on top according to them.</description>
+			</li>
+		</degreeDatas>
+		<conflictingTraits>
+			<li>VTE_AnimalLover</li>
+			<li>VTE_Menagerist</li>
+		</conflictingTraits>
+	</TraitDef>
+
+	<TraitDef>
+		<defName>VTE_BigBoned</defName>
+		<commonality>0.6</commonality>
+		<degreeDatas>
+			<li>
+				<label>big-boned</label>
+				<description>Whether because they're a bit chunky or because they shift their weight oddly, [PAWN_nameDef] has broken a few chairs in their time and is likely to break more.</description>
+			</li>
+		</degreeDatas>
+	</TraitDef>
+
+	<TraitDef>
+		<defName>VTE_Rebel</defName>
+		<commonality>1</commonality>
+		<degreeDatas>
+			<li>
+				<label>rebel</label>
+				<description>[PAWN_nameDef] only plays by their own rules, and will roll their eyes and take it easy while doing any task they've been forced to do.</description>
+			</li>
+		</degreeDatas>
+		<conflictingTraits>
+			<li>VTE_Submissive</li>
+		</conflictingTraits>
+	</TraitDef>
+
+	<TraitDef>
+		<defName>VTE_Submissive</defName>
+		<commonality>0.5</commonality>
+		<degreeDatas>
+			<li>
+				<label>submissive</label>
+				<description>[PAWN_nameDef] needs clear instructions on how, and when to do certain things and will only work at a normal speed when being forced to do something.</description>
+			</li>
+		</degreeDatas>
+		<conflictingTraits>
+			<li>VTE_Rebel</li>
+		</conflictingTraits>
+	</TraitDef>
+
+	<TraitDef>
+		<defName>VTE_Vengeful</defName>
+		<commonality>0.7</commonality>
+		<degreeDatas>
+			<li>
+				<label>vengeful</label>
+				<description>[PAWN_nameDef] is fueled by spite. They can't stand walking on the same soil as their rivals and will be elated by news of their life ending.</description>
+			</li>
+		</degreeDatas>
+		<conflictingTraits>
+			<li>Kind</li>
+		</conflictingTraits>
+	</TraitDef>
+
+	<TraitDef>
+		<defName>VTE_Technophobe</defName>
+		<commonality>0.6</commonality>
+		<degreeDatas>
+			<li>
+				<label>technophobe</label>
+				<description>Whether by past trauma or fear of change, [PAWN_nameDef] rejects modernity. They may randomly punch or attack mechanical devices and refuse to learn or research anything about them. They also love killing mechanoids.</description>
+				<theOnlyAllowedMentalBreaks>
+					<li>VTE_TechnophobeTantrum</li>
+				</theOnlyAllowedMentalBreaks>
+				<randomMentalState>VTE_TechnophobeTantrum</randomMentalState>
+				<randomMentalStateMtbDaysMoodCurve>
+					<points>
+						<li>(0, 50)</li>
+					</points>
+				</randomMentalStateMtbDaysMoodCurve>
+			</li>
+		</degreeDatas>
+		<conflictingTraits>
+			<li>Transhumanist</li>
+		</conflictingTraits>
+	</TraitDef>
+
+	<TraitDef>
+		<defName>VTE_FunLoving</defName>
+		<commonality>1.1</commonality>
+		<degreeDatas>
+			<li>
+				<label>fun-loving</label>
+				<description>[PAWN_nameDef] always recalls the good times and lives to party, any party attended will be remembered for many times longer than most.</description>
+			</li>
+		</degreeDatas>
+		<conflictingTraits>
+			<li>VTE_Anxious</li>
+		</conflictingTraits>
+	</TraitDef>
+
+	<TraitDef>
+		<defName>VTE_Dunce</defName>
+		<commonality>0.7</commonality>
+		<degreeDatas>
+			<li>
+				<label>dunce</label>
+				<description>[PAWN_nameDef] has hindered mental capacities. While slow to learn and hard to speak with, they tend to be much happier naturally.</description>
+				<statOffsets>
+					<GlobalLearningFactor>-0.50</GlobalLearningFactor>
+					<SocialImpact>-0.50</SocialImpact>
+				</statOffsets>
+				<marketValueFactorOffset>-0.5</marketValueFactorOffset>
+			</li>
+		</degreeDatas>
+		<conflictingTraits>
+			<li>FastLearner</li>
+			<li>TooSmart</li>
+			<li>VTE_Eccentric</li>
+			<li>VTE_Prodigy</li>
+		</conflictingTraits>
+	</TraitDef>
+
+	<TraitDef>
+		<defName>VTE_MartialArtist</defName>
+		<commonality>0.6</commonality>
+		<degreeDatas>
+			<li>
+				<label>martial artist</label>
+				<description>[PAWN_nameDef] learned a specific move in melee combat which allows them to disarm opponents and will use it frequently.</description>
+			</li>
+		</degreeDatas>
+		<requiredWorkTags>
+  		    <li>Violent</li>
+		 </requiredWorkTags>
+	</TraitDef>
+
+	<TraitDef>
+		<defName>VTE_Snob</defName>
+		<commonality>1</commonality>
+		<degreeDatas>
+			<li>
+				<label>snob</label>
+				<description>[PAWN_nameDef] believes they belong in high society, and loves nothing more than critiquing art and brushing elbows with royalty.</description>
+			</li>
+		</degreeDatas>
+		<conflictingTraits>
+			<li>Ascetic</li>
+		</conflictingTraits>
+	</TraitDef>
+
+	<TraitDef>
+		<defName>VTE_Squeamish</defName>
+		<commonality>0.9</commonality>
+		<degreeDatas>
+			<li>
+				<label>squeamish</label>
+				<description>Sour stomach plagues [PAWN_nameDef] any time they're around too much blood or rotting corpses. Vomiting is just part of life for {PAWN_objective}.</description>
+			</li>
+		</degreeDatas>
+		<conflictingTraits>
+			<li>VTE_IronStomach</li>
+			<li>VTE_Desensitized</li>
+		</conflictingTraits>
+	</TraitDef>
+
+	<TraitDef>
+		<defName>VTE_Anxious</defName>
+		<commonality>1</commonality>
+		<degreeDatas>
+			<li>
+				<label>anxious</label>
+				<description>[PAWN_nameDef] feels naturally anxious, but especially from social situations. They will not attend any gatherings and may occasionally need alone time in their room to breathe.</description>
+				<theOnlyAllowedMentalBreaks>
+					<li>VTE_PanicFreezing</li>
+				</theOnlyAllowedMentalBreaks>
+				<randomMentalState>VTE_PanicFreezing</randomMentalState>
+				<randomMentalStateMtbDaysMoodCurve>
+					<points>
+						<li>(0, 50)</li>
+					</points>
+				</randomMentalStateMtbDaysMoodCurve>
+			</li>
+		</degreeDatas>
+		<conflictingTraits>
+			<li>VTE_FunLoving</li>
+		</conflictingTraits>
+	</TraitDef>
+
+	<TraitDef>
+		<defName>VTE_Insatiable</defName>
+		<commonality>1.1</commonality>
+		<degreeDatas>
+			<li>
+				<label>insatiable</label>
+				<description>No amount of lovin' is enough lovin' for [PAWN_nameDef]. [PAWN_pronoun] will tend to jump from partner to partner and tumble between the sheets with them frequently.</description>
+			</li>
+		</degreeDatas>
+		<conflictingTraits>
+			<li>VTE_Prude</li>
+			<li>Asexual</li>
+			<li>Nudist</li>
+		</conflictingTraits>
+	</TraitDef>
+
+	<TraitDef>
+		<defName>VTE_Prude</defName>
+		<commonality>1</commonality>
+		<degreeDatas>
+			<li>
+				<label>prude</label>
+				<description>[PAWN_nameDef] refuses to give their body to anybody but their spouse and would never fathom initiating a divorce. They also hate being nude much more than other pawns.</description>
+			</li>
+		</degreeDatas>
+		<conflictingTraits>
+			<li>VTE_Insatiable</li>
+			<li>Nudist</li>
+		</conflictingTraits>
+	</TraitDef>
+
+	<TraitDef>
+		<defName>VTE_CouchPotato</defName>
+		<commonality>0.6</commonality>
+		<degreeDatas>
+			<li>
+				<label>couch potato</label>
+				<description>An armchair and flatscreen is all [PAWN_nameDef] needs to be happy. Even reruns or ancient commercials are entertaining to them, they will never grow bored of television and tend to watch it more, as well as feel pleased after doing so.</description>
+			</li>
+		</degreeDatas>
+	</TraitDef>
+
+	<TraitDef>
+		<defName>VTE_CatPerson</defName>
+		<commonality>1</commonality>
+		<degreeDatas>
+			<li>
+				<label>cat person</label>
+				<description>[PAWN_nameDef] is mad for all things feline. They will naturally gravitate towards bonding with cats, however they're not a fan of dogs.</description>
+			</li>
+		</degreeDatas>
+		<conflictingTraits>
+			<li>VTE_DogPerson</li>
+		</conflictingTraits>
+	</TraitDef>
+
+	<TraitDef>
+		<defName>VTE_DogPerson</defName>
+		<commonality>1</commonality>
+		<degreeDatas>
+			<li>
+				<label>dog person</label>
+				<description>[PAWN_nameDef] is mad for all things canine. They will naturally gravitate towards bonding with dogs, however they're not a fan of cats.</description>
+			</li>
+		</degreeDatas>
+		<conflictingTraits>
+			<li>VTE_CatPerson</li>
+		</conflictingTraits>
+	</TraitDef>
+
+	<TraitDef>
+		<defName>VTE_Prodigy</defName>
+		<commonality>0.8</commonality>
+		<degreeDatas>
+			<li>
+				<label>prodigy</label>
+				<description>[PAWN_nameDef] is a natural scientist. They research much faster and recall things better. However, they'll be upset without a laboratory dedicated to their work and tend to stress out more frequently.</description>
+				<statOffsets>
+					<MentalBreakThreshold>0.2</MentalBreakThreshold>
+				</statOffsets>
+				<statFactors>
+					<ResearchSpeed>1.30</ResearchSpeed>
+				</statFactors>
+			</li>
+		</degreeDatas>
+		<conflictingTraits>
+			<li>VTE_Dunce</li>
+		</conflictingTraits>
+	</TraitDef>
+
+	<TraitDef>
+		<defName>VTE_Menagerist</defName>
+		<commonality>0.6</commonality>
+		<requiredWorkTags>
+			<li>Animals</li>
+		</requiredWorkTags>
+		<forcedPassions>
+			<li>Animals</li>
+		</forcedPassions>
+		<degreeDatas>
+			<li>
+				<label>menagerist</label>
+				<description>[PAWN_nameDef] believes animals are integral to the way society and life functions from furry friends to sources of food. They love having as many as possible and are particularly good at taming and training them.</description>
+				<statFactors>
+					<TameAnimalChance>1.2</TameAnimalChance>
+					<TrainAnimalChance>1.2</TrainAnimalChance>
+				</statFactors>
+			</li>
+		</degreeDatas>
+		<conflictingTraits>
+			<li>VTE_AnimalHater</li>
+		</conflictingTraits>
+	</TraitDef>
+
+	<TraitDef>
+		<defName>VTE_ChildOfSea</defName>
+		<commonality>1</commonality>
+		<degreeDatas>
+			<li>
+				<label>Ocean lover</label>
+				<description>The sea calls to [PAWN_nameDef]. [PAWN_pronoun] feels happier just being near the ocean or a deep river.</description>
+			</li>
+		</degreeDatas>
+	</TraitDef>
+
+	<TraitDef>
+		<defName>VTE_ChildOfMountain</defName>
+		<commonality>1</commonality>
+		<degreeDatas>
+			<li>
+				<label>Mountain lover</label>
+				<description>The mountains call to [PAWN_nameDef]. [PAWN_pronoun] feels happier just being near a large mountain.</description>
+			</li>
+		</degreeDatas>
+	</TraitDef>
+
+	<TraitDef>
+		<defName>VTE_MadSurgeon</defName>
+		<commonality>0.6</commonality>
+		<degreeDatas>
+			<li>
+				<label>mad surgeon</label>
+				<description>[PAWN_nameDef] has a twisted secret. [PAWN_pronoun] treats organ harvesting like a sick experiment, and does not even blink at the idea. While harvesting one will make them happy, going too long without giving in to their compulsion will upset them.</description>
+				<statOffsets>
+					<SurgerySuccessChanceFactor>0.20</SurgerySuccessChanceFactor>
+				</statOffsets>
+			</li>
+		</degreeDatas>
+		<requiredWorkTypes>
+			<li>Doctor</li>
+		</requiredWorkTypes>
+	</TraitDef>
+
+	<TraitDef>
+		<defName>VTE_DrunkenMaster</defName>
+		<commonality>0.5</commonality>
+		<degreeDatas>
+			<li>
+				<label>drunken master</label>
+				<description>[PAWN_nameDef] is supposedly a hand-to-hand combat specialist, but only when inebriated. They claim to become more talented the more drunk they are.</description>
+				<skillGains>
+					<li>
+						<key>Melee</key>
+						<value>4</value>
+					</li>
+				</skillGains>
+			</li>
+		</degreeDatas>
+		<requiredWorkTags>
+  		    <li>Violent</li>
+		 </requiredWorkTags>
+	</TraitDef>
+
+
+	<TraitDef>
+		<defName>VTE_Kleptomaniac</defName>
+		<commonality>0.6</commonality>
+		<degreeDatas>
+			<li>
+				<label>kleptomaniac</label>
+				<description>[PAWN_nameDef] is compulsed to steal and take things that don't belong to them, even if it means angering the other party.</description>
+				<theOnlyAllowedMentalBreaks>
+					<li>VTE_Kleptomaniac</li>
+				</theOnlyAllowedMentalBreaks>
+				<randomMentalState>VTE_Kleptomaniac</randomMentalState>
+				<randomMentalStateMtbDaysMoodCurve>
+					<points>
+						<li>(0, 50)</li>
+					</points>
+				</randomMentalStateMtbDaysMoodCurve>
+			</li>
+		</degreeDatas>
+	</TraitDef>
+
+	<TraitDef>
+		<defName>VTE_Stoner</defName>
+		<commonality>0.9</commonality>
+		<degreeDatas>
+			<li>
+				<label>stoner</label>
+				<description>Smokeleaf culture is just part of life for [PAWN_nameDef]. [PAWN_pronoun] absolutely adores smokeleaf and would rather die before giving it up.</description>
+			</li>
+		</degreeDatas>
+		<conflictingTraits>
+			<li>DrugDesire</li>
+			<li>VTE_Lush</li>
+		</conflictingTraits>
+	</TraitDef>
+
+	<TraitDef>
+		<defName>VTE_Lush</defName>
+		<commonality>0.9</commonality>
+		<degreeDatas>
+			<li>
+				<label>lush</label>
+				<description>Alcohol culture is just part of life for [PAWN_nameDef]. [PAWN_pronoun] absolutely adores booze and would rather die before giving it up.</description>
+			</li>
+		</degreeDatas>
+		<conflictingTraits>
+			<li>DrugDesire</li>
+			<li>VTE_Lush</li>
+		</conflictingTraits>
+	</TraitDef>
+
+	<TraitDef>
+		<defName>VTE_Wanderlust</defName>
+		<commonality>1.1</commonality>
+		<degreeDatas>
+			<li>
+				<label>wanderlust</label>
+				<description>[PAWN_nameDef] loves to travel and does so swiftly, but can grow upset if they haven't done so in a while. They are also quite adept at foraging while traveling.</description>
+				<statOffsets>
+					<ForagedNutritionPerDay>0.2</ForagedNutritionPerDay>
+				</statOffsets>
+			</li>
+		</degreeDatas>
+	</TraitDef>
+
+	<TraitDef>
+		<defName>VTE_Insomniac</defName>
+		<commonality>0.7</commonality>
+		<degreeDatas>
+			<li>
+				<label>insomniac</label>
+				<description>[PAWN_nameDef] is never really asleep or awake. [PAWN_pronoun] is almost zombie like, lurching along and working very slowly, and will only sleep once every three days or so.</description>
+				<statFactors>
+					<WorkSpeedGlobal>0.5</WorkSpeedGlobal>
+					<MoveSpeed>0.7</MoveSpeed>
+				</statFactors>
+			</li>
+		</degreeDatas>
+		<conflictingTraits>
+			<li>VTE_HeavySleeper</li>
+		</conflictingTraits>
+	</TraitDef>
+
+	<TraitDef>
+		<defName>VTE_WorldWeary</defName>
+		<commonality>0.8</commonality>
+		<degreeDatas>
+			<li>
+				<label>world weary</label>
+				<description>[PAWN_nameDef] has grown tired of the world and needs to be constantly distracted to stop dark thoughts. [PAWN_possessive] bleak personality is a big downer and therefore it is very hard to become friends with them.</description>
+			</li>
+		</degreeDatas>
+	</TraitDef>
+
+	<TraitDef>
+		<defName>VTE_Desensitized</defName>
+		<commonality>0.6</commonality>
+		<degreeDatas>
+			<li>
+				<label>desensitized</label>
+				<description>[PAWN_nameDef] is hardened through what can only be presumed as old emotional trauma. They feel absolutely nothing from lost animals, colonists, family, prisoners or dead bodies.</description>
+			</li>
+		</degreeDatas>
+		<conflictingTraits>
+			<li>VTE_Squeamish</li>
+		</conflictingTraits>
+	</TraitDef>
+
+	<TraitDef>
+		<defName>VTE_RefinedPalate</defName>
+		<commonality>0.6</commonality>
+		<degreeDatas>
+			<li>
+				<label>refined palate</label>
+				<description>Only the finest of culinary creations may grace the lips of [PAWN_nameDef]. They feel neutral towards mundane meals, but will laud and savour lavish meals down to the last bite.</description>
+				<statFactors>
+					<EatingSpeed>0.7</EatingSpeed>
+				</statFactors>
+			</li>
+		</degreeDatas>
+		<conflictingTraits>
+			<li>Ascetic</li>
+		</conflictingTraits>
+	</TraitDef>
+
+	<TraitDef>
+		<defName>VTE_Academian</defName>
+		<commonality>0.8</commonality>
+		<requiredWorkTags>
+			<li>Intellectual</li>
+		</requiredWorkTags>
+		<forcedPassions>
+			<li>Intellectual</li>
+			<li>Medicine</li>
+		</forcedPassions>
+		<degreeDatas>
+			<li>
+				<label>academian</label>
+				<description>Whether through studying ancient manuscripts or years of scholastic pursuit [PAWN_nameDef] is surprisingly well read on a variety of topics, particularly science and medical practice.</description>
+				<skillGains>
+					<li>
+						<key>Intellectual</key>
+						<value>4</value>
+					</li>
+					<li>
+						<key>Medicine</key>
+						<value>4</value>
+					</li>
+				</skillGains>
+				<statOffsets>
+					<MedicalTendQuality>0.2</MedicalTendQuality>
+				</statOffsets>
+			</li>
+		</degreeDatas>
+	</TraitDef>
+
+	<TraitDef>
+		<defName>VTE_Groundbreaker</defName>
+		<commonality>0.8</commonality>
+		<requiredWorkTags>
+			<li>Mining</li>
+		</requiredWorkTags>
+		<forcedPassions>
+			<li>Mining</li>
+			<li>Construction</li>
+		</forcedPassions>
+		<degreeDatas>
+			<li>
+				<label>groundbreaker</label>
+				<description>[PAWN_nameDef] strongly believes infrastucture rules all and is a natural born stoneworker.</description>
+				<skillGains>
+					<li>
+						<key>Mining</key>
+						<value>4</value>
+					</li>
+					<li>
+						<key>Construction</key>
+						<value>4</value>
+					</li>
+				</skillGains>
+				<statOffsets>
+					<MiningYield>0.2</MiningYield>
+					<ConstructionSpeed>0.2</ConstructionSpeed>
+				</statOffsets>
+			</li>
+		</degreeDatas>
+	</TraitDef>
+
+	<TraitDef>
+		<defName>VTE_Gastronomist</defName>
+		<commonality>0.8</commonality>
+		<forcedPassions>
+			<li>Cooking</li>
+			<li>Artistic</li>
+		</forcedPassions>
+		<degreeDatas>
+			<li>
+				<label>gastronomist</label>
+				<description>In the eyes of [PAWN_nameDef] food is art, their culinary creations are incredibly beautiful, amazing to taste, and almost always safe to eat.</description>
+				<skillGains>
+					<li>
+						<key>Cooking</key>
+						<value>4</value>
+					</li>
+					<li>
+						<key>Artistic</key>
+						<value>4</value>
+					</li>
+				</skillGains>
+				<statOffsets>
+					<FoodPoisonChance>-0.25</FoodPoisonChance>
+				</statOffsets>
+			</li>
+		</degreeDatas>
+	</TraitDef>
+
+	<TraitDef>
+		<defName>VTE_Ecologist</defName>
+		<commonality>0.8</commonality>
+		<requiredWorkTags>
+			<li>Animals</li>
+		</requiredWorkTags>
+		<forcedPassions>
+			<li>Animals</li>
+			<li>Plants</li>
+		</forcedPassions>
+		<degreeDatas>
+			<li>
+				<label>ecologist</label>
+				<description>Flora and fauna are both vital to [PAWN_nameDef]. They use all parts of plants and animals and strongly appreciate mother Gaia's blessings.</description>
+				<skillGains>
+					<li>
+						<key>Animals</key>
+						<value>4</value>
+					</li>
+					<li>
+						<key>Plants</key>
+						<value>4</value>
+					</li>
+				</skillGains>
+				<statOffsets>
+					<PlantHarvestYield>0.2</PlantHarvestYield>
+					<ButcheryFleshEfficiency>0.2</ButcheryFleshEfficiency>
+				</statOffsets>
+			</li>
+		</degreeDatas>
+	</TraitDef>
+
+	<TraitDef>
+		<defName>VTE_Tycoon</defName>
+		<commonality>0.8</commonality>
+		<forcedPassions>
+			<li>Social</li>
+			<li>Crafting</li>
+		</forcedPassions>
+		<requiredWorkTags>
+			<li>Social</li>
+		</requiredWorkTags>
+		<degreeDatas>
+			<li>
+				<label>tycoon</label>
+				<description>[PAWN_nameDef] has an eye for silver and a tongue made from it. They believe their products are the best products and [PAWN_pronoun] will likely convince you if given the chance.</description>
+				<skillGains>
+					<li>
+						<key>Social</key>
+						<value>4</value>
+					</li>
+					<li>
+						<key>Crafting</key>
+						<value>4</value>
+					</li>
+				</skillGains>
+				<statOffsets>
+					<TradePriceImprovement>0.25</TradePriceImprovement>
+				</statOffsets>
+			</li>
+		</degreeDatas>
+	</TraitDef>
+
+	<TraitDef>
+		<defName>VTE_ThickSkinned</defName>
+		<commonality>0.6</commonality>
+		<degreeDatas>
+			<li>
+				<label>thick skinned</label>
+				<description>[PAWN_nameDef] is strangely hypercoagulating and will bleed much more slowly than most.</description>
+			</li>
+		</degreeDatas>
+		<conflictingTraits>
+			<li>VTE_ThinSkinned</li>
+		</conflictingTraits>
+	</TraitDef>
+
+	<TraitDef>
+		<defName>VTE_ThinSkinned</defName>
+		<commonality>0.6</commonality>
+		<degreeDatas>
+			<li>
+				<label>thin skinned</label>
+				<description>[PAWN_nameDef] is strangely hemophilic and tends to bleed much more profusely than others.</description>
+			</li>
+		</degreeDatas>
+		<conflictingTraits>
+			<li>VTE_ThickSkinned</li>
+		</conflictingTraits>
+	</TraitDef>
+
+	<TraitDef>
+		<defName>VTE_Schizoid</defName>
+		<commonality>0.3</commonality>
+		<degreeDatas>
+			<li>
+				<label>schizoid</label>
+				<description>[PAWN_nameDef] has trouble expressing themselves until its all too much to bear, whereafter they will have an utter meltdown.</description>
+			</li>
+		</degreeDatas>
+		<conflictingTraits>
+			<li>Nerves</li>
+		</conflictingTraits>
+	</TraitDef>
+
+
+</Defs>

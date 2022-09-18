@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<HediffDef>
+		<defName>VTE_SlowWorkSpeed</defName>
+		<label>slow work</label>
+		<labelNoun>slow work</labelNoun>
+		<description>slow work</description>
+		<defaultLabelColor>(1,0,0.5)</defaultLabelColor>
+		<stages>
+			<li>
+				<becomeVisible>false</becomeVisible>
+				<statFactors>
+					<WorkSpeedGlobal>0.4</WorkSpeedGlobal>
+				</statFactors>
+			</li>
+		</stages>
+	</HediffDef>
+	
+	<HediffDef>
+		<defName>VTE_RestSlowFallFactor</defName>
+		<label>Insomnia</label>
+		<labelNoun>Insomnia</labelNoun>
+		<description>Pronounced mental or physical unrest causes insomnia, insomnia means one can often feel sluggish or exhausted and find themselves hardly ever capable of sleep.</description>
+		<defaultLabelColor>(1,0,0.5)</defaultLabelColor>
+		<stages>
+			<li>
+				<becomeVisible>false</becomeVisible>
+				<restFallFactor>0.2</restFallFactor>
+			</li>
+		</stages>
+	</HediffDef>
+	
+	<HediffDef>
+		<defName>VTE_SlowerBleedingRate</defName>
+		<label>hyper-coagulant</label>
+		<labelNoun>hyper-coagulation</labelNoun>
+		<description>Higher red blood-cell count means hyper-coagulation occurs, causing wounds to bleed much less profusely.</description>
+		<defaultLabelColor>(1,0,0.5)</defaultLabelColor>
+		<stages>
+			<li>
+				<becomeVisible>false</becomeVisible>
+				<totalBleedFactor>0.5</totalBleedFactor>
+			</li>
+		</stages>
+	</HediffDef>
+
+	<HediffDef>
+		<defName>VTE_HigherBleedingRate</defName>
+		<label>hemophilic</label>
+		<labelNoun>hemophilia</labelNoun>
+		<description>Hemophilia is the inability for blood to clot properly, causing wounds to bleed much more profusely.</description>
+		<defaultLabelColor>(1,0,0.5)</defaultLabelColor>
+		<stages>
+			<li>
+				<becomeVisible>false</becomeVisible>
+				<totalBleedFactor>1.5</totalBleedFactor>
+			</li>
+		</stages>
+	</HediffDef>
+</Defs>
