@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\VanillaTraitsExpanded\\1.3\\Source\\VanillaTraitsExpanded\\VanillaTraitsExpanded.csproj": {}
+    "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\VanillaTraitsExpanded\\1.4\\Source\\VanillaTraitsExpanded\\VanillaTraitsExpanded.csproj": {}
   },
   "projects": {
-    "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\VanillaTraitsExpanded\\1.3\\Source\\VanillaTraitsExpanded\\VanillaTraitsExpanded.csproj": {
+    "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\VanillaTraitsExpanded\\1.4\\Source\\VanillaTraitsExpanded\\VanillaTraitsExpanded.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\VanillaTraitsExpanded\\1.3\\Source\\VanillaTraitsExpanded\\VanillaTraitsExpanded.csproj",
+        "projectUniqueName": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\VanillaTraitsExpanded\\1.4\\Source\\VanillaTraitsExpanded\\VanillaTraitsExpanded.csproj",
         "projectName": "VanillaTraitsExpanded",
-        "projectPath": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\VanillaTraitsExpanded\\1.3\\Source\\VanillaTraitsExpanded\\VanillaTraitsExpanded.csproj",
+        "projectPath": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\VanillaTraitsExpanded\\1.4\\Source\\VanillaTraitsExpanded\\VanillaTraitsExpanded.csproj",
         "packagesPath": "C:\\Users\\Vova\\.nuget\\packages\\",
-        "outputPath": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\VanillaTraitsExpanded\\1.3\\Source\\VanillaTraitsExpanded\\obj\\",
+        "outputPath": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\VanillaTraitsExpanded\\1.4\\Source\\VanillaTraitsExpanded\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "configFilePaths": [
@@ -34,14 +34,10 @@
       "frameworks": {
         "net472": {
           "dependencies": {
-            "Krafs.Rimworld.Ref": {
-              "target": "Package",
-              "version": "[1.3.3209-beta, )"
-            },
             "Lib.Harmony": {
               "include": "Compile, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "target": "Package",
-              "version": "[2.1.1, )"
+              "version": "[2.2.2, )"
             }
           }
         }

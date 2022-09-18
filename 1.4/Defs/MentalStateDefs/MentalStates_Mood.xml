@@ -47,7 +47,7 @@
     <baseInspectLine>Mental state: freezing in panic</baseInspectLine>
 	<stateEffecter>VTE_PanicFreezing</stateEffecter>
     <blockNormalThoughts>true</blockNormalThoughts>
-    <unspawnedCanDo>true</unspawnedCanDo>
+    <inCaravanCanDo>true</inCaravanCanDo>
   </MentalStateDef>
 
   <MentalBreakDef>
