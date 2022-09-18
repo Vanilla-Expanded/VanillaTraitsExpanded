@@ -35,11 +35,11 @@ namespace VanillaTraitsExpanded
             {
                 if (__instance.HasTrait(VTEDefOf.VTE_Coward))
                 {
-                    TraitUtils.TraitsManager.cowards.Add(__instance);
+                    TraitsManager.Instance.cowards.Add(__instance);
                 }
                 if (__instance.HasTrait(VTEDefOf.VTE_BigBoned))
                 {
-                    TraitUtils.TraitsManager.bigBoned.Add(__instance);
+                    TraitsManager.Instance.bigBoned.Add(__instance);
                 }
 
                 if (__instance.HasTrait(VTEDefOf.VTE_Submissive))
@@ -52,16 +52,16 @@ namespace VanillaTraitsExpanded
                 }
                 if (__instance.HasTrait(VTEDefOf.VTE_Snob))
                 {
-                    TraitUtils.TraitsManager.snobs.Add(__instance);
+                    TraitsManager.Instance.snobs.Add(__instance);
                 }
 
                 if (__instance.HasTrait(VTEDefOf.VTE_MadSurgeon))
                 {
-                    if (TraitUtils.TraitsManager.madSurgeonsWithLastHarvestedTick == null)
-                        TraitUtils.TraitsManager.madSurgeonsWithLastHarvestedTick = new Dictionary<Pawn, int>();
-                    if (!TraitUtils.TraitsManager.madSurgeonsWithLastHarvestedTick.ContainsKey(__instance))
+                    if (TraitsManager.Instance.madSurgeonsWithLastHarvestedTick == null)
+                        TraitsManager.Instance.madSurgeonsWithLastHarvestedTick = new Dictionary<Pawn, int>();
+                    if (!TraitsManager.Instance.madSurgeonsWithLastHarvestedTick.ContainsKey(__instance))
                     {
-                        TraitUtils.TraitsManager.madSurgeonsWithLastHarvestedTick[__instance] = GenTicks.TicksAbs;
+                        TraitsManager.Instance.madSurgeonsWithLastHarvestedTick[__instance] = GenTicks.TicksAbs;
                     }
                 }
                 if (__instance.HasTrait(VTEDefOf.VTE_Stoner))
@@ -82,10 +82,10 @@ namespace VanillaTraitsExpanded
                 }
                 if (__instance.HasTrait(VTEDefOf.VTE_Wanderlust))
                 {
-                    if (TraitUtils.TraitsManager.wanderLustersWithLastMapExitedTick == null) TraitUtils.TraitsManager.wanderLustersWithLastMapExitedTick = new Dictionary<Pawn, int>();
-                    if (!TraitUtils.TraitsManager.wanderLustersWithLastMapExitedTick.ContainsKey(__instance))
+                    if (TraitsManager.Instance.wanderLustersWithLastMapExitedTick == null) TraitsManager.Instance.wanderLustersWithLastMapExitedTick = new Dictionary<Pawn, int>();
+                    if (!TraitsManager.Instance.wanderLustersWithLastMapExitedTick.ContainsKey(__instance))
                     {
-                        TraitUtils.TraitsManager.wanderLustersWithLastMapExitedTick[__instance] = GenTicks.TicksAbs;
+                        TraitsManager.Instance.wanderLustersWithLastMapExitedTick[__instance] = GenTicks.TicksAbs;
                     }
                 }
                 if (__instance.HasTrait(VTEDefOf.VTE_Insomniac))

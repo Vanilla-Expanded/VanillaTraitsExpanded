@@ -11,11 +11,11 @@ namespace VanillaTraitsExpanded
 		{
 			if (p.HasTrait(VTEDefOf.VTE_MadSurgeon))
             {
-				if (TraitUtils.TraitsManager.madSurgeonsWithLastHarvestedTick.ContainsKey(p))
+				if (TraitsManager.Instance.madSurgeonsWithLastHarvestedTick.ContainsKey(p))
                 {
 					if (p.needs?.mood?.thoughts?.memories?.GetFirstMemoryOfDef(VTEDefOf.VTE_HarvestedOrgans) == null)
                     {
-						var lastTick = TraitUtils.TraitsManager.madSurgeonsWithLastHarvestedTick[p];
+						var lastTick = TraitsManager.Instance.madSurgeonsWithLastHarvestedTick[p];
 						if (GenTicks.TicksAbs - lastTick > 10 * GenDate.TicksPerDay)
 						{
 							return ThoughtState.ActiveDefault;
@@ -24,7 +24,7 @@ namespace VanillaTraitsExpanded
 				}
 				else
                 {
-					TraitUtils.TraitsManager.madSurgeonsWithLastHarvestedTick[p] = GenTicks.TicksAbs;
+					TraitsManager.Instance.madSurgeonsWithLastHarvestedTick[p] = GenTicks.TicksAbs;
 				}
 			}
 			return ThoughtState.Inactive;

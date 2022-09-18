@@ -11,9 +11,9 @@ namespace VanillaTraitsExpanded
 		{
 			if (p.HasTrait(VTEDefOf.VTE_Wanderlust))
             {
-				if (TraitUtils.TraitsManager.wanderLustersWithLastMapExitedTick.ContainsKey(p))
+				if (TraitsManager.Instance.wanderLustersWithLastMapExitedTick.ContainsKey(p))
                 {
-					var lastTick = TraitUtils.TraitsManager.wanderLustersWithLastMapExitedTick[p];
+					var lastTick = TraitsManager.Instance.wanderLustersWithLastMapExitedTick[p];
 					if ((GenTicks.TicksAbs - lastTick) > 10 * GenDate.TicksPerDay)
                     {
 						return ThoughtState.ActiveDefault;
@@ -21,7 +21,7 @@ namespace VanillaTraitsExpanded
 				}
 				else
                 {
-					TraitUtils.TraitsManager.wanderLustersWithLastMapExitedTick[p] = GenTicks.TicksAbs;
+					TraitsManager.Instance.wanderLustersWithLastMapExitedTick[p] = GenTicks.TicksAbs;
 				}
 			}
 			return ThoughtState.Inactive;

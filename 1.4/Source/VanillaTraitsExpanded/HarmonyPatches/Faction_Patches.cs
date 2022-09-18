@@ -17,9 +17,9 @@ namespace VanillaTraitsExpanded
 		public static int SnobCount()
         {
 			int num = 0;
-			if (TraitUtils.TraitsManager?.snobs != null)
+			if (TraitsManager.Instance?.snobs != null)
             {
-				foreach (var pawn in TraitUtils.TraitsManager.snobs)
+				foreach (var pawn in TraitsManager.Instance.snobs)
 				{
 					if (pawn != null)
                     {

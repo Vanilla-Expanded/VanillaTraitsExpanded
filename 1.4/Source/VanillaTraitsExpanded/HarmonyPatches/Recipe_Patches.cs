@@ -19,7 +19,7 @@ namespace VanillaTraitsExpanded
             {
                 if (recipeDef == DefDatabase<RecipeDef>.GetNamed("ButcherCorpseFlesh") && ingredients != null && ingredients.Where(x => x is Corpse corpse).Any())
                 {
-                    TraitUtils.TraitsManager.madSurgeonsWithLastHarvestedTick[worker] = GenTicks.TicksAbs;
+                    TraitsManager.Instance.madSurgeonsWithLastHarvestedTick[worker] = GenTicks.TicksAbs;
                     worker.TryGiveThought(VTEDefOf.VTE_HarvestedOrgans);
                 }
             }
@@ -49,7 +49,7 @@ namespace VanillaTraitsExpanded
             {
                 if (TakeDamage_Patch.dirty)
                 {
-                    TraitUtils.TraitsManager.madSurgeonsWithLastHarvestedTick[billDoer] = GenTicks.TicksAbs;
+                    TraitsManager.Instance.madSurgeonsWithLastHarvestedTick[billDoer] = GenTicks.TicksAbs;
                     billDoer.TryGiveThought(VTEDefOf.VTE_HarvestedOrgans);
                 }
             }

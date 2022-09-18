@@ -11,14 +11,16 @@ namespace VanillaTraitsExpanded
 {
     public class TraitsManager : GameComponent
     {
-		public TraitsManager()
+        public static TraitsManager Instance;
+        public TraitsManager()
 		{
-		}
+            Instance = this;
+        }
 
 		public TraitsManager(Game game)
 		{
-
-		}
+            Instance = this;
+        }
 
         public Dictionary<Pawn, Job> forcedJobs = new Dictionary<Pawn, Job>();
         public HashSet<Pawn> perfectionistsWithJobsToStop = new HashSet<Pawn>();
@@ -34,6 +36,7 @@ namespace VanillaTraitsExpanded
         {
             try
             {
+                Instance = this;
                 if (forcedJobs == null) forcedJobs = new Dictionary<Pawn, Job>();
                 if (perfectionistsWithJobsToStop == null) perfectionistsWithJobsToStop = new HashSet<Pawn>();
                 if (cowards == null) cowards = new HashSet<Pawn>();

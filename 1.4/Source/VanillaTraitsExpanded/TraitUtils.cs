@@ -12,21 +12,8 @@ using Verse.AI;
 namespace VanillaTraitsExpanded
 {
     [StaticConstructorOnStartup]
-    internal static class TraitUtils
+    public static class TraitUtils
     {
-        public static TraitsManager TraitsManager
-        {
-            get
-            {
-                if (tManager == null)
-                {
-                    tManager = Current.Game.GetComponent<TraitsManager>();
-                    return tManager;
-                }
-                return tManager;
-            }
-        }
-
         public static bool HasTrait(this Pawn pawn, TraitDef traitDef)
         {
             if (traitDef != null && (pawn?.story?.traits?.HasTrait(traitDef) ?? false))
@@ -108,8 +95,6 @@ namespace VanillaTraitsExpanded
             TraverseMode mode = canDig ? TraverseMode.PassAllDestroyableThings : TraverseMode.ByPawn;
             return RCellFinder.TryFindBestExitSpot(pawn, out spot, mode);
         }
-
-        private static TraitsManager tManager;
     }
 }
 

@@ -39,7 +39,7 @@ namespace VanillaTraitsExpanded
             {
 				if (___pawn.HasTrait(VTEDefOf.VTE_AbsentMinded))
 				{
-					TraitUtils.TraitsManager.forcedJobs[___pawn] = job;
+					TraitsManager.Instance.forcedJobs[___pawn] = job;
 				}
 				if (___pawn.HasTrait(VTEDefOf.VTE_Rebel))
 				{

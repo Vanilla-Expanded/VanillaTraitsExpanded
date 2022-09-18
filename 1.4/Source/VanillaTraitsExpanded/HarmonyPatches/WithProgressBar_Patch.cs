@@ -32,12 +32,12 @@ namespace VanillaTraitsExpanded
                     {
 						//Log.Message(__result.actor + " has Perfectionist trait and randomly decises interrupt current construction job");
 						Messages.Message("VTE.DecisesInterruptCurrentCostructionJob".Translate(__result.actor.Named("PAWN"), __result.actor.CurJob.GetTarget(TargetIndex.A).Thing.Label), __result.actor, MessageTypeDefOf.NeutralEvent, historical: false);
-						TraitUtils.TraitsManager.perfectionistsWithJobsToStop.Add(__result.actor);
+						TraitsManager.Instance.perfectionistsWithJobsToStop.Add(__result.actor);
 					}
 					else if ( __result.actor.CurJob?.bill?.recipe?.workAmount >= 2200 && Find.TickManager.TicksGame % GenDate.TicksPerHour * 3 == 0 && Rand.Chance(0.25f))
 					{
 						//Log.Message(p + " has Perfectionist trait and randomly decises interrupt current bill job");
-						TraitUtils.TraitsManager.perfectionistsWithJobsToStop.Add(__result.actor);
+						TraitsManager.Instance.perfectionistsWithJobsToStop.Add(__result.actor);
 					}
 				}
 			});
