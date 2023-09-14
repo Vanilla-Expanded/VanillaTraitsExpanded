@@ -8,6 +8,9 @@
 			<li>
 				<label>absent-minded</label>
 				<description>[PAWN_nameDef] tends to occasionally allow their mind to drift, even in the middle of working.</description>
+				<statFactors>
+					<CertaintyLossFactor MayRequire="Ludeon.RimWorld.Ideology">0.5</CertaintyLossFactor>
+				</statFactors>
 			</li>
 		</degreeDatas>
 		<conflictingTraits>
@@ -74,6 +77,9 @@
 					<MentalBreakThreshold>-0.2</MentalBreakThreshold>
 					<PainShockThreshold>0.2</PainShockThreshold>
 				</statOffsets>
+				<statFactors>
+					<CertaintyLossFactor MayRequire="Ludeon.RimWorld.Ideology">0.25</CertaintyLossFactor>
+				</statFactors>
 			</li>
 		</degreeDatas>
 		<conflictingTraits>
@@ -245,6 +251,9 @@
 			<li>
 				<label>rebel</label>
 				<description>[PAWN_nameDef] only plays by their own rules, and will roll their eyes and take it easy while doing any task they've been forced to do.</description>
+				<statFactors>
+					<CertaintyLossFactor MayRequire="Ludeon.RimWorld.Ideology">0.25</CertaintyLossFactor>
+				</statFactors>
 			</li>
 		</degreeDatas>
 		<conflictingTraits>
@@ -259,6 +268,9 @@
 			<li>
 				<label>submissive</label>
 				<description>[PAWN_nameDef] needs clear instructions on how, and when to do certain things and will only work at a normal speed when being forced to do something.</description>
+				<statFactors>
+					<CertaintyLossFactor MayRequire="Ludeon.RimWorld.Ideology">2</CertaintyLossFactor>
+				</statFactors>
 			</li>
 		</degreeDatas>
 		<conflictingTraits>
@@ -273,6 +285,9 @@
 			<li>
 				<label>vengeful</label>
 				<description>[PAWN_nameDef] is fueled by spite. They can't stand walking on the same soil as their rivals and will be elated by news of their life ending.</description>
+				<statFactors>
+					<CertaintyLossFactor MayRequire="Ludeon.RimWorld.Ideology">0.25</CertaintyLossFactor>
+				</statFactors>
 			</li>
 		</degreeDatas>
 		<conflictingTraits>
@@ -328,6 +343,9 @@
 					<GlobalLearningFactor>-0.50</GlobalLearningFactor>
 					<SocialImpact>-0.50</SocialImpact>
 				</statOffsets>
+				<statFactors>
+					<CertaintyLossFactor MayRequire="Ludeon.RimWorld.Ideology">3</CertaintyLossFactor>
+				</statFactors>
 				<marketValueFactorOffset>-0.5</marketValueFactorOffset>
 			</li>
 		</degreeDatas>
@@ -389,6 +407,9 @@
 			<li>
 				<label>anxious</label>
 				<description>[PAWN_nameDef] feels naturally anxious, but especially from social situations. They will not attend any gatherings and may occasionally need alone time in their room to breathe.</description>
+				<statFactors>
+					<CertaintyLossFactor MayRequire="Ludeon.RimWorld.Ideology">2</CertaintyLossFactor>
+				</statFactors>
 				<theOnlyAllowedMentalBreaks>
 					<li>VTE_PanicFreezing</li>
 				</theOnlyAllowedMentalBreaks>
@@ -412,6 +433,9 @@
 			<li>
 				<label>insatiable</label>
 				<description>No amount of lovin' is enough lovin' for [PAWN_nameDef]. [PAWN_pronoun] will tend to jump from partner to partner and tumble between the sheets with them frequently.</description>
+				<statFactors>
+					<CertaintyLossFactor MayRequire="Ludeon.RimWorld.Ideology">2</CertaintyLossFactor>
+				</statFactors>
 			</li>
 		</degreeDatas>
 		<conflictingTraits>
@@ -428,6 +452,9 @@
 			<li>
 				<label>prude</label>
 				<description>[PAWN_nameDef] refuses to give their body to anybody but their spouse and would never fathom initiating a divorce. They also hate being nude much more than other pawns.</description>
+				<statFactors>
+					<CertaintyLossFactor MayRequire="Ludeon.RimWorld.Ideology">0.5</CertaintyLossFactor>
+				</statFactors>
 			</li>
 		</degreeDatas>
 		<conflictingTraits>
@@ -641,6 +668,9 @@
 				</statOffsets>
 			</li>
 		</degreeDatas>
+		<conflictingTraits>
+			<li>Undergrounder</li>
+		</conflictingTraits>
 	</TraitDef>
 
 	<TraitDef>
@@ -653,6 +683,7 @@
 				<statFactors>
 					<WorkSpeedGlobal>0.5</WorkSpeedGlobal>
 					<MoveSpeed>0.7</MoveSpeed>
+					<CertaintyLossFactor MayRequire="Ludeon.RimWorld.Ideology">0.5</CertaintyLossFactor>
 				</statFactors>
 			</li>
 		</degreeDatas>
@@ -679,6 +710,9 @@
 			<li>
 				<label>desensitized</label>
 				<description>[PAWN_nameDef] is hardened through what can only be presumed as old emotional trauma. They feel absolutely nothing from lost animals, colonists, family, prisoners or dead bodies.</description>
+				<statFactors>
+					<CertaintyLossFactor MayRequire="Ludeon.RimWorld.Ideology">0.5</CertaintyLossFactor>
+				</statFactors>
 			</li>
 		</degreeDatas>
 		<conflictingTraits>
