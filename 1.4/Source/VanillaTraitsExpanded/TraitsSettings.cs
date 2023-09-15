@@ -1,14 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Reflection;
-using System.Runtime.CompilerServices;
-using HarmonyLib;
-using RimWorld;
 using UnityEngine;
 using Verse;
-using Verse.AI;
 
 namespace VanillaTraitsExpanded
 {

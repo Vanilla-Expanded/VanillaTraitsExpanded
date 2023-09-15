@@ -1,12 +1,5 @@
 ﻿using HarmonyLib;
-using RimWorld;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Verse;
-using Verse.AI;
 
 namespace VanillaTraitsExpanded
 {
@@ -15,6 +8,7 @@ namespace VanillaTraitsExpanded
 	{
 		static HarmonyInit()
 		{
+			// Harmony.DEBUG = true;
 			new Harmony("OskarPotocki.VanillaTraitsExpanded").PatchAll();
 		}
 	}
