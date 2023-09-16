@@ -1,5 +1,0 @@
-c:\GAMES\Rimworld\Mods\VanillaTraitsExpanded\1.2\Assemblies\VanillaTraitsExpanded.dll
-c:\GAMES\Rimworld\Mods\VanillaTraitsExpanded\1.2\Source\VanillaTraitsExpanded\obj\Debug\VanillaTraitsExpanded.csprojAssemblyReference.cache
-c:\GAMES\Rimworld\Mods\VanillaTraitsExpanded\1.2\Source\VanillaTraitsExpanded\obj\Debug\VanillaTraitsExpanded.csproj.CoreCompileInputs.cache
-c:\GAMES\Rimworld\Mods\VanillaTraitsExpanded\1.2\Source\VanillaTraitsExpanded\obj\Debug\VanillaTraitsExpanded.csproj.CopyComplete
-c:\GAMES\Rimworld\Mods\VanillaTraitsExpanded\1.2\Source\VanillaTraitsExpanded\obj\Debug\VanillaTraitsExpanded.dll

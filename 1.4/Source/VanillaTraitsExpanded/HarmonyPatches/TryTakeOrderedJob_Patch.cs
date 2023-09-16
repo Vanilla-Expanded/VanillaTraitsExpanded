@@ -1,17 +1,14 @@
 ﻿using HarmonyLib;
 using RimWorld;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Reflection;
 using Verse;
 using Verse.AI;
 
 namespace VanillaTraitsExpanded
 {
 	[HarmonyPatch(typeof(Pawn_JobTracker))]
-	[HarmonyPatch("TryTakeOrderedJob")]
+	[HarmonyPatch(nameof(Pawn_JobTracker.TryTakeOrderedJob))]
 	public static class TryTakeOrderedJob_Patch
 	{
 		public static HashSet<JobDef> jobsToExclude = new HashSet<JobDef>
@@ -59,7 +56,7 @@ namespace VanillaTraitsExpanded
 	}
 
 	[HarmonyPatch(typeof(Pawn_JobTracker))]
-	[HarmonyPatch("StartJob")]
+	[HarmonyPatch(nameof(Pawn_JobTracker.StartJob))]
 	public static class StartJob_Patch
 	{
 		private static bool Prefix(Pawn ___pawn, Job newJob, JobCondition lastJobEndCondition)
@@ -71,7 +68,9 @@ namespace VanillaTraitsExpanded
 			return true;
 		}
 	}
-    [HarmonyPatch(typeof(Pawn_JobTracker), "EndCurrentJob")]
+	
+	[HarmonyPatch(typeof(Pawn_JobTracker))]
+	[HarmonyPatch(nameof(Pawn_JobTracker.EndCurrentJob))]
     public static class EndCurrentJobPatch
     {
         private static void Prefix(Pawn ___pawn)
@@ -96,17 +95,35 @@ namespace VanillaTraitsExpanded
 		}
     }
 
-    [HarmonyPatch(typeof(FoodUtility))]
-	[HarmonyPatch("AddFoodPoisoningHediff")]
+	[HarmonyPatch(typeof(FoodUtility))]
+	[HarmonyPatch(nameof(FoodUtility.AddFoodPoisoningHediff))]
 	public static class AddFoodPoisoningHediff_Patch
 	{
-		private static bool Prefix(Pawn pawn, Thing ingestible, FoodPoisonCause cause)
+		private static bool Prefix(Pawn pawn)
 		{
-			if (pawn.HasTrait(VTEDefOf.VTE_IronStomach))
-			{
-				return false;
-			}
-			return true;
+			return !pawn.HasTrait(VTEDefOf.VTE_IronStomach);
+		}
+	}
+
+	[HarmonyPatch]
+	public static class GiveNastyGutBug_Patch
+	{
+		private static bool Prepare()
+		{
+			var t = AccessTools.TypeByName("DubsBadHygiene.SanitationUtil");
+			return t != null;
+		}
+		
+		private static MethodBase TargetMethod()
+		{
+			return AccessTools.Method(
+				AccessTools.TypeByName("DubsBadHygiene.SanitationUtil"), "GiveNastyGutBug"
+				);
+		}
+		
+		private static bool Prefix(Pawn pawn)
+		{
+			return !pawn.HasTrait(VTEDefOf.VTE_IronStomach);
 		}
 	}
 }

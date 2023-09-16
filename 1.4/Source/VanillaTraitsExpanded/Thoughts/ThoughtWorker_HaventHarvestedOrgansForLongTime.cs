@@ -1,7 +1,5 @@
 ﻿using RimWorld;
-using VanillaTraitsExpanded;
 using Verse;
-using Verse.AI;
 
 namespace VanillaTraitsExpanded
 {
