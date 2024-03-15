@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThinkTreeDef[defName="MentalStateCritical"]/thinkRoot/subNodes</xpath>
+		<value>
+			<li Class="ThinkNode_ConditionalMentalState">
+				<state>VTE_PanicFreezing</state>
+				<subNodes>
+					<li Class="VanillaTraitsExpanded.JobGiver_PanicFreezing" />
+				</subNodes>
+			</li>
+			
+			<li Class="ThinkNode_ConditionalMentalState">
+				<state>VTE_Kleptomaniac</state>
+				<subNodes>
+					<li Class="VanillaTraitsExpanded.JobGiver_StealingItems" />
+				</subNodes>
+			</li>
+		</value>
+	</Operation>
+</Patch>
+

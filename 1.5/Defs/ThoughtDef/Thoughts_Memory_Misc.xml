@@ -1,0 +1,301 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThoughtDef>
+		<defName>VTE_CreatedLowQualityItem</defName>
+		<durationDays>2</durationDays>
+		<stackLimit>1</stackLimit>
+		<stages>
+			<li>
+				<label>Created low quality item</label>
+				<description>I crafted junk. I feel like I can't do anything right.</description>
+				<baseMoodEffect>-10</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+
+	<ThoughtDef>
+		<defName>VTE_CouldNotFinishItem</defName>
+		<durationDays>2</durationDays>
+		<stackLimit>1</stackLimit>
+		<stages>
+			<li>
+				<label>Сould not finish item</label>
+				<description>I couldn't finish my project, it just wasn't coming along correctly.</description>
+				<baseMoodEffect>-5</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>VTE_PassionateCleaningWork</defName>
+		<workerClass>VanillaTraitsExpanded.ThoughtWorker_PassionateCleaningWork</workerClass>
+		<stages>
+			<li>
+				<label>Passionately cleaning</label>
+				<description>I actually really enjoy organizing and cleaning up the place.</description>
+				<baseMoodEffect>8</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>VTE_MyRivalsAreAlive</defName>
+		<workerClass>VanillaTraitsExpanded.ThoughtWorker_MyRivalsAreAlive</workerClass>
+		<stages>
+			<li>
+				<label>My rivals are alive</label>
+				<description>I hate them. Why should they deserve to live?</description>
+				<baseMoodEffect>-20</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>VTE_MechanoidIsKilled</defName>
+		<durationDays>2</durationDays>
+		<stackLimit>1</stackLimit>
+		<stages>
+			<li>
+				<label>Mechanoid died</label>
+				<description>Those evil machines don't deserve to function.</description>
+				<baseMoodEffect>10</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>VTE_ObservedManyBlood</defName>
+		<icon>Things/Mote/ThoughtSymbol/Skull</icon>
+		<showBubble>true</showBubble>
+		<thoughtClass>Thought_MemoryObservation</thoughtClass>
+		<durationDays>0.5</durationDays>
+		<stackedEffectMultiplier>0.5</stackedEffectMultiplier>
+		<stackLimit>5</stackLimit>
+		<nullifyingTraits>
+			<li>Bloodlust</li>
+		</nullifyingTraits>
+		<stages>
+			<li>
+				<label>observed much blood</label>
+				<description>I saw so much blood and bits. Just remembering it makes me gag.</description>
+				<baseMoodEffect>-6</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>VTE_WatchedTelevisor</defName>
+		<durationDays>0.5</durationDays>
+		<stackedEffectMultiplier>0.5</stackedEffectMultiplier>
+		<stackLimit>5</stackLimit>
+		<stages>
+			<li>
+				<label>Watched television recently</label>
+				<description>I got to laze around and catch up on my shows.</description>
+				<baseMoodEffect>6</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>VTE_NoDedicatedLaboratory</defName>
+		<workerClass>VanillaTraitsExpanded.ThoughtWorker_NoDedicatedLab</workerClass>
+		<stages>
+			<li>
+				<label>No dedicated laboratory</label>
+				<description>I have nowhere to study in peace, how annoying.</description>
+				<baseMoodEffect>-5</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>VTE_AnimalsInColony</defName>
+		<workerClass>VanillaTraitsExpanded.ThoughtWorker_AnimalsInColony</workerClass>
+		<stages>
+			<li>
+				<label>No animals in the colony</label>
+				<description>We don't have a single animal.</description>
+				<baseMoodEffect>0</baseMoodEffect>
+			</li>
+
+			<li>
+				<label>Hardly any animals in the colony</label>
+				<description>We have hardly any animals in the colony, this sucks.</description>
+				<baseMoodEffect>1</baseMoodEffect>
+			</li>
+			<li>
+				<label>Hardly any animals in the colony</label>
+				<description>We have hardly any animals in the colony, it's something I guess.</description>
+				<baseMoodEffect>2</baseMoodEffect>
+			</li>
+			<li>
+				<label>Hardly any animals in the colony</label>
+				<description>We have hardly any animals in the colony, it's something I guess.</description>
+				<baseMoodEffect>3</baseMoodEffect>
+			</li>
+			<li>
+				<label>A few animals in the colony</label>
+				<description>We have a few animals in the colony, that's nice.</description>
+				<baseMoodEffect>4</baseMoodEffect>
+			</li>
+			<li>
+				<label>A few animals in the colony</label>
+				<description>We have a few animals in the colony, that's nice.</description>
+				<baseMoodEffect>5</baseMoodEffect>
+			</li>
+			<li>
+				<label>Some animals in the colony</label>
+				<description>We've got a decent amount of animals now, we're getting there.</description>
+				<baseMoodEffect>6</baseMoodEffect>
+			</li>
+			<li>
+				<label>Some animals in the colony</label>
+				<description>We've got a decent amount of animals now, we're getting there.</description>
+				<baseMoodEffect>7</baseMoodEffect>
+			</li>
+			<li>
+				<label>Some animals in the colony</label>
+				<description>We've got a decent amount of animals now, we're getting there.</description>
+				<baseMoodEffect>8</baseMoodEffect>
+			</li>
+			<li>
+				<label>Some animals in the colony</label>
+				<description>We've got a decent amount of animals now, we're getting there.</description>
+				<baseMoodEffect>9</baseMoodEffect>
+			</li>
+			<li>
+				<label>Lots of animals in the colony</label>
+				<description>We've got a lot of animals around the colony now, they're wonderful.</description>
+				<baseMoodEffect>10</baseMoodEffect>
+			</li>
+			<li>
+				<label>Lots of animals in the colony</label>
+				<description>We've got a lot of animals around the colony now, they're wonderful.</description>
+				<baseMoodEffect>11</baseMoodEffect>
+			</li>
+			<li>
+				<label>Lots of animals in the colony</label>
+				<description>We've got a lot of animals around the colony now, they're wonderful.</description>
+				<baseMoodEffect>12</baseMoodEffect>
+			</li>
+			<li>
+				<label>A ton of animals in the colony</label>
+				<description>We've got so many animals now! It makes me so happy to see them all!</description>
+				<baseMoodEffect>13</baseMoodEffect>
+			</li>
+			<li>
+				<label>A ton of animals in the colony</label>
+				<description>We've got so many animals now! It makes me so happy to see them all!</description>
+				<baseMoodEffect>14</baseMoodEffect>
+			</li>
+			<li>
+				<label>A ton of animals in the colony</label>
+				<description>We've got so many animals now! It makes me so happy to see them all!</description>
+				<baseMoodEffect>15</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>VTE_ChildOfSea</defName>
+		<workerClass>VanillaTraitsExpanded.ThoughtWorker_ChildOfSea</workerClass>
+		<stages>
+			<li>
+				<label>Ocean lover</label>
+				<description>I just love being around the ocean and rivers, water is beautiful.</description>
+				<baseMoodEffect>5</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>VTE_ChildOfMountain</defName>
+		<workerClass>VanillaTraitsExpanded.ThoughtWorker_ChildOfMountain</workerClass>
+		<stages>
+			<li>
+				<label>Mountain lover</label>
+				<description>I just love being around the mountains, they take my breath away.</description>
+				<baseMoodEffect>5</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>VTE_HaventHarvestedOrgansForLongTime</defName>
+		<workerClass>VanillaTraitsExpanded.ThoughtWorker_HaventHarvestedOrgansForLongTime</workerClass>
+		<stages>
+			<li>
+				<label>Hasn't harvested organs</label>
+				<description>I'm growing impatient and bored, I need more subjects.</description>
+				<baseMoodEffect>-6</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>VTE_HarvestedOrgans</defName>
+		<durationDays>3</durationDays>
+		<stackLimit>4</stackLimit>
+		<stages>
+			<li>
+				<label>Harvested organs</label>
+				<description>The operation went just as expected, my collection has grown.</description>
+				<baseMoodEffect>3</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>VTE_HaventExitedColonyForLongTime</defName>
+		<workerClass>VanillaTraitsExpanded.ThoughtWorker_HaventExitedColonyForLongTime</workerClass>
+		<stages>
+			<li>
+				<label>Has not left colony</label>
+				<description>I haven't left home in a while, I'd really like to travel for a change.</description>
+				<baseMoodEffect>-6</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+	
+	
+  <ThoughtDef>
+    <defName>VTE_SoakingWetChildOfTheSea</defName>
+    <durationDays>0.1</durationDays>
+    <stackLimit>1</stackLimit>
+    <stages>
+      <li>
+        <label>soaking wet</label>
+        <description>I'm soaking wet. Love it.</description>
+        <baseMoodEffect>3</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+  
+    <ThoughtDef>
+    <defName>VTE_EnvironmentDark</defName>
+    <workerClass>VanillaTraitsExpanded.ThoughtWorker_DarkChildOfTheMountain</workerClass>
+    <stages>
+      <li>
+        <label>darkness</label>
+        <description>I've been in the dark for a while. I like it.</description>
+        <baseMoodEffect>5</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+  
+	<ThoughtDef>
+    <defName>VTE_Dunce</defName>
+    <workerClass>VanillaTraitsExpanded.ThoughtWorker_Dunce</workerClass>
+    <stages>
+      <li>
+        <label>Dunce</label>
+        <description>I don't really understand why everybody's so upset all the time.</description>
+        <baseMoodEffect>20</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+  
+</Defs>

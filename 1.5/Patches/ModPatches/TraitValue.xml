@@ -1,0 +1,542 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	<Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>[SYR] Trait Value</li> <!-- Checks for this mod, if not active there is no reason to add values -->
+    </mods>
+    <match Class="PatchOperationSequence">
+	    <operations>
+        <li Class="PatchOperationAddModExtension">
+		    <xpath>*/TraitDef[defName = "VTE_AbsentMinded"]</xpath>
+          <value>
+            <li Class="SyrTraitValue.TraitValueExtension">
+              <traitValues>
+                <li>-20</li>
+              </traitValues>
+            </li>
+          </value>
+        </li>
+        <li Class="PatchOperationAddModExtension">
+		<xpath>*/TraitDef[defName = "VTE_Eccentric"]</xpath>
+          <value>
+            <li Class="SyrTraitValue.TraitValueExtension">
+              <traitValues>
+                <li>10</li>
+              </traitValues>
+            </li>
+          </value>
+        </li>
+        <li Class="PatchOperationAddModExtension">
+		<xpath>*/TraitDef[defName = "VTE_Perfectionist"]</xpath>
+          <value>
+            <li Class="SyrTraitValue.TraitValueExtension">
+              <traitValues>
+                <li>10</li>
+              </traitValues>
+            </li>
+          </value>
+        </li>
+        <li Class="PatchOperationAddModExtension">
+		<xpath>*/TraitDef[defName = "VTE_Coward"]</xpath>
+          <value>
+            <li Class="SyrTraitValue.TraitValueExtension">
+              <traitValues>
+                <li>-10</li>
+              </traitValues>
+            </li>
+          </value>
+        </li>
+        <li Class="PatchOperationAddModExtension">
+		<xpath>*/TraitDef[defName = "VTE_Brave"]</xpath>
+          <value>
+            <li Class="SyrTraitValue.TraitValueExtension">
+              <traitValues>
+                <li>30</li>
+              </traitValues>
+            </li>
+          </value>
+        </li>
+        <li Class="PatchOperationAddModExtension">
+		<xpath>*/TraitDef[defName = "VTE_Clumsy"]</xpath>
+          <value>
+            <li Class="SyrTraitValue.TraitValueExtension">
+              <traitValues>
+                <li>-10</li>
+              </traitValues>
+            </li>
+          </value>
+        </li>
+        <li Class="PatchOperationAddModExtension">
+		<xpath>*/TraitDef[defName = "VTE_HeatInclined"]</xpath>
+          <value>
+            <li Class="SyrTraitValue.TraitValueExtension">
+              <traitValues>
+                <li>10</li>
+              </traitValues>
+            </li>
+          </value>
+        </li>
+        <li Class="PatchOperationAddModExtension">
+		<xpath>*/TraitDef[defName = "VTE_ColdInclined"]</xpath>
+          <value>
+            <li Class="SyrTraitValue.TraitValueExtension">
+              <traitValues>
+                <li>10</li>
+              </traitValues>
+            </li>
+          </value>
+        </li>
+        <li Class="PatchOperationAddModExtension">
+		<xpath>*/TraitDef[defName = "VTE_HeavySleeper"]</xpath>
+          <value>
+            <li Class="SyrTraitValue.TraitValueExtension">
+              <traitValues>
+                <li>-30</li>
+              </traitValues>
+            </li>
+          </value>
+        </li>
+        <li Class="PatchOperationAddModExtension">
+		<xpath>*/TraitDef[defName = "VTE_Neat"]</xpath>
+          <value>
+            <li Class="SyrTraitValue.TraitValueExtension">
+              <traitValues>
+                <li>10</li>
+              </traitValues>
+            </li>
+          </value>
+        </li>
+        <li Class="PatchOperationAddModExtension">
+		<xpath>*/TraitDef[defName = "VTE_Slob"]</xpath>
+          <value>
+            <li Class="SyrTraitValue.TraitValueExtension">
+              <traitValues>
+                <li>-10</li>
+              </traitValues>
+            </li>
+          </value>
+        </li>
+        <li Class="PatchOperationAddModExtension">
+		<xpath>*/TraitDef[defName = "VTE_Workaholic"]</xpath>
+          <value>
+            <li Class="SyrTraitValue.TraitValueExtension">
+              <traitValues>
+                <li>20</li>
+              </traitValues>
+            </li>
+          </value>
+        </li>
+        <li Class="PatchOperationAddModExtension">
+		<xpath>*/TraitDef[defName = "VTE_IronStomach"]</xpath>
+          <value>
+            <li Class="SyrTraitValue.TraitValueExtension">
+              <traitValues>
+                <li>10</li>
+              </traitValues>
+            </li>
+          </value>
+        </li>
+        <li Class="PatchOperationAddModExtension">
+		<xpath>*/TraitDef[defName = "VTE_AnimalLover"]</xpath>
+          <value>
+            <li Class="SyrTraitValue.TraitValueExtension">
+              <traitValues>
+                <li>0</li>
+              </traitValues>
+            </li>
+          </value>
+        </li>
+        <li Class="PatchOperationAddModExtension">
+		<xpath>*/TraitDef[defName = "VTE_AnimalHater"]</xpath>
+          <value>
+            <li Class="SyrTraitValue.TraitValueExtension">
+              <traitValues>
+                <li>10</li>
+              </traitValues>
+            </li>
+          </value>
+        </li>
+        <li Class="PatchOperationAddModExtension">
+		<xpath>*/TraitDef[defName = "VTE_BigBoned"]</xpath>
+          <value>
+            <li Class="SyrTraitValue.TraitValueExtension">
+              <traitValues>
+                <li>0</li>
+              </traitValues>
+            </li>
+          </value>
+        </li>
+        <li Class="PatchOperationAddModExtension">
+		<xpath>*/TraitDef[defName = "VTE_Rebel"]</xpath>
+          <value>
+            <li Class="SyrTraitValue.TraitValueExtension">
+              <traitValues>
+                <li>-20</li>
+              </traitValues>
+            </li>
+          </value>
+        </li>
+        <li Class="PatchOperationAddModExtension">
+		<xpath>*/TraitDef[defName = "VTE_Submissive"]</xpath>
+          <value>
+            <li Class="SyrTraitValue.TraitValueExtension">
+              <traitValues>
+                <li>-30</li>
+              </traitValues>
+            </li>
+          </value>
+        </li>
+        <li Class="PatchOperationAddModExtension">
+		<xpath>*/TraitDef[defName = "VTE_Vengeful"]</xpath>
+          <value>
+            <li Class="SyrTraitValue.TraitValueExtension">
+              <traitValues>
+                <li>-20</li>
+              </traitValues>
+            </li>
+          </value>
+        </li>
+        <li Class="PatchOperationAddModExtension">
+		<xpath>*/TraitDef[defName = "VTE_Technophobe"]</xpath>
+          <value>
+            <li Class="SyrTraitValue.TraitValueExtension">
+              <traitValues>
+                <li>-10</li>
+              </traitValues>
+            </li>
+          </value>
+        </li>
+        <li Class="PatchOperationAddModExtension">
+		<xpath>*/TraitDef[defName = "VTE_FunLoving"]</xpath>
+          <value>
+            <li Class="SyrTraitValue.TraitValueExtension">
+              <traitValues>
+                <li>20</li>
+              </traitValues>
+            </li>
+          </value>
+        </li>
+        <li Class="PatchOperationAddModExtension">
+		<xpath>*/TraitDef[defName = "VTE_Dunce"]</xpath>
+          <value>
+            <li Class="SyrTraitValue.TraitValueExtension">
+              <traitValues>
+                <li>0</li>
+              </traitValues>
+            </li>
+          </value>
+        </li>
+        <li Class="PatchOperationAddModExtension">
+		<xpath>*/TraitDef[defName = "VTE_MartialArtist"]</xpath>
+          <value>
+            <li Class="SyrTraitValue.TraitValueExtension">
+              <traitValues>
+                <li>10</li>
+              </traitValues>
+            </li>
+          </value>
+        </li>
+        <li Class="PatchOperationAddModExtension">
+		<xpath>*/TraitDef[defName = "VTE_Snob"]</xpath>
+          <value>
+            <li Class="SyrTraitValue.TraitValueExtension">
+              <traitValues>
+                <li>10</li>
+              </traitValues>
+            </li>
+          </value>
+        </li>
+        <li Class="PatchOperationAddModExtension">
+		<xpath>*/TraitDef[defName = "VTE_Squeamish"]</xpath>
+          <value>
+            <li Class="SyrTraitValue.TraitValueExtension">
+              <traitValues>
+                <li>-10</li>
+              </traitValues>
+            </li>
+          </value>
+        </li>
+        <li Class="PatchOperationAddModExtension">
+		<xpath>*/TraitDef[defName = "VTE_Anxious"]</xpath>
+          <value>
+            <li Class="SyrTraitValue.TraitValueExtension">
+              <traitValues>
+                <li>-20</li>
+              </traitValues>
+            </li>
+          </value>
+        </li>
+        <li Class="PatchOperationAddModExtension">
+		<xpath>*/TraitDef[defName = "VTE_Insatiable"]</xpath>
+          <value>
+            <li Class="SyrTraitValue.TraitValueExtension">
+              <traitValues>
+                <li>20</li>
+              </traitValues>
+            </li>
+          </value>
+        </li>
+        <li Class="PatchOperationAddModExtension">
+		<xpath>*/TraitDef[defName = "VTE_Prude"]</xpath>
+          <value>
+            <li Class="SyrTraitValue.TraitValueExtension">
+              <traitValues>
+                <li>0</li>
+              </traitValues>
+            </li>
+          </value>
+        </li>
+        <li Class="PatchOperationAddModExtension">
+		<xpath>*/TraitDef[defName = "VTE_CouchPotato"]</xpath>
+          <value>
+            <li Class="SyrTraitValue.TraitValueExtension">
+              <traitValues>
+                <li>10</li>
+              </traitValues>
+            </li>
+          </value>
+        </li>
+        <li Class="PatchOperationAddModExtension">
+		<xpath>*/TraitDef[defName = "VTE_CatPerson"]</xpath>
+          <value>
+            <li Class="SyrTraitValue.TraitValueExtension">
+              <traitValues>
+                <li>10</li>
+              </traitValues>
+            </li>
+          </value>
+        </li>
+        <li Class="PatchOperationAddModExtension">
+		<xpath>*/TraitDef[defName = "VTE_DogPerson"]</xpath>
+          <value>
+            <li Class="SyrTraitValue.TraitValueExtension">
+              <traitValues>
+                <li>10</li>
+              </traitValues>
+            </li>
+          </value>
+        </li>
+		        <li Class="PatchOperationAddModExtension">
+		<xpath>*/TraitDef[defName = "VTE_Prodigy"]</xpath>
+          <value>
+            <li Class="SyrTraitValue.TraitValueExtension">
+              <traitValues>
+                <li>30</li>
+              </traitValues>
+            </li>
+          </value>
+        </li>
+        <li Class="PatchOperationAddModExtension">
+		<xpath>*/TraitDef[defName = "VTE_Menagerist"]</xpath>
+          <value>
+            <li Class="SyrTraitValue.TraitValueExtension">
+              <traitValues>
+                <li>20</li>
+              </traitValues>
+            </li>
+          </value>
+        </li>
+        <li Class="PatchOperationAddModExtension">
+		<xpath>*/TraitDef[defName = "VTE_ChildOfSea"]</xpath>
+          <value>
+            <li Class="SyrTraitValue.TraitValueExtension">
+              <traitValues>
+                <li>10</li>
+              </traitValues>
+            </li>
+          </value>
+        </li>
+        <li Class="PatchOperationAddModExtension">
+		<xpath>*/TraitDef[defName = "VTE_ChildOfMountain"]</xpath>
+          <value>
+            <li Class="SyrTraitValue.TraitValueExtension">
+              <traitValues>
+                <li>10</li>
+              </traitValues>
+            </li>
+          </value>
+        </li>
+        <li Class="PatchOperationAddModExtension">
+		<xpath>*/TraitDef[defName = "VTE_MadSurgeon"]</xpath>
+          <value>
+            <li Class="SyrTraitValue.TraitValueExtension">
+              <traitValues>
+                <li>-20</li>
+              </traitValues>
+            </li>
+          </value>
+        </li>
+        <li Class="PatchOperationAddModExtension">
+		<xpath>*/TraitDef[defName = "VTE_DrunkenMaster"]</xpath>
+          <value>
+            <li Class="SyrTraitValue.TraitValueExtension">
+              <traitValues>
+                <li>10</li>
+              </traitValues>
+            </li>
+          </value>
+        </li>
+        <li Class="PatchOperationAddModExtension">
+		<xpath>*/TraitDef[defName = "VTE_Kleptomaniac"]</xpath>
+          <value>
+            <li Class="SyrTraitValue.TraitValueExtension">
+              <traitValues>
+                <li>-30</li>
+              </traitValues>
+            </li>
+          </value>
+        </li>
+        <li Class="PatchOperationAddModExtension">
+		<xpath>*/TraitDef[defName = "VTE_Stoner"]</xpath>
+          <value>
+            <li Class="SyrTraitValue.TraitValueExtension">
+              <traitValues>
+                <li>0</li>
+              </traitValues>
+            </li>
+          </value>
+        </li>
+        <li Class="PatchOperationAddModExtension">
+		<xpath>*/TraitDef[defName = "VTE_Lush"]</xpath>
+          <value>
+            <li Class="SyrTraitValue.TraitValueExtension">
+              <traitValues>
+                <li>0</li>
+              </traitValues>
+            </li>
+          </value>
+        </li>
+        <li Class="PatchOperationAddModExtension">
+		<xpath>*/TraitDef[defName = "VTE_Wanderlust"]</xpath>
+          <value>
+            <li Class="SyrTraitValue.TraitValueExtension">
+              <traitValues>
+                <li>20</li>
+              </traitValues>
+            </li>
+          </value>
+        </li>
+        <li Class="PatchOperationAddModExtension">
+		<xpath>*/TraitDef[defName = "VTE_Insomniac"]</xpath>
+          <value>
+            <li Class="SyrTraitValue.TraitValueExtension">
+              <traitValues>
+                <li>20</li>
+              </traitValues>
+            </li>
+          </value>
+        </li>
+        <li Class="PatchOperationAddModExtension">
+		<xpath>*/TraitDef[defName = "VTE_WorldWeary"]</xpath>
+          <value>
+            <li Class="SyrTraitValue.TraitValueExtension">
+              <traitValues>
+                <li>-30</li>
+              </traitValues>
+            </li>
+          </value>
+        </li>
+        <li Class="PatchOperationAddModExtension">
+		<xpath>*/TraitDef[defName = "VTE_Desensitized"]</xpath>
+          <value>
+            <li Class="SyrTraitValue.TraitValueExtension">
+              <traitValues>
+                <li>30</li>
+              </traitValues>
+            </li>
+          </value>
+        </li>
+        <li Class="PatchOperationAddModExtension">
+		<xpath>*/TraitDef[defName = "VTE_RefinedPalate"]</xpath>
+          <value>
+            <li Class="SyrTraitValue.TraitValueExtension">
+              <traitValues>
+                <li>10</li>
+              </traitValues>
+            </li>
+          </value>
+        </li>
+        <li Class="PatchOperationAddModExtension">
+		<xpath>*/TraitDef[defName = "VTE_Academian"]</xpath>
+          <value>
+            <li Class="SyrTraitValue.TraitValueExtension">
+              <traitValues>
+                <li>20</li>
+              </traitValues>
+            </li>
+          </value>
+        </li>
+        <li Class="PatchOperationAddModExtension">
+		<xpath>*/TraitDef[defName = "VTE_Groundbreaker"]</xpath>
+          <value>
+            <li Class="SyrTraitValue.TraitValueExtension">
+              <traitValues>
+                <li>20</li>
+              </traitValues>
+            </li>
+          </value>
+        </li>
+        <li Class="PatchOperationAddModExtension">
+		<xpath>*/TraitDef[defName = "VTE_Gastronomist"]</xpath>
+          <value>
+            <li Class="SyrTraitValue.TraitValueExtension">
+              <traitValues>
+                <li>20</li>
+              </traitValues>
+            </li>
+          </value>
+        </li>
+        <li Class="PatchOperationAddModExtension">
+		<xpath>*/TraitDef[defName = "VTE_Ecologist"]</xpath>
+          <value>
+            <li Class="SyrTraitValue.TraitValueExtension">
+              <traitValues>
+                <li>20</li>
+              </traitValues>
+            </li>
+          </value>
+        </li>
+        <li Class="PatchOperationAddModExtension">
+		<xpath>*/TraitDef[defName = "VTE_Tycoon"]</xpath>
+          <value>
+            <li Class="SyrTraitValue.TraitValueExtension">
+              <traitValues>
+                <li>20</li>
+              </traitValues>
+            </li>
+          </value>
+        </li>
+        <li Class="PatchOperationAddModExtension">
+		<xpath>*/TraitDef[defName = "VTE_ThickSkinned"]</xpath>
+          <value>
+            <li Class="SyrTraitValue.TraitValueExtension">
+              <traitValues>
+                <li>20</li>
+              </traitValues>
+            </li>
+          </value>
+        </li>
+        <li Class="PatchOperationAddModExtension">
+		<xpath>*/TraitDef[defName = "VTE_ThinSkinned"]</xpath>
+          <value>
+            <li Class="SyrTraitValue.TraitValueExtension">
+              <traitValues>
+                <li>-20</li>
+              </traitValues>
+            </li>
+          </value>
+        </li>
+        <li Class="PatchOperationAddModExtension">
+		<xpath>*/TraitDef[defName = "VTE_Schizoid"]</xpath>
+          <value>
+            <li Class="SyrTraitValue.TraitValueExtension">
+              <traitValues>
+                <li>-20</li>
+              </traitValues>
+            </li>
+          </value>
+        </li>
+      </operations>
+    </match>
+  </Operation>
+</Patch>

@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <JobDef>
+    <defName>VTE_StealItems</defName>
+    <driverClass>VanillaTraitsExpanded.JobDriver_StealItems</driverClass>
+    <reportString>stealing items from TargetA</reportString>
+    <allowOpportunisticPrefix>true</allowOpportunisticPrefix>
+  </JobDef>
+
+</Defs>
