@@ -590,10 +590,7 @@
 				<label>drunken master</label>
 				<description>{PAWN_nameDef} is supposedly a hand-to-hand combat specialist, but only when inebriated. They claim to become more talented the more drunk they are.</description>
 				<skillGains>
-					<li>
-						<key>Melee</key>
-						<value>4</value>
-					</li>
+					<Melee>4</Melee>
 				</skillGains>
 			</li>
 		</degreeDatas>
@@ -747,14 +744,8 @@
 				<label>academian</label>
 				<description>Whether through studying ancient manuscripts or years of scholastic pursuit {PAWN_nameDef} is surprisingly well read on a variety of topics, particularly science and medical practice.</description>
 				<skillGains>
-					<li>
-						<key>Intellectual</key>
-						<value>4</value>
-					</li>
-					<li>
-						<key>Medicine</key>
-						<value>4</value>
-					</li>
+					<Intellectual>4</Intellectual>
+					<Medicine>4</Medicine>
 				</skillGains>
 				<statOffsets>
 					<MedicalTendQuality>0.2</MedicalTendQuality>
@@ -781,14 +772,8 @@
 				<label>groundbreaker</label>
 				<description>{PAWN_nameDef} strongly believes infrastucture rules all and is a natural born stoneworker.</description>
 				<skillGains>
-					<li>
-						<key>Mining</key>
-						<value>4</value>
-					</li>
-					<li>
-						<key>Construction</key>
-						<value>4</value>
-					</li>
+					<Mining>4</Mining>
+					<Construction>4</Construction>
 				</skillGains>
 				<statOffsets>
 					<MiningYield>0.2</MiningYield>
@@ -810,14 +795,8 @@
 				<label>gastronomist</label>
 				<description>In the eyes of {PAWN_nameDef} food is art, their culinary creations are incredibly beautiful, amazing to taste, and almost always safe to eat.</description>
 				<skillGains>
-					<li>
-						<key>Cooking</key>
-						<value>4</value>
-					</li>
-					<li>
-						<key>Artistic</key>
-						<value>4</value>
-					</li>
+					<Cooking>4</Cooking>
+					<Artistic>4</Artistic>
 				</skillGains>
 				<statOffsets>
 					<FoodPoisonChance>-0.25</FoodPoisonChance>
@@ -841,14 +820,8 @@
 				<label>ecologist</label>
 				<description>Flora and fauna are both vital to {PAWN_nameDef}. They use all parts of plants and animals and strongly appreciate mother Gaia's blessings.</description>
 				<skillGains>
-					<li>
-						<key>Animals</key>
-						<value>4</value>
-					</li>
-					<li>
-						<key>Plants</key>
-						<value>4</value>
-					</li>
+					<Animals>4</Animals>
+					<Plants>4</Plants>
 				</skillGains>
 				<statOffsets>
 					<PlantHarvestYield>0.2</PlantHarvestYield>
@@ -873,14 +846,8 @@
 				<label>tycoon</label>
 				<description>{PAWN_nameDef} has an eye for silver and a tongue made from it. They believe their products are the best products and {PAWN_pronoun} will likely convince you if given the chance.</description>
 				<skillGains>
-					<li>
-						<key>Social</key>
-						<value>4</value>
-					</li>
-					<li>
-						<key>Crafting</key>
-						<value>4</value>
-					</li>
+					<Social>4</Social>
+					<Crafting>4</Crafting>
 				</skillGains>
 				<statOffsets>
 					<TradePriceImprovement>0.25</TradePriceImprovement>
