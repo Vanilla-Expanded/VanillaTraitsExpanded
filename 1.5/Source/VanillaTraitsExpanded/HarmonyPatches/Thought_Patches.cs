@@ -160,62 +160,66 @@ namespace VanillaTraitsExpanded
 		};
 		private static bool Prefix(MemoryThoughtHandler __instance, ref Thought_Memory newThought, Pawn otherPawn)
 		{
-			if (__instance.pawn.HasTrait(VTEDefOf.VTE_AnimalHater) && animalThoughtDefs.Contains(newThought.def))
+			try
 			{
-				newThought = (Thought_Memory)ThoughtMaker.MakeThought(inverseAnimalThoughDefs[newThought.def]);
-			}
-			if (__instance.pawn.HasTrait(VTEDefOf.VTE_Squeamish) && newThought.def == VTEDefOf.ObservedLayingRottingCorpse)
-			{
-				var comp = Current.Game.GetComponent<TraitsManager>();
-				if ((!comp.squeamishWithLastVomitedTick.ContainsKey(__instance.pawn) || GenTicks.TicksAbs >= comp.squeamishWithLastVomitedTick[__instance.pawn] + (30 * 60)) && Rand.Chance(0.5f))
-				{
-					Job vomit = JobMaker.MakeJob(JobDefOf.Vomit);
-					__instance.pawn.jobs.TryTakeOrderedJob(vomit);
-					comp.squeamishWithLastVomitedTick[__instance.pawn] = GenTicks.TicksAbs;
-				}
-			}
-			if (__instance.pawn.HasTrait(VTEDefOf.VTE_Desensitized) && horribleThoughts.Contains(newThought.def.defName))
-			{
-				return false;
-			}
-			if (__instance.pawn.HasTrait(VTEDefOf.VTE_ColdInclined) && 
-				(newThought.CurStageIndex < 1 && newThought.def == ThoughtDef.Named("EnvironmentCold")
-				|| newThought.def == ThoughtDefOf.SleptInCold))
-			{
-				return false;
-			}
-			if (__instance.pawn.HasTrait(VTEDefOf.VTE_HeatInclined) && 
-				(newThought.CurStageIndex < 1 && newThought.def == ThoughtDef.Named("EnvironmentHot")
-				|| newThought.def == ThoughtDefOf.SleptInHeat))
-			{
-				return false;
-			}
-			if (__instance.pawn.HasTrait(VTEDefOf.VTE_ChildOfMountain) && newThought.def == ThoughtDef.Named("EnvironmentDark"))
-			{
-				return false;
-			}
-			if (__instance.pawn.HasTrait(VTEDefOf.VTE_ChildOfSea) && newThought.def == ThoughtDef.Named("SoakingWet"))
-			{
-				__instance.pawn.TryGiveThought(VTEDefOf.VTE_SoakingWetChildOfTheSea);
-				return false;
-			}
-			if (__instance.pawn.HasTrait(VTEDefOf.VTE_HeavySleeper) && newThought.def == ThoughtDefOf.SleepDisturbed)
-            {
-				return false;
+                if (__instance.pawn.HasTrait(VTEDefOf.VTE_AnimalHater) && animalThoughtDefs.Contains(newThought.def))
+                {
+                    newThought = (Thought_Memory)ThoughtMaker.MakeThought(inverseAnimalThoughDefs[newThought.def]);
+                }
+                if (__instance.pawn.HasTrait(VTEDefOf.VTE_Squeamish) && newThought.def == VTEDefOf.ObservedLayingRottingCorpse)
+                {
+                    var comp = Current.Game.GetComponent<TraitsManager>();
+                    if ((!comp.squeamishWithLastVomitedTick.ContainsKey(__instance.pawn) || GenTicks.TicksAbs >= comp.squeamishWithLastVomitedTick[__instance.pawn] + (30 * 60)) && Rand.Chance(0.5f))
+                    {
+                        Job vomit = JobMaker.MakeJob(JobDefOf.Vomit);
+                        __instance.pawn.jobs.TryTakeOrderedJob(vomit);
+                        comp.squeamishWithLastVomitedTick[__instance.pawn] = GenTicks.TicksAbs;
+                    }
+                }
+                if (__instance.pawn.HasTrait(VTEDefOf.VTE_Desensitized) && horribleThoughts.Contains(newThought.def.defName))
+                {
+                    return false;
+                }
+                if (__instance.pawn.HasTrait(VTEDefOf.VTE_ColdInclined) &&
+                    (newThought.CurStageIndex < 1 && newThought.def == ThoughtDef.Named("EnvironmentCold")
+                    || newThought.def == ThoughtDefOf.SleptInCold))
+                {
+                    return false;
+                }
+                if (__instance.pawn.HasTrait(VTEDefOf.VTE_HeatInclined) &&
+                    (newThought.CurStageIndex < 1 && newThought.def == ThoughtDef.Named("EnvironmentHot")
+                    || newThought.def == ThoughtDefOf.SleptInHeat))
+                {
+                    return false;
+                }
+                if (__instance.pawn.HasTrait(VTEDefOf.VTE_ChildOfMountain) && newThought.def == ThoughtDef.Named("EnvironmentDark"))
+                {
+                    return false;
+                }
+                if (__instance.pawn.HasTrait(VTEDefOf.VTE_ChildOfSea) && newThought.def == ThoughtDef.Named("SoakingWet"))
+                {
+                    __instance.pawn.TryGiveThought(VTEDefOf.VTE_SoakingWetChildOfTheSea);
+                    return false;
+                }
+                if (__instance.pawn.HasTrait(VTEDefOf.VTE_HeavySleeper) && newThought.def == ThoughtDefOf.SleepDisturbed)
+                {
+                    return false;
+                }
+                if (__instance.pawn.HasTrait(VTEDefOf.VTE_MadSurgeon) &&
+                    (newThought.def == VTEDefOf.KnowColonistOrganHarvested
+                    || newThought.def == VTEDefOf.KnowGuestOrganHarvested
+                    || newThought.def == VTEDefOf.ButcheredHumanlikeCorpse
+                    || newThought.def == VTEDefOf.KnowButcheredHumanlikeCorpse
+                    || newThought.def == VTEDefOf.ObservedLayingCorpse
+                    || newThought.def == VTEDefOf.ObservedLayingRottingCorpse
+                    || newThought.def == ThoughtDefOf.KnowPrisonerDiedInnocent
+                    || newThought.def == VTEDefOf.KnowColonistExecuted && newThought.CurStageIndex == 3
+                    ))
+                {
+                    return false;
+                }
             }
-			if (__instance.pawn.HasTrait(VTEDefOf.VTE_MadSurgeon) && 
-				(newThought.def == VTEDefOf.KnowColonistOrganHarvested 
-				|| newThought.def == VTEDefOf.KnowGuestOrganHarvested 
-				|| newThought.def == VTEDefOf.ButcheredHumanlikeCorpse
-				|| newThought.def == VTEDefOf.KnowButcheredHumanlikeCorpse
-				|| newThought.def == VTEDefOf.ObservedLayingCorpse
-				|| newThought.def == VTEDefOf.ObservedLayingRottingCorpse
-				|| newThought.def == ThoughtDefOf.KnowPrisonerDiedInnocent
-				|| newThought.def == VTEDefOf.KnowColonistExecuted && newThought.CurStageIndex == 3
-				))
-			{
-				return false;
-			}
+			catch { }
 			return true;
 		}
 
