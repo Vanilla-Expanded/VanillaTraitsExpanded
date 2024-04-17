@@ -20,6 +20,8 @@ namespace VanillaTraitsExpanded
 			JobDefOf.BestowingCeremony,
 			JobDefOf.LayDown,
 			JobDefOf.Wait_Downed,
+			JobDefOf.Deathrest,
+			JobDefOf.BringBabyToSafety
 		};
 
 		private static bool Prefix(Pawn ___pawn, Job job)
@@ -32,7 +34,7 @@ namespace VanillaTraitsExpanded
         }
 		private static void Postfix(Pawn ___pawn, Job job)
 		{
-			if (!jobsToExclude.Contains(job.def))
+			if (!jobsToExclude.Contains(job.def) && (job.workGiverDef is null || job.workGiverDef.emergency is false))
             {
 				if (___pawn.HasTrait(VTEDefOf.VTE_AbsentMinded))
 				{
