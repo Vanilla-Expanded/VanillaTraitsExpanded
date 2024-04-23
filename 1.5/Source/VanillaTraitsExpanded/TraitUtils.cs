@@ -22,6 +22,18 @@ namespace VanillaTraitsExpanded
             pawn.needs?.mood?.thoughts.memories.TryGainMemory(thoughtDef);
         }
 
+        public static HashSet<Pawn> TryGetPawns(this HashSet<Pawn> list, TraitDef traitDef)
+        {
+            list.RemoveWhere(x => x.HasTrait(traitDef) is false);
+            return list;
+        }
+
+        public static Dictionary<K, V> TryGetPawns<K, V>(this Dictionary<K, V> list, TraitDef traitDef) where K : Pawn
+        {
+            list.RemoveAll(x => x.Key.HasTrait(traitDef) is false);
+            return list;
+        }
+
         public static void MakeFlee(Pawn pawn, Thing danger, int radius, List<Thing> dangers)
         {
             Job job = null;

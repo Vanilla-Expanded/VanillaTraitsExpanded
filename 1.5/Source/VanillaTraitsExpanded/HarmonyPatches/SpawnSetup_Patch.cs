@@ -78,8 +78,8 @@ namespace VanillaTraitsExpanded
                 }
                 if (__instance.HasTrait(VTEDefOf.VTE_Wanderlust))
                 {
-                    if (TraitsManager.Instance.wanderLustersWithLastMapExitedTick == null) TraitsManager.Instance.wanderLustersWithLastMapExitedTick = new Dictionary<Pawn, int>();
-                    if (!TraitsManager.Instance.wanderLustersWithLastMapExitedTick.ContainsKey(__instance))
+                    if (!TraitsManager.Instance.wanderLustersWithLastMapExitedTick
+                        .TryGetPawns(VTEDefOf.VTE_Wanderlust).ContainsKey(__instance))
                     {
                         TraitsManager.Instance.wanderLustersWithLastMapExitedTick[__instance] = GenTicks.TicksAbs;
                     }

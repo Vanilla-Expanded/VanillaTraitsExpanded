@@ -19,11 +19,11 @@ namespace VanillaTraitsExpanded
             Instance = this;
         }
 
-        public Dictionary<Pawn, Job> forcedJobs = new Dictionary<Pawn, Job>();
         public HashSet<Pawn> perfectionistsWithJobsToStop = new HashSet<Pawn>();
         public HashSet<Pawn> cowards = new HashSet<Pawn>();
         public HashSet<Pawn> bigBoned = new HashSet<Pawn>();
         public HashSet<Pawn> snobs = new HashSet<Pawn>();
+        public Dictionary<Pawn, Job> forcedJobs = new Dictionary<Pawn, Job>();
         public Dictionary<Pawn, int> madSurgeonsWithLastHarvestedTick = new Dictionary<Pawn, int>();
         public Dictionary<Pawn, int> wanderLustersWithLastMapExitedTick = new Dictionary<Pawn, int>();
         public Dictionary<Pawn, int> squeamishWithLastVomitedTick = new Dictionary<Pawn, int>();
@@ -43,7 +43,6 @@ namespace VanillaTraitsExpanded
                 if (wanderLustersWithLastMapExitedTick == null) wanderLustersWithLastMapExitedTick = new Dictionary<Pawn, int>();
                 if (squeamishWithLastVomitedTick == null) squeamishWithLastVomitedTick = new Dictionary<Pawn, int>();
                 if (absentMindedWithLastDiscardedTick == null) absentMindedWithLastDiscardedTick = new Dictionary<Pawn, int>();
-                TryRemoveWrongPawns();
             }
             catch
             {
@@ -67,7 +66,7 @@ namespace VanillaTraitsExpanded
         {
             if (forcedJobs is null) PreInit();
             var keysToRemove = new List<Pawn>();
-            foreach (var data in forcedJobs)
+            foreach (var data in forcedJobs.TryGetPawns(VTEDefOf.VTE_AbsentMinded))
             {
                 if (data.Key.Map != null)
                 {
@@ -98,7 +97,7 @@ namespace VanillaTraitsExpanded
         public void TryForceFleeCowards()
         {
             if (cowards is null) PreInit();
-            foreach (var pawn in cowards)
+            foreach (var pawn in cowards.TryGetPawns(VTEDefOf.VTE_Coward))
             {
                 if (pawn?.Map != null && !pawn.Downed && !pawn.Dead && Rand.Chance(0.1f))
                 {
@@ -137,7 +136,7 @@ namespace VanillaTraitsExpanded
         public void TryBreakChairsUnderBigBoneds()
         {
             if (bigBoned is null) PreInit();
-            foreach (var pawn in bigBoned)
+            foreach (var pawn in bigBoned.TryGetPawns(VTEDefOf.VTE_BigBoned))
             {
                 if (pawn?.Map != null && !pawn.pather.Moving && Rand.Chance(0.05f))
                 {
@@ -184,19 +183,18 @@ namespace VanillaTraitsExpanded
             {
                 TryBreakChairsUnderBigBoneds();
             }
-            if (Find.TickManager.TicksGame % 2000 == 0)
-            {
-                TryRemoveWrongPawns();
-            }
+
+            HandlePerfectionists();
+        }
+
+        private void HandlePerfectionists()
+        {
             if (perfectionistsWithJobsToStop.Count > 0)
             {
-                foreach (var pawn in perfectionistsWithJobsToStop)
+                foreach (var pawn in perfectionistsWithJobsToStop.TryGetPawns(VTEDefOf.VTE_Perfectionist))
                 {
                     pawn.jobs.StopAll();
-                    if (pawn.HasTrait(VTEDefOf.VTE_Perfectionist))
-                    {
-                        pawn.TryGiveThought(VTEDefOf.VTE_CouldNotFinishItem);
-                    }
+                    pawn.TryGiveThought(VTEDefOf.VTE_CouldNotFinishItem);
                 }
                 perfectionistsWithJobsToStop.Clear();
             }
@@ -227,19 +225,6 @@ namespace VanillaTraitsExpanded
             bigBoned.RemoveWhere(x => x == key);
             squeamishWithLastVomitedTick.RemoveAll(x => x.Key == key);
             absentMindedWithLastDiscardedTick.RemoveAll(x => x.Key == key);
-        }
-
-        public void TryRemoveWrongPawns()
-        {
-            forcedJobs.RemoveAll(x => !x.Key.HasTrait(VTEDefOf.VTE_AbsentMinded));
-            absentMindedWithLastDiscardedTick.RemoveAll(x => !x.Key.HasTrait(VTEDefOf.VTE_AbsentMinded));
-            madSurgeonsWithLastHarvestedTick.RemoveAll(x => !x.Key.HasTrait(VTEDefOf.VTE_MadSurgeon));
-            wanderLustersWithLastMapExitedTick.RemoveAll(x => !x.Key.HasTrait(VTEDefOf.VTE_Wanderlust));
-            perfectionistsWithJobsToStop.RemoveWhere(x => !x.HasTrait(VTEDefOf.VTE_Perfectionist));
-            cowards.RemoveWhere(x => !x.HasTrait(VTEDefOf.VTE_Coward));
-            snobs.RemoveWhere(x => !x.HasTrait(VTEDefOf.VTE_Snob));
-            bigBoned.RemoveWhere(x => !x.HasTrait(VTEDefOf.VTE_BigBoned));
-            squeamishWithLastVomitedTick.RemoveAll(x => !x.Key.HasTrait(VTEDefOf.VTE_Squeamish));
         }
 
         private List<Pawn> pawnKeys = new List<Pawn>();

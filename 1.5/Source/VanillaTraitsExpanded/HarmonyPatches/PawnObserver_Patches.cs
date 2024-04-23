@@ -11,7 +11,7 @@ namespace VanillaTraitsExpanded
 	{
 		public static void Postfix(Pawn ___pawn)
         {
-			if (!___pawn.HasTrait(VTEDefOf.VTE_Squeamish) && !___pawn.health.capacities.CapableOf(PawnCapacityDefOf.Sight) || ___pawn.needs.mood == null)
+			if (!___pawn.HasTrait(VTEDefOf.VTE_Squeamish) || !___pawn.health.capacities.CapableOf(PawnCapacityDefOf.Sight) || ___pawn.needs.mood == null)
 			{
 				return;
 			}

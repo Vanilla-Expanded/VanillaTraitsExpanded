@@ -13,7 +13,7 @@ namespace VanillaTraitsExpanded
 			int num = 0;
 			if (TraitsManager.Instance?.snobs != null)
             {
-				foreach (var pawn in TraitsManager.Instance.snobs)
+				foreach (var pawn in TraitsManager.Instance.snobs.TryGetPawns(VTEDefOf.VTE_Snob))
 				{
 					if (pawn != null)
                     {

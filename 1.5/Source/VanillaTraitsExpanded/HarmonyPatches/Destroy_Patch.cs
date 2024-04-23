@@ -8,8 +8,7 @@ namespace VanillaTraitsExpanded
 	{
 		private static void Prefix(Pawn __instance)
 		{
-			var comp = Current.Game.GetComponent<TraitsManager>();
-			comp.RemoveDestroyedPawn(__instance);
+            TraitsManager.Instance.RemoveDestroyedPawn(__instance);
 		}
 	}
 }
