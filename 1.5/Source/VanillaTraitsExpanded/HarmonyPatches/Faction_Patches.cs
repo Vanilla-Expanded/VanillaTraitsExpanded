@@ -35,14 +35,12 @@ namespace VanillaTraitsExpanded
 				{
 					var snobCount = SnobCount();
 					var newGoodWillChange = (int)(goodwillChange * (1 + (SnobCount() / 10f)));
-					Log.Message("Faction.OfPlayer gets new relationship change to Empire due to " + snobCount + " snobs in the faction. Old value: " + goodwillChange + " - new value: " + newGoodWillChange);
 					goodwillChange = newGoodWillChange;
 				}
 				else if (other == Faction.OfPlayer && __instance == Faction.OfEmpire)
 				{
 					var snobCount = SnobCount();
 					var newGoodWillChange = (int)(goodwillChange * (1 + (SnobCount() / 10f)));
-					Log.Message("Faction.OfPlayer gets new relationship change to Empire due to " + snobCount + " snobs in the faction. Old value: " + goodwillChange + " - new value: " + newGoodWillChange);
 					goodwillChange = newGoodWillChange;
 				}
 			}

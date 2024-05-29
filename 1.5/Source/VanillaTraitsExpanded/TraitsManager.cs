@@ -76,7 +76,6 @@ namespace VanillaTraitsExpanded
                             && GenTicks.TicksAbs > absentMindedWithLastDiscardedTick[data.Key] + (GenDate.TicksPerHour * 2f)
                             || !absentMindedWithLastDiscardedTick.ContainsKey(data.Key)) && Rand.Chance(0.03f))
                         {
-                            //Log.Message(data.Key + " - stops forced " + data.Key.CurJob + " due to absent-minded trait");
                             Messages.Message("VTE.PawnStopsForcedJob".Translate(data.Key.Named("PAWN")), data.Key, MessageTypeDefOf.SilentInput, historical: false);
                             data.Key.jobs.StopAll();
                             absentMindedWithLastDiscardedTick[data.Key] = GenTicks.TicksAbs;
