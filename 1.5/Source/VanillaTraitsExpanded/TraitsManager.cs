@@ -79,6 +79,7 @@ namespace VanillaTraitsExpanded
                             Messages.Message("VTE.PawnStopsForcedJob".Translate(data.Key.Named("PAWN")), data.Key, MessageTypeDefOf.SilentInput, historical: false);
                             data.Key.jobs.StopAll();
                             absentMindedWithLastDiscardedTick[data.Key] = GenTicks.TicksAbs;
+                            keysToRemove.Add(data.Key);
                         }
                     }
                     else
