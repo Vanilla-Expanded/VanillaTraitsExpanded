@@ -3,10 +3,10 @@
 	<name>Vanilla Traits Expanded</name>
 	<author>Oskar Potocki, Taranchuk, Chowder</author>
 	<supportedVersions>
-	<li>1.3</li>
-	<li>1.2</li>
-	<li>1.4</li>
-	<li>1.5</li>
+		<li>1.3</li>
+		<li>1.2</li>
+		<li>1.4</li>
+		<li>1.5</li>
 	</supportedVersions>
 	<packageId>VanillaExpanded.VanillaTraitsExpanded</packageId>
 	<description>Have you ever thought about how base game traits become repetitive after a while? Are you tired of seeing pyromaniac or kind pawn over and over again? Are you perhaps considering pyromaniac to be an instant death sentence in your colony? If for any of these questions the answer was ‘aye’, then look no further.
@@ -17,4 +17,26 @@ Using our new mod options menu, you can now disable specific traits added by van
 
 I really hope you will enjoy the effect of our hard work! Let us know in the comments what you think works and what doesn’t!
 </description>
+	<loadAfter>
+		<li>Ludeon.RimWorld</li>
+		<li>Ludeon.RimWorld.Royalty</li>
+		<li>Ludeon.RimWorld.Ideology</li>
+		<li>Ludeon.RimWorld.Biotech</li>
+		<li>brrainz.harmony</li>
+		<li>OskarPotocki.VanillaFactionsExpanded.Core</li>
+	</loadAfter>
+	<modDependencies>
+		<li>
+			<packageId>brrainz.harmony</packageId>
+			<displayName>Harmony</displayName>
+			<steamWorkshopUrl>steam://url/CommunityFilePage/2009463077</steamWorkshopUrl>
+			<downloadUrl>https://github.com/pardeike/HarmonyRimWorld/releases/latest</downloadUrl>
+		</li>
+		<li>
+			<packageId>OskarPotocki.VanillaFactionsExpanded.Core</packageId>
+			<displayName>Vanilla Expanded Framework</displayName>
+			<steamWorkshopUrl>https://steamcommunity.com/workshop/filedetails/?id=2023507013</steamWorkshopUrl>
+			<downloadUrl>https://github.com/Vanilla-Expanded/VanillaExpandedFramework</downloadUrl>
+		</li>
+	</modDependencies>
 </ModMetaData>
