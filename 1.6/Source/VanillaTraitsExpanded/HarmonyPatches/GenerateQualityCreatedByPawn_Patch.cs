@@ -1,12 +1,9 @@
 ﻿using HarmonyLib;
 using RimWorld;
 using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Verse;
-using Verse.AI;
+
 
 namespace VanillaTraitsExpanded
 {
@@ -15,12 +12,11 @@ namespace VanillaTraitsExpanded
 	[HarmonyPatch(new Type[]
 		{
 			typeof(Pawn),
-			typeof(SkillDef)
-		}, new ArgumentType[]
-		{
-			0,
-			0
-		})]
+			typeof(SkillDef),
+
+            typeof(bool)
+        })]
+	[HarmonyPriority(Priority.First)]
 	public static class GenerateQualityCreatedByPawn_Patch
 	{
 		private static void Prefix(Pawn pawn, out bool __state)
@@ -43,6 +39,12 @@ namespace VanillaTraitsExpanded
 					var newResult = (QualityCategory)((int)__result + 1);
 					__result = newResult;
 				}
+				else
+				{
+					// Allow legendary items if the current quality
+					// was already legendary, even without inspiration.
+					__state = true;
+				}
 				if (__result == QualityCategory.Normal || __result == QualityCategory.Awful || __result == QualityCategory.Poor)
 				{
 					pawn.TryGiveThought(VTEDefOf.VTE_CreatedLowQualityItem);
@@ -51,10 +53,10 @@ namespace VanillaTraitsExpanded
                 {
 					if (ModsConfig.IdeologyActive)
                     {
-						var role = pawn.Ideo.GetRole(pawn);
-						if (role != null && role.def.defName == "IdeoRole_ProductionSpecialist")
+						var effect = pawn.Ideo.GetRole(pawn)?.def.roleEffects.OfType<RoleEffect_ProductionQualityOffset>().FirstOrDefault();
+						if (effect != null && effect.offset > 0)
                         {
-							return; // we allow legendary for production specialist
+							return; // we allow legendary for any roles boosting production quality
                         }
                     }
 					__result = QualityCategory.Masterwork;

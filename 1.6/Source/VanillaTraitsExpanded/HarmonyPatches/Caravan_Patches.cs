@@ -14,6 +14,7 @@ namespace VanillaTraitsExpanded
 		typeof(List<Pawn>),
 		typeof(float),
 		typeof(float),
+		typeof(bool),
 		typeof(StringBuilder)
 	})]
 	[HarmonyPatch(typeof(CaravanTicksPerMoveUtility), "GetTicksPerMove")]
