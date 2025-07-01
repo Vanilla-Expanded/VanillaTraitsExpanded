@@ -18,8 +18,8 @@ namespace VanillaTraitsExpanded
 				var ArtThing = __instance.pawn.CurJob.targetA.Thing;
 				float num = (ArtThing.GetStatValue(StatDefOf.Beauty) / ArtThing.def.GetStatValueAbstract(StatDefOf.Beauty)) * 2f;
 				float extraJoyGainFactor = (num > 0f) ? num : 0f;
-				__instance.pawn.GainComfortFromCellIfPossible();
-				JoyUtility.JoyTickCheckEnd(__instance.pawn, JoyTickFullJoyAction.EndJob, extraJoyGainFactor, (Building)ArtThing);
+				__instance.pawn.GainComfortFromCellIfPossible(1);
+				JoyUtility.JoyTickCheckEnd(__instance.pawn,1,JoyTickFullJoyAction.EndJob, extraJoyGainFactor, (Building)ArtThing);
 			}
 		}
 	}

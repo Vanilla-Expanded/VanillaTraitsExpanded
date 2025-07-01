@@ -72,7 +72,7 @@ namespace VanillaTraitsExpanded
             }
             if (flag)
             {
-                using (PawnPath path = pawn.Map.pathFinder.FindPath(pawn.Position, dest, TraverseParms.For(pawn, Danger.Deadly, TraverseMode.PassAllDestroyableThings)))
+                using (PawnPath path = pawn.Map.pathFinder.FindPathNow(pawn.Position, dest, TraverseParms.For(pawn, Danger.Deadly, TraverseMode.PassAllDestroyableThings)))
                 {
                     IntVec3 cellBefore;
                     Thing thing = path.FirstBlockingBuilding(out cellBefore, pawn);

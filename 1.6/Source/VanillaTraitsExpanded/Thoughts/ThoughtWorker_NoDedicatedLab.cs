@@ -28,7 +28,7 @@ namespace VanillaTraitsExpanded
 
 		public bool HasLab(Map map)
         {
-			foreach (var room in map.regionGrid.allRooms)
+			foreach (var room in map.regionGrid.AllRooms)
             {
 				if (room.Role == VTEDefOf.Laboratory)
                 {
