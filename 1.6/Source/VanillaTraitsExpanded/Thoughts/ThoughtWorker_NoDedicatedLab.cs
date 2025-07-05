@@ -9,7 +9,7 @@ namespace VanillaTraitsExpanded
 		{
 			if (p.HasTrait(VTEDefOf.VTE_Prodigy))
             {
-				Map map = null;
+				Map map;
 				if (p.ownership?.OwnedBed?.Map != null)
                 {
 					map = p.ownership.OwnedBed.Map;

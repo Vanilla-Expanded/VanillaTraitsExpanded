@@ -14,8 +14,8 @@ namespace VanillaTraitsExpanded
             {
                 return null;
             }
-            var cells = pawn.ownership?.OwnedRoom?.Cells;
-            if (cells?.Count() > 0)
+            var cells = pawn.ownership?.OwnedRoom?.Cells?.ToList();
+            if (cells?.Count > 0)
             {
                 if (!cells.Contains(pawn.Position))
                 {
@@ -29,10 +29,7 @@ namespace VanillaTraitsExpanded
                     return job;
                 }
             }
-            else
-            {
-                Job job = JobMaker.MakeJob(JobDefOf.Wait, 60);
-            }
+
             return null;
         }
 	}

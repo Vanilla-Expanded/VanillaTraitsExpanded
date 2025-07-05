@@ -31,19 +31,12 @@ namespace VanillaTraitsExpanded
 		{
 			if (goodwillChange > 0)
             {
-				if (__instance == Faction.OfPlayer && other == Faction.OfEmpire)
+				if ((__instance == Faction.OfPlayer && other == Faction.OfEmpire) || (other == Faction.OfPlayer && __instance == Faction.OfEmpire))
 				{
-					var snobCount = SnobCount();
 					var newGoodWillChange = (int)(goodwillChange * (1 + (SnobCount() / 10f)));
 					goodwillChange = newGoodWillChange;
 				}
-				else if (other == Faction.OfPlayer && __instance == Faction.OfEmpire)
-				{
-					var snobCount = SnobCount();
-					var newGoodWillChange = (int)(goodwillChange * (1 + (SnobCount() / 10f)));
-					goodwillChange = newGoodWillChange;
-				}
-			}
+            }
 		}
 	}
 }

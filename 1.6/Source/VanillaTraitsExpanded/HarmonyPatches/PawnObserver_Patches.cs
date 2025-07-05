@@ -16,7 +16,7 @@ namespace VanillaTraitsExpanded
 				return;
 			}
 			Map map = ___pawn.Map;
-			for (int i = 0; (float)i < 100f; i++)
+			for (int i = 0; i < 100; i++)
 			{
 				IntVec3 intVec = ___pawn.Position + GenRadial.RadialPattern[i];
 				if (!intVec.InBounds(map) || !GenSight.LineOfSight(intVec, ___pawn.Position, map, skipFirstCell: true))

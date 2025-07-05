@@ -24,34 +24,33 @@ namespace VanillaTraitsExpanded
 
 		private Toil DoStealing()
 		{
-			return new Toil
+			var toil = ToilMaker.MakeToil();
+			toil.initAction = delegate
 			{
-				initAction = delegate
+				var mostValuableItem = Victim.inventory?.innerContainer?.InnerListForReading?.OrderByDescending(x => x.MarketValue).FirstOrDefault();
+				if (mostValuableItem != null)
 				{
-					var mostValuableItem = Victim.inventory?.innerContainer?.InnerListForReading?.OrderByDescending(x => x.MarketValue).FirstOrDefault();
-					if (mostValuableItem != null)
-                    {
-						if (Rand.Chance(0.5f))
-                        {
-							if (Victim.inventory.innerContainer.TryTransferToContainer(mostValuableItem, this.pawn.inventory.innerContainer))
-                            {
-								Messages.Message("VTE.PawnStoleItem".Translate(mostValuableItem.Label, pawn.Named("PAWN"), Victim.Named("VICTIM")), pawn, MessageTypeDefOf.NeutralEvent, historical: false);
-								if (Rand.Chance(0.5f))
-								{
-									Victim.Faction.TryAffectGoodwillWith(pawn.Faction, -5);
-								}
+					if (Rand.Chance(0.5f))
+					{
+						if (Victim.inventory.innerContainer.TryTransferToContainer(mostValuableItem, this.pawn.inventory.innerContainer))
+						{
+							Messages.Message("VTE.PawnStoleItem".Translate(mostValuableItem.Label, pawn.Named("PAWN"), Victim.Named("VICTIM")), pawn, MessageTypeDefOf.NeutralEvent, historical: false);
+							if (Rand.Chance(0.5f))
+							{
+								Victim.Faction.TryAffectGoodwillWith(pawn.Faction, -5);
 							}
 						}
-						else
-                        {
-							Messages.Message("VTE.PawnFailedToStealItem".Translate(mostValuableItem.Label, pawn.Named("PAWN"), Victim.Named("VICTIM")), pawn, MessageTypeDefOf.NeutralEvent, 
-								historical: false); 
-							Victim.Faction.TryAffectGoodwillWith(pawn.Faction, -5);
-						}
 					}
-				},
-				atomicWithPrevious = true
+					else
+					{
+						Messages.Message("VTE.PawnFailedToStealItem".Translate(mostValuableItem.Label, pawn.Named("PAWN"), Victim.Named("VICTIM")), pawn, MessageTypeDefOf.NeutralEvent, 
+							historical: false); 
+						Victim.Faction.TryAffectGoodwillWith(pawn.Faction, -5);
+					}
+				}
 			};
+			toil.atomicWithPrevious = true;
+			return toil;
 		}
 	}
 }

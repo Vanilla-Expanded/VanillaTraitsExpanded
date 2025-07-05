@@ -31,17 +31,15 @@ namespace VanillaTraitsExpanded
 		private static void Postfix(JobDriver_WatchBuilding __instance, ref IEnumerable<Toil> __result)
 		{
 			var list = __result.ToList();
-			Toil t = new Toil
+			Toil t = ToilMaker.MakeToil();
+			t.initAction = delegate
 			{
-				initAction = delegate ()
+				if (__instance.pawn.HasTrait(VTEDefOf.VTE_CouchPotato) && __instance.job.def == VTEDefOf.WatchTelevision)
 				{
-					if (__instance.pawn.HasTrait(VTEDefOf.VTE_CouchPotato) && __instance.job.def == VTEDefOf.WatchTelevision)
-                    {
-						__instance.pawn.TryGiveThought(VTEDefOf.VTE_WatchedTelevisor);
-                    }
-				},
-				defaultCompleteMode = ToilCompleteMode.Instant
+					__instance.pawn.TryGiveThought(VTEDefOf.VTE_WatchedTelevisor);
+				}
 			};
+			t.defaultCompleteMode = ToilCompleteMode.Instant;
 			list.Add(t);
 			__result = list;
 		}

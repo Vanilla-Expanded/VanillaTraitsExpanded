@@ -19,10 +19,10 @@ namespace VanillaTraitsExpanded
             Instance = this;
         }
 
-        public HashSet<Pawn> perfectionistsWithJobsToStop = new HashSet<Pawn>();
-        public HashSet<Pawn> cowards = new HashSet<Pawn>();
-        public HashSet<Pawn> bigBoned = new HashSet<Pawn>();
-        public HashSet<Pawn> snobs = new HashSet<Pawn>();
+        public HashSet<Pawn> perfectionistsWithJobsToStop = [];
+        public HashSet<Pawn> cowards = [];
+        public HashSet<Pawn> bigBoned = [];
+        public HashSet<Pawn> snobs = [];
         public Dictionary<Pawn, Job> forcedJobs = new Dictionary<Pawn, Job>();
         public Dictionary<Pawn, int> madSurgeonsWithLastHarvestedTick = new Dictionary<Pawn, int>();
         public Dictionary<Pawn, int> wanderLustersWithLastMapExitedTick = new Dictionary<Pawn, int>();
@@ -34,15 +34,15 @@ namespace VanillaTraitsExpanded
             try
             {
                 Instance = this;
-                if (forcedJobs == null) forcedJobs = new Dictionary<Pawn, Job>();
-                if (perfectionistsWithJobsToStop == null) perfectionistsWithJobsToStop = new HashSet<Pawn>();
-                if (cowards == null) cowards = new HashSet<Pawn>();
-                if (bigBoned == null) bigBoned = new HashSet<Pawn>();
-                if (snobs == null) snobs = new HashSet<Pawn>();
-                if (madSurgeonsWithLastHarvestedTick == null) madSurgeonsWithLastHarvestedTick = new Dictionary<Pawn, int>();
-                if (wanderLustersWithLastMapExitedTick == null) wanderLustersWithLastMapExitedTick = new Dictionary<Pawn, int>();
-                if (squeamishWithLastVomitedTick == null) squeamishWithLastVomitedTick = new Dictionary<Pawn, int>();
-                if (absentMindedWithLastDiscardedTick == null) absentMindedWithLastDiscardedTick = new Dictionary<Pawn, int>();
+                forcedJobs ??= new Dictionary<Pawn, Job>();
+                perfectionistsWithJobsToStop ??= [];
+                cowards ??= [];
+                bigBoned ??= [];
+                snobs ??= [];
+                madSurgeonsWithLastHarvestedTick ??= new Dictionary<Pawn, int>();
+                wanderLustersWithLastMapExitedTick ??= new Dictionary<Pawn, int>();
+                squeamishWithLastVomitedTick ??= new Dictionary<Pawn, int>();
+                absentMindedWithLastDiscardedTick ??= new Dictionary<Pawn, int>();
             }
             catch
             {
@@ -101,15 +101,18 @@ namespace VanillaTraitsExpanded
             {
                 if (pawn?.Map != null && !pawn.Downed && !pawn.Dead && Rand.Chance(0.1f))
                 {
+                    const float maxDistance = 15f;
+                    const float maxDistanceSquared = maxDistance * maxDistance;
+                    
                     var enemies = pawn.Map.attackTargetsCache?.GetPotentialTargetsFor(pawn)?.Where(x => 
-                        (x is Pawn pawnEnemy && !pawnEnemy.Dead && !pawnEnemy.Downed || !(x.Thing is Pawn) && x.Thing.DestroyedOrNull())
-                        && x.Thing.Position.DistanceTo(pawn.Position) < 15f 
-                        && GenSight.LineOfSight(x.Thing.Position, pawn.Position, pawn.Map))?.Select(y => y.Thing);
-                    if (enemies?.Count() > 0)
+                        (x is Pawn pawnEnemy && !pawnEnemy.Dead && !pawnEnemy.Downed || x.Thing is not Pawn && x.Thing.DestroyedOrNull())
+                        && x.Thing.Position.DistanceToSquared(pawn.Position) < maxDistanceSquared
+                        && GenSight.LineOfSight(x.Thing.Position, pawn.Position, pawn.Map)).Select(y => y.Thing).ToList();
+                    if (enemies?.Count > 0)
                     {
                         if (pawn.Faction == Faction.OfPlayer)
                         {
-                            TraitUtils.MakeFlee(pawn, enemies.OrderBy(x => x.Position.DistanceTo(pawn.Position)).First(), 15, enemies.ToList());
+                            TraitUtils.MakeFlee(pawn, enemies.OrderBy(x => x.Position.DistanceToSquared(pawn.Position)).First(), 15, enemies.ToList());
                             Messages.Message("VTE.PawnCowardlyFlees".Translate(pawn.Named("PAWN")), pawn, MessageTypeDefOf.NeutralEvent, historical: false);
                         }
                         else if (pawn.Faction != null)
@@ -141,7 +144,7 @@ namespace VanillaTraitsExpanded
                 if (pawn?.Map != null && !pawn.pather.Moving && Rand.Chance(0.05f))
                 {
                     var firstBuilding = pawn.Position.GetFirstBuilding(pawn.Map);
-                    if (firstBuilding?.def?.building?.isSittable ?? false && !(firstBuilding is Building_Throne))
+                    if ((firstBuilding?.def?.building?.isSittable ?? false) && firstBuilding is not Building_Throne)
                     {
                         //if (latestChairsBreaks.ContainsKey(pawn.GetUniqueLoadID() + firstBuilding.GetUniqueLoadID()))
                         if (pawn.CurJobDef == JobDefOf.Ingest)
@@ -227,20 +230,20 @@ namespace VanillaTraitsExpanded
             absentMindedWithLastDiscardedTick.RemoveAll(x => x.Key == key);
         }
 
-        private List<Pawn> pawnKeys = new List<Pawn>();
-        private List<Job> jobValues = new List<Job>();
+        private List<Pawn> pawnKeys = [];
+        private List<Job> jobValues = [];
 
 
-        private List<Pawn> pawnKeys2 = new List<Pawn>();
-        private List<int> tickValues = new List<int>();
+        private List<Pawn> pawnKeys2 = [];
+        private List<int> tickValues = [];
 
-        private List<Pawn> pawnKeys3 = new List<Pawn>();
-        private List<int> tickValues1 = new List<int>();
+        private List<Pawn> pawnKeys3 = [];
+        private List<int> tickValues1 = [];
 
-        private List<Pawn> pawnKeys4 = new List<Pawn>();
-        private List<int> tickValues2 = new List<int>();
+        private List<Pawn> pawnKeys4 = [];
+        private List<int> tickValues2 = [];
 
-        private List<Pawn> pawnKeys5 = new List<Pawn>();
-        private List<int> tickValues3 = new List<int>();
+        private List<Pawn> pawnKeys5 = [];
+        private List<int> tickValues3 = [];
     }
 }
