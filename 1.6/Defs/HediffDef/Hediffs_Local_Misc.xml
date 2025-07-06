@@ -3,16 +3,24 @@
 
 	<HediffDef>
 		<defName>VTE_SlowWorkSpeed</defName>
+		<hediffClass>VanillaTraitsExpanded.Hediff_ForcedWork</hediffClass>
 		<label>slow work</label>
 		<labelNoun>slow work</labelNoun>
 		<description>slow work</description>
 		<defaultLabelColor>(1,0,0.5)</defaultLabelColor>
 		<stages>
 			<li>
+				<label>inactive</label>
+				<becomeVisible>false</becomeVisible>
+			</li>
+			<li>
+				<label>active</label>
 				<becomeVisible>false</becomeVisible>
 				<statFactors>
-					<WorkSpeedGlobal>0.4</WorkSpeedGlobal>
+					<WorkSpeedGlobal>0.6</WorkSpeedGlobal>
 				</statFactors>
+				<!-- Hediff does not care for severity, but HediffDef forces the stages to be in order from lowest to highest severity (unless using Hediff_Addiction). -->
+				<minSeverity>0.01</minSeverity>
 			</li>
 		</stages>
 	</HediffDef>

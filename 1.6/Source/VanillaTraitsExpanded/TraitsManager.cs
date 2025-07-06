@@ -219,15 +219,15 @@ namespace VanillaTraitsExpanded
 
         public void RemoveDestroyedPawn(Pawn key)
         {
-            forcedJobs.RemoveAll(x => x.Key == key);
-            madSurgeonsWithLastHarvestedTick.RemoveAll(x => x.Key == key);
-            wanderLustersWithLastMapExitedTick.RemoveAll(x => x.Key == key);
-            perfectionistsWithJobsToStop.RemoveWhere(x => x == key);
-            cowards.RemoveWhere(x => x == key);
-            snobs.RemoveWhere(x => x == key);
-            bigBoned.RemoveWhere(x => x == key);
-            squeamishWithLastVomitedTick.RemoveAll(x => x.Key == key);
-            absentMindedWithLastDiscardedTick.RemoveAll(x => x.Key == key);
+            forcedJobs.Remove(key);
+            madSurgeonsWithLastHarvestedTick.Remove(key);
+            wanderLustersWithLastMapExitedTick.Remove(key);
+            perfectionistsWithJobsToStop.Remove(key);
+            cowards.Remove(key);
+            snobs.Remove(key);
+            bigBoned.Remove(key);
+            squeamishWithLastVomitedTick.Remove(key);
+            absentMindedWithLastDiscardedTick.Remove(key);
         }
 
         private List<Pawn> pawnKeys = [];

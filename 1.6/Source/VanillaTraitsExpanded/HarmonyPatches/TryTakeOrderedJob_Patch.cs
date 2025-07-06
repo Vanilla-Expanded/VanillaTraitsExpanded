@@ -40,19 +40,6 @@ namespace VanillaTraitsExpanded
 				{
 					TraitsManager.Instance.forcedJobs[___pawn] = job;
 				}
-				if (___pawn.HasTrait(VTEDefOf.VTE_Rebel))
-				{
-					var slowWorkHediff = HediffMaker.MakeHediff(VTEDefOf.VTE_SlowWorkSpeed, ___pawn);
-					___pawn.health.AddHediff(slowWorkHediff);
-				}
-				if (___pawn.HasTrait(VTEDefOf.VTE_Submissive))
-				{
-					var slowWorkHediff = ___pawn.health.hediffSet.GetFirstHediffOfDef(VTEDefOf.VTE_SlowWorkSpeed);
-					if (slowWorkHediff != null)
-                    {
-						___pawn.health.RemoveHediff(slowWorkHediff);
-                    }
-				}
 			}
 		}
 	}
@@ -70,32 +57,6 @@ namespace VanillaTraitsExpanded
 			return true;
 		}
 	}
-	
-	[HarmonyPatch(typeof(Pawn_JobTracker))]
-	[HarmonyPatch(nameof(Pawn_JobTracker.EndCurrentJob))]
-    public static class EndCurrentJobPatch
-    {
-        private static void Prefix(Pawn ___pawn)
-        {
-			if (___pawn.HasTrait(VTEDefOf.VTE_Rebel))
-            {
-				var rebelHediff = ___pawn.health.hediffSet.GetFirstHediffOfDef(VTEDefOf.VTE_SlowWorkSpeed);
-				if (rebelHediff != null)
-                {
-					___pawn.health.RemoveHediff(rebelHediff);
-				}
-			}
-
-			if (___pawn.HasTrait(VTEDefOf.VTE_Submissive))
-			{
-				if (___pawn.health.hediffSet.GetFirstHediffOfDef(VTEDefOf.VTE_SlowWorkSpeed) == null)
-                {
-					var slowWorkHediff = HediffMaker.MakeHediff(VTEDefOf.VTE_SlowWorkSpeed, ___pawn);
-					___pawn.health.AddHediff(slowWorkHediff);
-                }
-			}
-		}
-    }
 
 	[HarmonyPatch(typeof(FoodUtility))]
 	[HarmonyPatch(nameof(FoodUtility.AddFoodPoisoningHediff))]

@@ -65,6 +65,7 @@
     <Compile Include="HarmonyPatches\PawnObserver_Patches.cs" />
     <Compile Include="HarmonyPatches\Recipe_Patches.cs" />
     <Compile Include="HarmonyPatches\Relationship_Patches.cs" />
+    <Compile Include="HarmonyPatches\RemoveTrait_Patch.cs" />
     <Compile Include="HarmonyPatches\Skill_Patches.cs" />
     <Compile Include="HarmonyPatches\SpawnSetup_Patch.cs" />
     <Compile Include="HarmonyPatches\Thought_Patches.cs" />
@@ -73,6 +74,7 @@
     <Compile Include="HarmonyPatches\TryTakeOrderedJob_Patch.cs" />
     <Compile Include="HarmonyPatches\WithProgressBar_Patch.cs" />
     <Compile Include="HarmonyPatches\Workgiver_Patches.cs" />
+    <Compile Include="Hediffs\Hediff_ForcedWork.cs" />
     <Compile Include="JobDrivers\JobDriver_StealItems.cs" />
     <Compile Include="JobGivers\JobGiver_StealingItems.cs" />
     <Compile Include="JobGivers\JobGiver_PanicFreezing.cs" />

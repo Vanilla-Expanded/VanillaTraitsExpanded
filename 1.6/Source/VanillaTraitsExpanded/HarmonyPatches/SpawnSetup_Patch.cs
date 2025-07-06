@@ -7,7 +7,7 @@ using Verse;
 namespace VanillaTraitsExpanded
 {
     [HarmonyPatch(typeof(TraitSet))]
-    [HarmonyPatch("GainTrait")]
+    [HarmonyPatch(nameof(TraitSet.GainTrait))]
     public static class GainTrait_Patch
     {
         private static void Postfix(Pawn ___pawn)
@@ -17,7 +17,7 @@ namespace VanillaTraitsExpanded
     }
 
     [HarmonyPatch(typeof(Pawn))]
-    [HarmonyPatch("SpawnSetup")]
+    [HarmonyPatch(nameof(Pawn.SpawnSetup))]
 
     public static class SpawnSetup_Patch
     {
@@ -38,7 +38,7 @@ namespace VanillaTraitsExpanded
                     TraitsManager.Instance.bigBoned.Add(__instance);
                 }
 
-                if (__instance.HasTrait(VTEDefOf.VTE_Submissive))
+                if (__instance.HasTrait(VTEDefOf.VTE_Submissive) || __instance.HasTrait(VTEDefOf.VTE_Rebel))
                 {
                     if (__instance.health.hediffSet.GetFirstHediffOfDef(VTEDefOf.VTE_SlowWorkSpeed) == null)
                     {
