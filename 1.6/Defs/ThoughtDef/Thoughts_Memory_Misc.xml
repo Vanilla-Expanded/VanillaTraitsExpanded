@@ -34,7 +34,7 @@
 		<stages>
 			<li>
 				<label>Passionately cleaning</label>
-				<description>I actually really enjoy organizing and cleaning up the place.</description>
+				<description>I really enjoy organizing and cleaning up the place.</description>
 				<baseMoodEffect>8</baseMoodEffect>
 			</li>
 		</stages>
@@ -79,7 +79,7 @@
 		<stages>
 			<li>
 				<label>observed much blood</label>
-				<description>I saw so much blood and bits. Just remembering it makes me gag.</description>
+				<description>I saw so much blood and bits, just remembering it makes me gag.</description>
 				<baseMoodEffect>-6</baseMoodEffect>
 			</li>
 		</stages>
@@ -105,7 +105,7 @@
 		<stages>
 			<li>
 				<label>No dedicated laboratory</label>
-				<description>I have nowhere to study in peace, how annoying.</description>
+				<description>I have nowhere to study in peace. How annoying.</description>
 				<baseMoodEffect>-5</baseMoodEffect>
 			</li>
 		</stages>
@@ -183,17 +183,17 @@
 			</li>
 			<li>
 				<label>A ton of animals in the colony</label>
-				<description>We've got so many animals now! It makes me so happy to see them all!</description>
+				<description>We've got so many animals now! It makes me so happy to see them all.</description>
 				<baseMoodEffect>13</baseMoodEffect>
 			</li>
 			<li>
 				<label>A ton of animals in the colony</label>
-				<description>We've got so many animals now! It makes me so happy to see them all!</description>
+				<description>We've got so many animals now! It makes me so happy to see them all.</description>
 				<baseMoodEffect>14</baseMoodEffect>
 			</li>
 			<li>
 				<label>A ton of animals in the colony</label>
-				<description>We've got so many animals now! It makes me so happy to see them all!</description>
+				<description>We've got so many animals now! It makes me so happy to see them all.</description>
 				<baseMoodEffect>15</baseMoodEffect>
 			</li>
 		</stages>
@@ -205,7 +205,7 @@
 		<stages>
 			<li>
 				<label>Ocean lover</label>
-				<description>I just love being around the ocean and rivers, water is beautiful.</description>
+				<description>I really like being around the ocean and rivers, water is beautiful.</description>
 				<baseMoodEffect>5</baseMoodEffect>
 			</li>
 		</stages>
@@ -217,7 +217,7 @@
 		<stages>
 			<li>
 				<label>Mountain lover</label>
-				<description>I just love being around the mountains, they take my breath away.</description>
+				<description>I really like being around the mountains, they take my breath away.</description>
 				<baseMoodEffect>5</baseMoodEffect>
 			</li>
 		</stages>
@@ -229,7 +229,7 @@
 		<stages>
 			<li>
 				<label>Hasn't harvested organs</label>
-				<description>I'm growing impatient and bored, I need more subjects.</description>
+				<description>I'm growing impatient, I need more subjects.</description>
 				<baseMoodEffect>-6</baseMoodEffect>
 			</li>
 		</stages>
@@ -292,7 +292,7 @@
     <stages>
       <li>
         <label>Dunce</label>
-        <description>I don't really understand why everybody's so upset all the time.</description>
+        <description>I don't understand why everybody is so upset all the time.</description>
         <baseMoodEffect>20</baseMoodEffect>
       </li>
     </stages>

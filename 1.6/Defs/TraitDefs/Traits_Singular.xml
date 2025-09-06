@@ -7,7 +7,7 @@
 		<degreeDatas>
 			<li>
 				<label>absent-minded</label>
-				<description>{PAWN_nameDef} tends to occasionally allow their mind to drift, even in the middle of working.</description>
+				<description>{PAWN_nameDef} tends to let {PAWN_possessive} mind drift, even in the middle of work. {PAWN_pronoun} may sometimes stop tasks at random.</description>
 				<statFactors>
 					<CertaintyLossFactor MayRequire="Ludeon.RimWorld.Ideology">0.5</CertaintyLossFactor>
 				</statFactors>
@@ -24,7 +24,7 @@
 		<degreeDatas>
 			<li>
 				<label>eccentric</label>
-				<description>{PAWN_nameDef} has a loose screw or two, a small trade off for being naturally scientifically inclined.</description>
+				<description>{PAWN_nameDef} has a screw loose, but it comes with a sharper scientific mind.</description>
 				<statFactors>
 					<ResearchSpeed>1.15</ResearchSpeed>
 				</statFactors>
@@ -41,7 +41,7 @@
 		<degreeDatas>
 			<li>
 				<label>perfectionist</label>
-				<description>{PAWN_nameDef} strives for perfection in {PAWN_possessive} work. They will naturally produce better quality products at the expense of time. However, making a low quality product will upset them. Additionally, they may very rarely quit a project mid attempt if they don't like the direction its going in.</description>
+				<description>{PAWN_nameDef} strives for perfection in {PAWN_possessive} work. {PAWN_pronoun} produces higher-quality products, but works more slowly. Failing to meet {PAWN_possessive} standards causes unhappiness, and on rare occasions {PAWN_pronoun} may abandon a project mid-way.</description>
 				<statFactors>
 					<WorkSpeedGlobal>0.65</WorkSpeedGlobal>
 				</statFactors>
@@ -55,7 +55,7 @@
 		<degreeDatas>
 			<li>
 				<label>coward</label>
-				<description>While fully capable of warfare in theory, {PAWN_nameDef}'s fight or flight instincts heavily lean towards flight, and {PAWN_pronoun} will try to hide or run as a first priority.</description>
+				<description>{PAWN_nameDef}'s instincts lean heavily toward cowardice. In danger, {PAWN_pronoun} will often hide or run before standing to fight.</description>
 			</li>
 		</degreeDatas>
 		<conflictingTraits>
@@ -71,7 +71,7 @@
 		<degreeDatas>
 			<li>
 				<label>brave</label>
-				<description>{PAWN_nameDef} has a higher mental and physical fortitude compared to most and can more readily adapt to harsh environments in the rimworlds.</description>
+				<description>{PAWN_nameDef} has stronger mental and physical fortitude than most. {PAWN_pronoun} can endure pain more readily, and is slower to break under harsh conditions.</description>
 				<statOffsets>
 					<MentalBreakThreshold>-0.2</MentalBreakThreshold>
 					<PainShockThreshold>0.2</PainShockThreshold>
@@ -94,7 +94,7 @@
 		<degreeDatas>
 			<li>
 				<label>clumsy</label>
-				<description>Minor bruises and scrapes plague {PAWN_nameDef} all too often, mostly due to uncoordinated tripping or falling.</description>
+				<description>Minor bruises and scrapes plague {PAWN_nameDef}, usually from tripping or falling due to poor coordination.</description>
 			</li>
 		</degreeDatas>
 		<conflictingTraits>
@@ -108,7 +108,7 @@
 		<degreeDatas>
 			<li>
 				<label>heat inclined</label>
-				<description>{PAWN_nameDef} loves the brightness and heat of a dry summer day. They don't mind working up a sweat or sleeping in the warmth either.</description>
+				<description>{PAWN_nameDef} enjoys the heat of a dry summer day. {PAWN_pronoun} doesn't mind working up a sweat or sleeping in warmth.</description>
 				<statOffsets>
 					<ComfyTemperatureMax>10.0</ComfyTemperatureMax>
 				</statOffsets>
@@ -122,7 +122,7 @@
 		<degreeDatas>
 			<li>
 				<label>cold inclined</label>
-				<description>{PAWN_nameDef} loves the overcast and cold of a brisk winter night. They don't mind getting chilly or sleeping in the cold either.</description>
+				<description>{PAWN_nameDef} enjoys the chill of a brisk winter night. {PAWN_pronoun} doesn't mind shivering or sleeping in the cold.</description>
 				<statOffsets>
 					<ComfyTemperatureMin>-10.0</ComfyTemperatureMin>
 				</statOffsets>
@@ -136,7 +136,7 @@
 		<degreeDatas>
 			<li>
 				<label>heavy sleeper</label>
-				<description>A bomb could go off next to {PAWN_nameDef} while they sleep and they'd continue to do so. They can't be bothered to defend the colony mid catnap, either.</description>
+				<description>A bomb could go off beside {PAWN_nameDef} while {PAWN_pronoun} sleeps, and {PAWN_pronoun} would keep right on sleeping. {PAWN_pronoun} can't be bothered to work or defend the colony mid-nap.</description>
 			</li>
 		</degreeDatas>
 	</TraitDef>
@@ -147,7 +147,7 @@
 		<degreeDatas>
 			<li>
 				<label>neat</label>
-				<description>{PAWN_nameDef} is naturally hygenic and organized. They will not track in dirt or throw trash anywhere, and feel happy while cleaning.</description>
+				<description>{PAWN_nameDef} is naturally hygienic and organized. {PAWN_pronoun} doesn't track dirt or scatter trash, and enjoys cleaning.</description>
 			</li>
 		</degreeDatas>
 		<conflictingTraits>
@@ -161,7 +161,7 @@
 		<degreeDatas>
 			<li>
 				<label>slob</label>
-				<description>{PAWN_nameDef} is sloppy naturally and leaves trash and dirt everywhere it seems. At least they're not much bothered by messes.</description>
+				<description>{PAWN_nameDef} is naturally sloppy, leaving trash and dirt scattered around. At least {PAWN_pronoun} isn't much bothered by messy surroundings.</description>
 			</li>
 		</degreeDatas>
 		<conflictingTraits>
@@ -175,7 +175,7 @@
 		<degreeDatas>
 			<li>
 				<label>workaholic</label>
-				<description>{PAWN_nameDef} has problems taking breaks or resting mid job. {PAWN_pronoun} will continue to work even sacrificing their health or sleep.</description>
+				<description>{PAWN_nameDef} struggles to take breaks or rest mid-job. {PAWN_pronoun} will keep working, even at the expense of {PAWN_possessive} health or sleep.</description>
 			</li>
 		</degreeDatas>
 		<conflictingTraits>
@@ -189,7 +189,7 @@
 		<degreeDatas>
 			<li>
 				<label>iron stomach</label>
-				<description>{PAWN_nameDef} has never felt nausea in {PAWN_possessive} life. Throwing up or food poisoning is foreign to {PAWN_objective}.</description>
+				<description>{PAWN_nameDef} has never known nausea. Food poisoning and vomiting are foreign to {PAWN_objective}.</description>
 			</li>
 		</degreeDatas>
 		<conflictingTraits>
@@ -203,7 +203,7 @@
 		<degreeDatas>
 			<li>
 				<label>animal lover</label>
-				<description>{PAWN_nameDef} can't stand mistreatment of animals. {PAWN_pronoun} will feel happier being nuzzled or being a master to a bonded animal, but will be more deeply crushed when not master of a bonded animal or seeing one die. They also refuse to butcher.</description>
+				<description>{PAWN_nameDef} can't stand cruelty toward animals. {PAWN_pronoun} feels happier when nuzzled or acting as master to a tamed animal, but is more deeply upset when losing one. {PAWN_pronoun} also refuses to butcher animals.</description>
 			</li>
 		</degreeDatas>
 		<conflictingTraits>
@@ -217,7 +217,7 @@
 		<degreeDatas>
 			<li>
 				<label>animal hater</label>
-				<description>{PAWN_nameDef} believes deeply in human superiority. Killing animals will please them and the colony losing an animal is a cherry on top according to them.</description>
+				<description>{PAWN_nameDef} believes in human superiority over animals. {PAWN_pronoun} dislikes bonding or being nuzzled, but feels satisfaction when animals die or are sold.</description>
 			</li>
 		</degreeDatas>
 		<conflictingTraits>
@@ -234,7 +234,7 @@
 		<degreeDatas>
 			<li>
 				<label>big-boned</label>
-				<description>Whether because they're a bit chunky or because they shift their weight oddly, {PAWN_nameDef} has broken a few chairs in their time and is likely to break more.</description>
+				<description>Whether from bulk or awkward posture, {PAWN_nameDef} has broken a few chairs in {PAWN_possessive} time, and is likely to break more.</description>
 			</li>
 		</degreeDatas>
 	</TraitDef>
@@ -245,7 +245,7 @@
 		<degreeDatas>
 			<li>
 				<label>rebel</label>
-				<description>{PAWN_nameDef} only plays by their own rules, and will roll their eyes and take it easy while doing any task they've been forced to do.</description>
+				<description>{PAWN_nameDef} only plays by {PAWN_possessive} own rules. When forced, {PAWN_pronoun} will drag {PAWN_possessive} feet and work more slowly.</description>
 				<statFactors>
 					<CertaintyLossFactor MayRequire="Ludeon.RimWorld.Ideology">0.25</CertaintyLossFactor>
 				</statFactors>
@@ -262,7 +262,7 @@
 		<degreeDatas>
 			<li>
 				<label>submissive</label>
-				<description>{PAWN_nameDef} needs clear instructions on how, and when to do certain things and will only work at a normal speed when being forced to do something.</description>
+				<description>{PAWN_nameDef} needs clear direction on when and how to act. {PAWN_pronoun} works at normal speed only when ordered, and otherwise slows down.</description>
 				<statFactors>
 					<CertaintyLossFactor MayRequire="Ludeon.RimWorld.Ideology">2</CertaintyLossFactor>
 				</statFactors>
@@ -279,7 +279,7 @@
 		<degreeDatas>
 			<li>
 				<label>vengeful</label>
-				<description>{PAWN_nameDef} is fueled by spite. They can't stand walking on the same soil as their rivals and will be elated by news of their life ending.</description>
+				<description>{PAWN_nameDef} is fueled by spite. {PAWN_pronoun} can’t stand sharing the colony with rivals, and feels happier when one of them dies.</description>
 				<statFactors>
 					<CertaintyLossFactor MayRequire="Ludeon.RimWorld.Ideology">0.25</CertaintyLossFactor>
 				</statFactors>
@@ -296,7 +296,7 @@
 		<degreeDatas>
 			<li>
 				<label>technophobe</label>
-				<description>Whether by past trauma or fear of change, {PAWN_nameDef} rejects modernity. They may randomly punch or attack mechanical devices and refuse to learn or research anything about them. They also love killing mechanoids.</description>
+				<description>Whether from trauma or fear of change, {PAWN_nameDef} rejects modernity. {PAWN_pronoun} may lash out at machines, refuses to research, and feels satisfaction from destroying mechanoids.</description>
 				<theOnlyAllowedMentalBreaks>
 					<li>VTE_TechnophobeTantrum</li>
 				</theOnlyAllowedMentalBreaks>
@@ -319,7 +319,7 @@
 		<degreeDatas>
 			<li>
 				<label>fun-loving</label>
-				<description>{PAWN_nameDef} always recalls the good times and lives to party, any party attended will be remembered for many times longer than most.</description>
+				<description>{PAWN_nameDef} lives for a good time. {PAWN_pronoun} remembers parties fondly, and the joy lasts far longer than it does for most.</description>
 			</li>
 		</degreeDatas>
 		<conflictingTraits>
@@ -333,7 +333,7 @@
 		<degreeDatas>
 			<li>
 				<label>dunce</label>
-				<description>{PAWN_nameDef} has hindered mental capacities. While slow to learn and hard to speak with, they tend to be much happier naturally.</description>
+				<description>{PAWN_nameDef} has limited mental capacity. {PAWN_pronoun} learns slowly and struggles with conversation, but tends to be naturally happy.</description>
 				<statOffsets>
 					<GlobalLearningFactor>-0.50</GlobalLearningFactor>
 					<SocialImpact>-0.50</SocialImpact>
@@ -360,7 +360,7 @@
 		<degreeDatas>
 			<li>
 				<label>martial artist</label>
-				<description>{PAWN_nameDef} learned a specific move in melee combat which allows them to disarm opponents and will use it frequently.</description>
+				<description>{PAWN_nameDef} has trained in melee combat and learned a special move to disarm opponents.</description>
 			</li>
 		</degreeDatas>
 		<requiredWorkTags>
@@ -388,7 +388,7 @@
 		<degreeDatas>
 			<li>
 				<label>squeamish</label>
-				<description>Sour stomach plagues {PAWN_nameDef} any time they're around too much blood or rotting corpses. Vomiting is just part of life for {PAWN_objective}.</description>
+				<description>{PAWN_nameDef} gets a sour stomach around blood or corpses. Vomiting is just part of life for {PAWN_objective}.</description>
 			</li>
 		</degreeDatas>
 		<conflictingTraits>
@@ -404,7 +404,7 @@
 		<degreeDatas>
 			<li>
 				<label>anxious</label>
-				<description>{PAWN_nameDef} feels naturally anxious, but especially from social situations. They will not attend any gatherings and may occasionally need alone time in their room to breathe.</description>
+				<description>{PAWN_nameDef} is naturally anxious, especially in social situations. {PAWN_pronoun} avoids gatherings and sometimes retreats to {PAWN_possessive} room to cope.</description>
 				<statFactors>
 					<CertaintyLossFactor MayRequire="Ludeon.RimWorld.Ideology">2</CertaintyLossFactor>
 				</statFactors>
@@ -430,7 +430,7 @@
 		<degreeDatas>
 			<li>
 				<label>insatiable</label>
-				<description>No amount of lovin' is enough lovin' for {PAWN_nameDef}. {PAWN_pronoun} will tend to jump from partner to partner and tumble between the sheets with them frequently.</description>
+				<description>No amount of lovin’ is ever enough for {PAWN_nameDef}. {PAWN_pronoun} tends to move between partners and seeks intimacy often.</description>
 				<statFactors>
 					<CertaintyLossFactor MayRequire="Ludeon.RimWorld.Ideology">2</CertaintyLossFactor>
 				</statFactors>
@@ -448,7 +448,7 @@
 		<degreeDatas>
 			<li>
 				<label>prude</label>
-				<description>{PAWN_nameDef} refuses to give their body to anybody but their spouse and would never fathom initiating a divorce. They also hate being nude much more than other pawns.</description>
+				<description>{PAWN_nameDef} gives {PAWN_possessive} body only to a spouse and would never initiate divorce. {PAWN_pronoun} also dislikes nudity more than most.</description>
 				<statFactors>
 					<CertaintyLossFactor MayRequire="Ludeon.RimWorld.Ideology">0.5</CertaintyLossFactor>
 				</statFactors>
@@ -466,7 +466,7 @@
 		<degreeDatas>
 			<li>
 				<label>couch potato</label>
-				<description>An armchair and flatscreen is all {PAWN_nameDef} needs to be happy. Even reruns or ancient commercials are entertaining to them, they will never grow bored of television and tend to watch it more, as well as feel pleased after doing so.</description>
+				<description>An armchair and a screen are all {PAWN_nameDef} needs to be happy. {PAWN_pronoun} never tires of watching television, and always feels good after.</description>
 			</li>
 		</degreeDatas>
 	</TraitDef>
@@ -477,7 +477,7 @@
 		<degreeDatas>
 			<li>
 				<label>cat person</label>
-				<description>{PAWN_nameDef} is mad for all things feline. They will naturally gravitate towards bonding with cats, however they're not a fan of dogs.</description>
+				<description>{PAWN_nameDef} enjoys the company of cats and gravitates toward bonding with them, but dislikes dogs.</description>
 			</li>
 		</degreeDatas>
 		<conflictingTraits>
@@ -491,7 +491,7 @@
 		<degreeDatas>
 			<li>
 				<label>dog person</label>
-				<description>{PAWN_nameDef} is mad for all things canine. They will naturally gravitate towards bonding with dogs, however they're not a fan of cats.</description>
+				<description>{PAWN_nameDef} enjoys the company of dogs and gravitates toward bonding with them, but dislikes cats.</description>
 			</li>
 		</degreeDatas>
 		<conflictingTraits>
@@ -505,7 +505,7 @@
 		<degreeDatas>
 			<li>
 				<label>prodigy</label>
-				<description>{PAWN_nameDef} is a natural scientist. They research much faster and recall things better. However, they'll be upset without a laboratory dedicated to their work and tend to stress out more frequently.</description>
+				<description>{PAWN_nameDef} has a sharp, logical mind. {PAWN_pronoun} researches faster than most, and {PAWN_possessive} rational outlook makes {PAWN_objective} less prone to mental breaks.</description>
 				<statOffsets>
 					<MentalBreakThreshold>0.2</MentalBreakThreshold>
 				</statOffsets>
@@ -531,7 +531,7 @@
 		<degreeDatas>
 			<li>
 				<label>menagerist</label>
-				<description>{PAWN_nameDef} believes animals are integral to the way society and life functions from furry friends to sources of food. They love having as many as possible and are particularly good at taming and training them.</description>
+				<description>{PAWN_nameDef} believes animals are essential to life and society. {PAWN_pronoun} feels happier with more of them around, and is especially skilled at taming and training.</description>
 				<statFactors>
 					<TameAnimalChance>1.2</TameAnimalChance>
 					<TrainAnimalChance>1.2</TrainAnimalChance>
@@ -549,7 +549,7 @@
 		<degreeDatas>
 			<li>
 				<label>Ocean lover</label>
-				<description>The sea calls to {PAWN_nameDef}. {PAWN_pronoun} feels happier just being near the ocean or a deep river.</description>
+				<description>The sea calls to {PAWN_nameDef}. {PAWN_pronoun} feels happier when near the ocean or a deep river.</description>
 			</li>
 		</degreeDatas>
 	</TraitDef>
@@ -560,7 +560,7 @@
 		<degreeDatas>
 			<li>
 				<label>Mountain lover</label>
-				<description>The mountains call to {PAWN_nameDef}. {PAWN_pronoun} feels happier just being near a large mountain.</description>
+				<description>The mountains call to {PAWN_nameDef}. {PAWN_pronoun} feels happier when near a large mountain.</description>
 			</li>
 		</degreeDatas>
 	</TraitDef>
@@ -571,7 +571,7 @@
 		<degreeDatas>
 			<li>
 				<label>mad surgeon</label>
-				<description>{PAWN_nameDef} has a twisted secret. {PAWN_pronoun} treats organ harvesting like a sick experiment, and does not even blink at the idea. While harvesting one will make them happy, going too long without giving in to their compulsion will upset them.</description>
+				<description>{PAWN_nameDef} hides a twisted obsession. {PAWN_pronoun} treats organ harvesting as a dark experiment and takes pleasure in it. Harvesting makes {PAWN_objective} happy, but going too long without fuels growing unrest.</description>
 				<statOffsets>
 					<SurgerySuccessChanceFactor>0.20</SurgerySuccessChanceFactor>
 				</statOffsets>
@@ -588,7 +588,7 @@
 		<degreeDatas>
 			<li>
 				<label>drunken master</label>
-				<description>{PAWN_nameDef} is supposedly a hand-to-hand combat specialist, but only when inebriated. They claim to become more talented the more drunk they are.</description>
+				<description>{PAWN_nameDef} fights best when drunk. {PAWN_pronoun} grows more dangerous in melee the more intoxicated {PAWN_pronoun} becomes.</description>
 				<skillGains>
 					<Melee>4</Melee>
 				</skillGains>
@@ -606,7 +606,7 @@
 		<degreeDatas>
 			<li>
 				<label>kleptomaniac</label>
-				<description>{PAWN_nameDef} is compulsive to steal and take things that don't belong to them, even if it means angering the other party.</description>
+				<description>{PAWN_nameDef} is compelled to steal, even from guests and allies, risking angering others.</description>
 				<theOnlyAllowedMentalBreaks>
 					<li>VTE_Kleptomaniac</li>
 				</theOnlyAllowedMentalBreaks>
@@ -626,7 +626,7 @@
 		<degreeDatas>
 			<li>
 				<label>stoner</label>
-				<description>Smokeleaf culture is just part of life for {PAWN_nameDef}. {PAWN_pronoun} absolutely adores smokeleaf and would rather die before giving it up.</description>
+				<description>Smokeleaf is a way of life for {PAWN_nameDef}. {PAWN_pronoun} adores it and would rather die than give it up.</description>
 			</li>
 		</degreeDatas>
 		<conflictingTraits>
@@ -640,7 +640,7 @@
 		<degreeDatas>
 			<li>
 				<label>lush</label>
-				<description>Alcohol culture is just part of life for {PAWN_nameDef}. {PAWN_pronoun} absolutely adores booze and would rather die before giving it up.</description>
+				<description>Alcohol is a way of life for {PAWN_nameDef}. {PAWN_pronoun} adores drinking and would rather die than give it up.</description>
 			</li>
 		</degreeDatas>
 		<conflictingTraits>
@@ -654,7 +654,7 @@
 		<degreeDatas>
 			<li>
 				<label>wanderlust</label>
-				<description>{PAWN_nameDef} loves to travel and does so swiftly, but can grow upset if they haven't done so in a while. They are also quite adept at foraging while traveling.</description>
+				<description>{PAWN_nameDef} loves to travel and feels happiest on the move. {PAWN_pronoun} grows restless when staying too long in one place, but moves quickly and forages well while caravanning.</description>
 				<statOffsets>
 					<ForagedNutritionPerDay>0.2</ForagedNutritionPerDay>
 				</statOffsets>
@@ -671,7 +671,7 @@
 		<degreeDatas>
 			<li>
 				<label>insomniac</label>
-				<description>{PAWN_nameDef} is never really asleep or awake. {PAWN_pronoun} is almost zombie like, lurching along and working very slowly, and will only sleep once every three days or so.</description>
+				<description>{PAWN_nameDef} is never fully asleep or awake. {PAWN_pronoun} lurches along in a slow, shambler-like state, and only sleeps once every few days.</description>
 				<statFactors>
 					<WorkSpeedGlobal>0.5</WorkSpeedGlobal>
 					<MoveSpeed>0.7</MoveSpeed>
@@ -690,7 +690,7 @@
 		<degreeDatas>
 			<li>
 				<label>world weary</label>
-				<description>{PAWN_nameDef} has grown tired of the world and needs to be constantly distracted to stop dark thoughts. {PAWN_possessive} bleak personality is a big downer and therefore it is very hard to become friends with them.</description>
+				<description>{PAWN_nameDef} has grown tired of the world. {PAWN_pronoun} struggles with bleak thoughts, making {PAWN_possessive} personality difficult to befriend.</description>
 			</li>
 		</degreeDatas>
 	</TraitDef>
@@ -701,7 +701,7 @@
 		<degreeDatas>
 			<li>
 				<label>desensitized</label>
-				<description>{PAWN_nameDef} is hardened through what can only be presumed as old emotional trauma. They feel absolutely nothing from lost animals, colonists, family, prisoners or dead bodies.</description>
+				<description>{PAWN_nameDef} is hardened by old emotional trauma. {PAWN_pronoun} feels nothing from death or loss, whether animal, colonist, family, or prisoner.</description>
 				<statFactors>
 					<CertaintyLossFactor MayRequire="Ludeon.RimWorld.Ideology">0.5</CertaintyLossFactor>
 				</statFactors>
@@ -718,7 +718,7 @@
 		<degreeDatas>
 			<li>
 				<label>refined palate</label>
-				<description>Only the finest of culinary creations may grace the lips of {PAWN_nameDef}. They feel neutral towards mundane meals, but will laud and savour lavish meals down to the last bite.</description>
+				<description>Only the finest meals satisfy {PAWN_nameDef}. {PAWN_pronoun} feels indifferent toward ordinary food, but savors lavish meals and gains greater joy from them.</description>
 				<statFactors>
 					<EatingSpeed>0.7</EatingSpeed>
 				</statFactors>
@@ -742,7 +742,7 @@
 		<degreeDatas>
 			<li>
 				<label>academian</label>
-				<description>Whether through studying ancient manuscripts or years of scholastic pursuit {PAWN_nameDef} is surprisingly well read on a variety of topics, particularly science and medical practice.</description>
+				<description>Through scholastic pursuit, {PAWN_nameDef} has become well-read. {PAWN_pronoun} excels in science and medicine, and tends patients with greater skill.</description>
 				<skillGains>
 					<Intellectual>4</Intellectual>
 					<Medicine>4</Medicine>
@@ -770,7 +770,7 @@
 		<degreeDatas>
 			<li>
 				<label>groundbreaker</label>
-				<description>{PAWN_nameDef} strongly believes infrastucture rules all and is a natural born stoneworker.</description>
+				<description>{PAWN_nameDef} believes infrastructure is everything. {PAWN_pronoun} is a natural builder and stoneworker, constructing and mining with greater speed and efficiency.</description>
 				<skillGains>
 					<Mining>4</Mining>
 					<Construction>4</Construction>
@@ -793,7 +793,7 @@
 		<degreeDatas>
 			<li>
 				<label>gastronomist</label>
-				<description>In the eyes of {PAWN_nameDef} food is art, their culinary creations are incredibly beautiful, amazing to taste, and almost always safe to eat.</description>
+				<description>To {PAWN_nameDef}, food is art. {PAWN_pronoun} creates beautiful, delicious meals that are almost always safe to eat.</description>
 				<skillGains>
 					<Cooking>4</Cooking>
 					<Artistic>4</Artistic>
@@ -818,7 +818,7 @@
 		<degreeDatas>
 			<li>
 				<label>ecologist</label>
-				<description>Flora and fauna are both vital to {PAWN_nameDef}. They use all parts of plants and animals and strongly appreciate mother Gaia's blessings.</description>
+				<description>Flora and fauna are vital to {PAWN_nameDef}. {PAWN_pronoun} uses every part of plants and animals, and appreciates nature’s gifts.</description>
 				<skillGains>
 					<Animals>4</Animals>
 					<Plants>4</Plants>
@@ -844,7 +844,7 @@
 		<degreeDatas>
 			<li>
 				<label>tycoon</label>
-				<description>{PAWN_nameDef} has an eye for silver and a tongue made from it. They believe their products are the best products and {PAWN_pronoun} will likely convince you if given the chance.</description>
+				<description>{PAWN_nameDef} has an eye for silver and a silver tongue to match. {PAWN_pronoun} values {PAWN_possessive} own goods highly, and convinces others to do the same.</description>
 				<skillGains>
 					<Social>4</Social>
 					<Crafting>4</Crafting>
@@ -890,7 +890,7 @@
 		<degreeDatas>
 			<li>
 				<label>schizoid</label>
-				<description>{PAWN_nameDef} has trouble expressing themselves until its all too much to bear, whereafter they will have an utter meltdown.</description>
+				<description>{PAWN_nameDef} bottles up {PAWN_possessive} feelings for long stretches of time. When the pressure grows too great, {PAWN_pronoun} may suddenly break down.</description>
 			</li>
 		</degreeDatas>
 	</TraitDef>

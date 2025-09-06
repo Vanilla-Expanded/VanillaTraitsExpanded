@@ -10,7 +10,7 @@
 		<stages>
 			<li>
 				<label>bonded animal {0} died</label>
-				<description>Such a gross, annoying animal. I'm glad it's gone!</description>
+				<description>Such a gross, annoying animal. I'm glad it's gone.</description>
 				<baseMoodEffect>8</baseMoodEffect>
 			</li>
 		</stages>
@@ -26,7 +26,7 @@
 		<stages>
 			<li>
 				<label>bonded animal {0} lost</label>
-				<description>Such a gross, annoying animal. I'm glad it's gone!</description>
+				<description>Such a gross, annoying animal. I'm glad it's gone.</description>
 				<baseMoodEffect>8</baseMoodEffect>
 			</li>
 		</stages>
@@ -44,7 +44,7 @@
 		<stages>
 			<li>
 				<label>bonded animal {0} banished</label>
-				<description>My bonded animal was banished, finally.</description>
+				<description>My bonded animal was banished. Good.</description>
 				<baseMoodEffect>6</baseMoodEffect>
 			</li>
 		</stages>
@@ -91,7 +91,7 @@
 			<li>
 				<label>bonded animal given away.</label>
 				<labelSocial>gave away my bonded animal.</labelSocial>
-				<description>My nasty bonded animal was given away, about time!</description>
+				<description>My nasty bonded animal was given away, about time.</description>
 				<baseOpinionOffset>-10</baseOpinionOffset>
 			</li>
 		</stages>
@@ -105,7 +105,7 @@
 			<li>
 				<label>bonded animal given away</label>
 				<labelSocial>gave away my bonded animal</labelSocial>
-				<description>My nasty bonded animal was given away, about time!</description>
+				<description>My nasty bonded animal was given away, about time.</description>
 				<baseMoodEffect>10</baseMoodEffect>
 			</li>
 		</stages>
@@ -156,12 +156,12 @@
 		<stages>
 			<li>
 				<label>not {0}'s master</label>
-				<description>That thing may like me, but I certainly don't like it back - I'm glad somebody else took it.</description>
+				<description>That thing may like me, but I certainly don't like it back--I'm glad somebody else took it.</description>
 				<baseMoodEffect>-3</baseMoodEffect>
 			</li>
 			<li>
 				<label>not master of {0}</label>
-				<description>That thing may like me, but I certainly don't like it back - I'm glad somebody else took it.</description>
+				<description>That thing may like me, but I certainly don't like it back--I'm glad somebody else took it.</description>
 				<baseMoodEffect>-3</baseMoodEffect>
 			</li>
 		</stages>
