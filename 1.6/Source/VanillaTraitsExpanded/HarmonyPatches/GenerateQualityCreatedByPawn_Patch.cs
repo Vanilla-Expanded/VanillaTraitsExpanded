@@ -53,7 +53,7 @@ namespace VanillaTraitsExpanded
                 {
 					if (ModsConfig.IdeologyActive)
                     {
-						var effect = pawn.Ideo.GetRole(pawn)?.def.roleEffects.OfType<RoleEffect_ProductionQualityOffset>().FirstOrDefault();
+						var effect = pawn.Ideo.GetRole(pawn)?.def.roleEffects?.OfType<RoleEffect_ProductionQualityOffset>().FirstOrDefault();
 						if (effect != null && effect.offset > 0)
                         {
 							return; // we allow legendary for any roles boosting production quality
