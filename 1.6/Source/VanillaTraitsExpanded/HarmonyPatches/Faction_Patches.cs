@@ -27,7 +27,7 @@ namespace VanillaTraitsExpanded
 			}
 			return num;
         }
-		public static void Prefix(Faction __instance, Faction other, ref int goodwillChange, bool canSendMessage = true, bool canSendHostilityLetter = true, string reason = null, GlobalTargetInfo? lookTarget = null)
+		public static void Prefix(Faction __instance, Faction other, ref int goodwillChange)
 		{
 			if (goodwillChange > 0)
             {
