@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-
 	<TraitDef>
 		<defName>VTE_AbsentMinded</defName>
 		<commonality>0.7</commonality>
@@ -17,7 +16,6 @@
 			<li>VTE_Workaholic</li>
 		</conflictingTraits>
 	</TraitDef>
-
 	<TraitDef>
 		<defName>VTE_Eccentric</defName>
 		<commonality>0.8</commonality>
@@ -34,7 +32,6 @@
 			<li>SlowLearner</li>
 		</conflictingTraits>
 	</TraitDef>
-
 	<TraitDef>
 		<defName>VTE_Perfectionist</defName>
 		<commonality>0.9</commonality>
@@ -48,7 +45,6 @@
 			</li>
 		</degreeDatas>
 	</TraitDef>
-
 	<TraitDef>
 		<defName>VTE_Coward</defName>
 		<commonality>1</commonality>
@@ -64,7 +60,6 @@
 			<li>Brawler</li>
 		</conflictingTraits>
 	</TraitDef>
-
 	<TraitDef>
 		<defName>VTE_Brave</defName>
 		<commonality>0.7</commonality>
@@ -87,7 +82,6 @@
 			<li>Wimp</li>
 		</conflictingTraits>
 	</TraitDef>
-
 	<TraitDef>
 		<defName>VTE_Clumsy</defName>
 		<commonality>1</commonality>
@@ -101,7 +95,6 @@
 			<li>Nimble</li>
 		</conflictingTraits>
 	</TraitDef>
-
 	<TraitDef>
 		<defName>VTE_HeatInclined</defName>
 		<commonality>0.8</commonality>
@@ -115,7 +108,6 @@
 			</li>
 		</degreeDatas>
 	</TraitDef>
-
 	<TraitDef>
 		<defName>VTE_ColdInclined</defName>
 		<commonality>0.8</commonality>
@@ -129,7 +121,6 @@
 			</li>
 		</degreeDatas>
 	</TraitDef>
-
 	<TraitDef>
 		<defName>VTE_HeavySleeper</defName>
 		<commonality>0.6</commonality>
@@ -140,7 +131,6 @@
 			</li>
 		</degreeDatas>
 	</TraitDef>
-
 	<TraitDef>
 		<defName>VTE_Neat</defName>
 		<commonality>1</commonality>
@@ -154,7 +144,6 @@
 			<li>VTE_Slob</li>
 		</conflictingTraits>
 	</TraitDef>
-
 	<TraitDef>
 		<defName>VTE_Slob</defName>
 		<commonality>0.8</commonality>
@@ -168,7 +157,6 @@
 			<li>VTE_Neat</li>
 		</conflictingTraits>
 	</TraitDef>
-
 	<TraitDef>
 		<defName>VTE_Workaholic</defName>
 		<commonality>0.7</commonality>
@@ -182,7 +170,6 @@
 			<li>VTE_AbsentMinded</li>
 		</conflictingTraits>
 	</TraitDef>
-
 	<TraitDef>
 		<defName>VTE_IronStomach</defName>
 		<commonality>1</commonality>
@@ -196,7 +183,6 @@
 			<li>VTE_Squeamish</li>
 		</conflictingTraits>
 	</TraitDef>
-
 	<TraitDef>
 		<defName>VTE_AnimalLover</defName>
 		<commonality>1</commonality>
@@ -210,7 +196,6 @@
 			<li>VTE_AnimalHater</li>
 		</conflictingTraits>
 	</TraitDef>
-
 	<TraitDef>
 		<defName>VTE_AnimalHater</defName>
 		<commonality>0.5</commonality>
@@ -227,7 +212,6 @@
 			<li>VTE_Menagerist</li>
 		</conflictingTraits>
 	</TraitDef>
-
 	<TraitDef>
 		<defName>VTE_BigBoned</defName>
 		<commonality>0.6</commonality>
@@ -238,7 +222,6 @@
 			</li>
 		</degreeDatas>
 	</TraitDef>
-
 	<TraitDef>
 		<defName>VTE_Rebel</defName>
 		<commonality>1</commonality>
@@ -255,7 +238,6 @@
 			<li>VTE_Submissive</li>
 		</conflictingTraits>
 	</TraitDef>
-
 	<TraitDef>
 		<defName>VTE_Submissive</defName>
 		<commonality>0.5</commonality>
@@ -272,7 +254,6 @@
 			<li>VTE_Rebel</li>
 		</conflictingTraits>
 	</TraitDef>
-
 	<TraitDef>
 		<defName>VTE_Vengeful</defName>
 		<commonality>0.7</commonality>
@@ -289,7 +270,6 @@
 			<li>Kind</li>
 		</conflictingTraits>
 	</TraitDef>
-
 	<TraitDef>
 		<defName>VTE_Technophobe</defName>
 		<commonality>0.6</commonality>
@@ -312,7 +292,6 @@
 			<li>Transhumanist</li>
 		</conflictingTraits>
 	</TraitDef>
-
 	<TraitDef>
 		<defName>VTE_FunLoving</defName>
 		<commonality>1.1</commonality>
@@ -326,7 +305,6 @@
 			<li>VTE_Anxious</li>
 		</conflictingTraits>
 	</TraitDef>
-
 	<TraitDef>
 		<defName>VTE_Dunce</defName>
 		<commonality>0.7</commonality>
@@ -353,7 +331,6 @@
 			<li>TooSmart</li>
 		</conflictingTraits>
 	</TraitDef>
-
 	<TraitDef>
 		<defName>VTE_MartialArtist</defName>
 		<commonality>0.6</commonality>
@@ -367,7 +344,6 @@
 			<li>Violent</li>
 		</requiredWorkTags>
 	</TraitDef>
-
 	<TraitDef>
 		<defName>VTE_Snob</defName>
 		<commonality>1</commonality>
@@ -381,7 +357,6 @@
 			<li>Ascetic</li>
 		</conflictingTraits>
 	</TraitDef>
-
 	<TraitDef>
 		<defName>VTE_Squeamish</defName>
 		<commonality>0.9</commonality>
@@ -397,7 +372,6 @@
 			<li>Bloodlust</li>
 		</conflictingTraits>
 	</TraitDef>
-
 	<TraitDef>
 		<defName>VTE_Anxious</defName>
 		<commonality>1</commonality>
@@ -423,7 +397,6 @@
 			<li>VTE_FunLoving</li>
 		</conflictingTraits>
 	</TraitDef>
-
 	<TraitDef>
 		<defName>VTE_Insatiable</defName>
 		<commonality>1.1</commonality>
@@ -441,7 +414,6 @@
 			<li>Asexual</li>
 		</conflictingTraits>
 	</TraitDef>
-
 	<TraitDef>
 		<defName>VTE_Prude</defName>
 		<commonality>1</commonality>
@@ -459,7 +431,6 @@
 			<li>Nudist</li>
 		</conflictingTraits>
 	</TraitDef>
-
 	<TraitDef>
 		<defName>VTE_CouchPotato</defName>
 		<commonality>0.6</commonality>
@@ -470,7 +441,6 @@
 			</li>
 		</degreeDatas>
 	</TraitDef>
-
 	<TraitDef>
 		<defName>VTE_CatPerson</defName>
 		<commonality>1</commonality>
@@ -484,7 +454,6 @@
 			<li>VTE_DogPerson</li>
 		</conflictingTraits>
 	</TraitDef>
-
 	<TraitDef>
 		<defName>VTE_DogPerson</defName>
 		<commonality>1</commonality>
@@ -498,7 +467,6 @@
 			<li>VTE_CatPerson</li>
 		</conflictingTraits>
 	</TraitDef>
-
 	<TraitDef>
 		<defName>VTE_Prodigy</defName>
 		<commonality>0.8</commonality>
@@ -518,7 +486,6 @@
 			<li>SlowLearner</li>
 		</conflictingTraits>
 	</TraitDef>
-
 	<TraitDef>
 		<defName>VTE_Menagerist</defName>
 		<commonality>0.6</commonality>
@@ -542,7 +509,6 @@
 			<li>VTE_AnimalHater</li>
 		</conflictingTraits>
 	</TraitDef>
-
 	<TraitDef>
 		<defName>VTE_ChildOfSea</defName>
 		<commonality>1</commonality>
@@ -553,7 +519,6 @@
 			</li>
 		</degreeDatas>
 	</TraitDef>
-
 	<TraitDef>
 		<defName>VTE_ChildOfMountain</defName>
 		<commonality>1</commonality>
@@ -564,7 +529,6 @@
 			</li>
 		</degreeDatas>
 	</TraitDef>
-
 	<TraitDef>
 		<defName>VTE_MadSurgeon</defName>
 		<commonality>0.6</commonality>
@@ -581,7 +545,6 @@
 			<li>Doctor</li>
 		</requiredWorkTypes>
 	</TraitDef>
-
 	<TraitDef>
 		<defName>VTE_DrunkenMaster</defName>
 		<commonality>0.5</commonality>
@@ -598,8 +561,6 @@
 			<li>Violent</li>
 		</requiredWorkTags>
 	</TraitDef>
-
-
 	<TraitDef>
 		<defName>VTE_Kleptomaniac</defName>
 		<commonality>0.6</commonality>
@@ -619,7 +580,6 @@
 			</li>
 		</degreeDatas>
 	</TraitDef>
-
 	<TraitDef>
 		<defName>VTE_Stoner</defName>
 		<commonality>0.9</commonality>
@@ -633,7 +593,6 @@
 			<li>DrugDesire</li>
 		</conflictingTraits>
 	</TraitDef>
-
 	<TraitDef>
 		<defName>VTE_Lush</defName>
 		<commonality>0.9</commonality>
@@ -647,7 +606,6 @@
 			<li>DrugDesire</li>
 		</conflictingTraits>
 	</TraitDef>
-
 	<TraitDef>
 		<defName>VTE_Wanderlust</defName>
 		<commonality>1.1</commonality>
@@ -664,7 +622,6 @@
 			<li>Undergrounder</li>
 		</conflictingTraits>
 	</TraitDef>
-
 	<TraitDef>
 		<defName>VTE_Insomniac</defName>
 		<commonality>0.7</commonality>
@@ -683,7 +640,6 @@
 			<li>VTE_HeavySleeper</li>
 		</conflictingTraits>
 	</TraitDef>
-
 	<TraitDef>
 		<defName>VTE_WorldWeary</defName>
 		<commonality>0.8</commonality>
@@ -694,7 +650,6 @@
 			</li>
 		</degreeDatas>
 	</TraitDef>
-
 	<TraitDef>
 		<defName>VTE_Desensitized</defName>
 		<commonality>0.6</commonality>
@@ -711,7 +666,6 @@
 			<li>VTE_Squeamish</li>
 		</conflictingTraits>
 	</TraitDef>
-
 	<TraitDef>
 		<defName>VTE_RefinedPalate</defName>
 		<commonality>0.6</commonality>
@@ -728,7 +682,6 @@
 			<li>Ascetic</li>
 		</conflictingTraits>
 	</TraitDef>
-
 	<TraitDef>
 		<defName>VTE_Academian</defName>
 		<commonality>0.8</commonality>
@@ -756,7 +709,6 @@
 			<li>SlowLearner</li>
 		</conflictingTraits>
 	</TraitDef>
-
 	<TraitDef>
 		<defName>VTE_Groundbreaker</defName>
 		<commonality>0.8</commonality>
@@ -782,7 +734,6 @@
 			</li>
 		</degreeDatas>
 	</TraitDef>
-
 	<TraitDef>
 		<defName>VTE_Gastronomist</defName>
 		<commonality>0.8</commonality>
@@ -804,7 +755,6 @@
 			</li>
 		</degreeDatas>
 	</TraitDef>
-
 	<TraitDef>
 		<defName>VTE_Ecologist</defName>
 		<commonality>0.8</commonality>
@@ -830,7 +780,6 @@
 			</li>
 		</degreeDatas>
 	</TraitDef>
-
 	<TraitDef>
 		<defName>VTE_Tycoon</defName>
 		<commonality>0.8</commonality>
@@ -855,7 +804,6 @@
 			</li>
 		</degreeDatas>
 	</TraitDef>
-
 	<TraitDef>
 		<defName>VTE_ThickSkinned</defName>
 		<commonality>0.6</commonality>
@@ -869,7 +817,6 @@
 			<li>VTE_ThinSkinned</li>
 		</conflictingTraits>
 	</TraitDef>
-
 	<TraitDef>
 		<defName>VTE_ThinSkinned</defName>
 		<commonality>0.6</commonality>
@@ -883,7 +830,6 @@
 			<li>VTE_ThickSkinned</li>
 		</conflictingTraits>
 	</TraitDef>
-
 	<TraitDef>
 		<defName>VTE_Schizoid</defName>
 		<commonality>0.3</commonality>
@@ -894,6 +840,4 @@
 			</li>
 		</degreeDatas>
 	</TraitDef>
-
-
 </Defs>
