@@ -36,10 +36,11 @@ namespace VanillaTraitsExpanded
 	})]
 	public static class PawnAllowedToStartAnew_Patch
 	{
-		public static bool Prefix(Pawn p, RecipeDef ___recipe)
+		public static bool Prefix(Bill __instance, Pawn p, RecipeDef ___recipe)
 		{
 			if (p.HasTrait(VTEDefOf.VTE_AnimalLover) && ___recipe == DefDatabase<RecipeDef>.GetNamed("ButcherCorpseFlesh"))
 			{
+				JobFailReason.Is("VTE.AnimalLoverRefusesToButcher".Translate(p.Named("PAWN")), __instance.Label);
 				return false;
 			}
 			return true;
