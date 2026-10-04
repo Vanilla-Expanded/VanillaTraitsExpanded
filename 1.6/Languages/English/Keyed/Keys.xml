@@ -17,4 +17,5 @@
   <VTE.PawnCowardlyExitMapNeutral>{PAWN_nameDef} runs away from combat due to being a coward</VTE.PawnCowardlyExitMapNeutral>
   <VTE.PawnStopsForcedJob>{PAWN_nameDef} has defied or forgotten their orders and stopped working for the time being</VTE.PawnStopsForcedJob>
   <VTE.VictimDropsEquipmentMartialArtist>{PAWN_nameDef} has disarmed {VICTIM_nameDef} in melee combat</VTE.VictimDropsEquipmentMartialArtist>
+  <VTE.AnimalLoverRefusesToButcher>{PAWN_nameDef} is an animal lover</VTE.AnimalLoverRefusesToButcher>
 </LanguageData>
