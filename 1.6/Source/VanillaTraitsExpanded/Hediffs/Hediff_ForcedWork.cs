@@ -10,12 +10,20 @@ public class Hediff_ForcedWork : Hediff
     private bool suppressed = false;
     private bool activeWhileForcedWork = true;
     private int nextForcedWorkTickEnd = DefaultLastForcedWorkTick;
+    // RecacheData can run while the hediff list is being iterated (e.g. Notify_Spawned), so removal is left to ShouldRemove.
+    private bool pendingRemoval = false;
 
-    public override int CurStageIndex => suppressed || (Find.TickManager.TicksGame < nextForcedWorkTickEnd) != activeWhileForcedWork ? 0 : 1;
+    public override int CurStageIndex => pendingRemoval || suppressed || (Find.TickManager.TicksGame < nextForcedWorkTickEnd) != activeWhileForcedWork ? 0 : 1;
+
+    public override bool ShouldRemove => pendingRemoval || base.ShouldRemove;
 
     public override void TickInterval(int delta)
     {
         base.TickInterval(delta);
+
+        // Re-check before the health tracker acts on ShouldRemove, in case a trait was gained since.
+        if (pendingRemoval)
+            RecacheData();
 
         if (suppressed)
             nextForcedWorkTickEnd = DefaultLastForcedWorkTick;
@@ -58,9 +66,11 @@ public class Hediff_ForcedWork : Hediff
 
         if (pawn.story?.traits == null)
         {
-            pawn.health.RemoveHediff(this);
+            pendingRemoval = true;
             return;
         }
+
+        pendingRemoval = false;
 
         var submissiveActive = false;
         var anySuppressed = false;
@@ -96,6 +106,6 @@ public class Hediff_ForcedWork : Hediff
         else if (anySuppressed)
             suppressed = true;
         else
-            pawn.health.RemoveHediff(this);
+            pendingRemoval = true;
     }
 }
