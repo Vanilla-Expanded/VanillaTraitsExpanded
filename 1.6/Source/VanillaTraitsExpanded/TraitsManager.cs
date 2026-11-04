@@ -206,15 +206,23 @@ namespace VanillaTraitsExpanded
         public override void ExposeData()
         {
             base.ExposeData();
-            Scribe_Collections.Look(ref forcedJobs, "forcedJobs", LookMode.Reference, LookMode.Reference, ref pawnKeys, ref jobValues);
-            Scribe_Collections.Look(ref madSurgeonsWithLastHarvestedTick, "madSurgeonsWithLastHarvestedTick", LookMode.Reference, LookMode.Value, ref pawnKeys2, ref tickValues);
-            Scribe_Collections.Look(ref wanderLustersWithLastMapExitedTick, "wanderLustersWithLastMapExitedTick", LookMode.Reference, LookMode.Value, ref pawnKeys3, ref tickValues1);
-            Scribe_Collections.Look(ref squeamishWithLastVomitedTick, "squeamishWithLastVomitedTick", LookMode.Reference, LookMode.Value, ref pawnKeys4, ref tickValues2);
-            Scribe_Collections.Look(ref absentMindedWithLastDiscardedTick, "absentMindedWithLastDiscardedTick", LookMode.Reference, LookMode.Value, ref pawnKeys5, ref tickValues3);
+            // A pawn can be missing from the save even though it's still a key here; skip it quietly, like vanilla does for its own pawn-keyed tables
+            Scribe_Collections.Look(ref forcedJobs, "forcedJobs", LookMode.Reference, LookMode.Reference, ref pawnKeys, ref jobValues, logNullErrors: false);
+            Scribe_Collections.Look(ref madSurgeonsWithLastHarvestedTick, "madSurgeonsWithLastHarvestedTick", LookMode.Reference, LookMode.Value, ref pawnKeys2, ref tickValues, logNullErrors: false);
+            Scribe_Collections.Look(ref wanderLustersWithLastMapExitedTick, "wanderLustersWithLastMapExitedTick", LookMode.Reference, LookMode.Value, ref pawnKeys3, ref tickValues1, logNullErrors: false);
+            Scribe_Collections.Look(ref squeamishWithLastVomitedTick, "squeamishWithLastVomitedTick", LookMode.Reference, LookMode.Value, ref pawnKeys4, ref tickValues2, logNullErrors: false);
+            Scribe_Collections.Look(ref absentMindedWithLastDiscardedTick, "absentMindedWithLastDiscardedTick", LookMode.Reference, LookMode.Value, ref pawnKeys5, ref tickValues3, logNullErrors: false);
             Scribe_Collections.Look(ref perfectionistsWithJobsToStop, "perfectionistsWithJobsToStop", LookMode.Reference);
             Scribe_Collections.Look(ref cowards, "cowards", LookMode.Reference);
             Scribe_Collections.Look(ref snobs, "snobs", LookMode.Reference);
             Scribe_Collections.Look(ref bigBoned, "bigBoned", LookMode.Reference);
+            if (Scribe.mode == LoadSaveMode.PostLoadInit)
+            {
+                perfectionistsWithJobsToStop?.RemoveWhere(x => x is null);
+                cowards?.RemoveWhere(x => x is null);
+                snobs?.RemoveWhere(x => x is null);
+                bigBoned?.RemoveWhere(x => x is null);
+            }
         }
 
         public void RemoveDestroyedPawn(Pawn key)
